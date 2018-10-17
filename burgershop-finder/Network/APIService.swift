@@ -17,12 +17,14 @@ extension String: LocalizedError {
 class APIService {
 
     enum Callback {
-        typealias Success = (Object) -> Void
+        typealias Success = (Identifiers) -> Void
         typealias Successs = (Data) -> Void
         typealias Fail = (String?) -> Void
     }
 
     static let shared = APIService()
+
+    private init() {}
 
     func fetchVenues(success: @escaping Callback.Success, fail: @escaping Callback.Fail) {
         let parameters = [URLQueryItem(with: .clientId, value: Constants.identifier),
@@ -37,14 +39,14 @@ class APIService {
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             do {
                 guard let data = data, error == nil, let response = response as? HTTPURLResponse else {
-                    throw "Fetch venues API call returned no data.)"
+                    throw "Fetch venues API call returned no data."
                 }
 
                 guard 200 ... 299 ~= response.statusCode else {
                     throw "Expected response status code in range between 200 - 299, but received \(response.statusCode)."
                 }
 
-                success(try JSONDecoder().decode(Object.self, from: data))
+                success(try Identifiers.parse(data: data))
             } catch {
                 fail(error.localizedDescription.errorDescription)
             }
@@ -61,14 +63,15 @@ class APIService {
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             do {
                 guard let data = data, error == nil, let response = response as? HTTPURLResponse else {
-                    throw "Fetch venues API call returned no data.)"
+                    throw "Inspect venue API call returned no data."
                 }
 
                 guard 200 ... 299 ~= response.statusCode else {
                     throw "Expected response status code in range between 200 - 299, but received \(response.statusCode)."
                 }
-
-//                success(try JSONDecoder().decode(Object.self, from: data))
+                let details = try JSONDecoder().decode(Details.self, from: data)
+                print(details.response.venue.id)
+                // FIXME:
             } catch {
                 fail(error.localizedDescription.errorDescription)
             }

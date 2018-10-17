@@ -1,5 +1,5 @@
 //
-//  Response.swift
+//  Group.swift
 //  burgershop-finder
 //
 //  Created by e.vanags on 17/10/2018.
@@ -8,6 +8,9 @@
 
 import Foundation
 
-struct Response: Codable {
-    var venue: Venue
+typealias Groups = [Group]
+
+struct Group: Codable {
+    var type: String
+    var items: Items
 }
