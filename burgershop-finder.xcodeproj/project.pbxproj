@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7213F69821A76D2B003A591A /* FSOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 7213F69721A76D2B003A591A /* FSOAuth.m */; };
 		724BCD09216E5E62002F526E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724BCD08216E5E62002F526E /* Constants.swift */; };
 		724BCD11216E7E7F002F526E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724BCD10216E7E7F002F526E /* Location.swift */; };
 		72AF5675216B5FC300102EA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF5674216B5FC300102EA8 /* AppDelegate.swift */; };
@@ -26,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7213F69521A76D2A003A591A /* burgershop-finder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "burgershop-finder-Bridging-Header.h"; sourceTree = "<group>"; };
+		7213F69621A76D2B003A591A /* FSOAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSOAuth.h; sourceTree = "<group>"; };
+		7213F69721A76D2B003A591A /* FSOAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSOAuth.m; sourceTree = "<group>"; };
 		724BCD08216E5E62002F526E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		724BCD10216E7E7F002F526E /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		72AF5671216B5FC300102EA8 /* burgershop-finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "burgershop-finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,14 +105,17 @@
 		72AF5673216B5FC300102EA8 /* burgershop-finder */ = {
 			isa = PBXGroup;
 			children = (
-				72AF5674216B5FC300102EA8 /* AppDelegate.swift */,
-				72AF5676216B5FC300102EA8 /* ViewController.swift */,
 				724BCD14216E7EB3002F526E /* Network */,
+				72AF5674216B5FC300102EA8 /* AppDelegate.swift */,
+				7213F69621A76D2B003A591A /* FSOAuth.h */,
+				7213F69721A76D2B003A591A /* FSOAuth.m */,
+				72AF5676216B5FC300102EA8 /* ViewController.swift */,
 				724BCD08216E5E62002F526E /* Constants.swift */,
 				72AF5678216B5FC300102EA8 /* Main.storyboard */,
 				72AF567B216B5FC400102EA8 /* Assets.xcassets */,
 				72AF567D216B5FC400102EA8 /* LaunchScreen.storyboard */,
 				72AF5680216B5FC400102EA8 /* Info.plist */,
+				7213F69521A76D2A003A591A /* burgershop-finder-Bridging-Header.h */,
 			);
 			path = "burgershop-finder";
 			sourceTree = "<group>";
@@ -145,6 +152,7 @@
 				TargetAttributes = {
 					72AF5670216B5FC300102EA8 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -196,6 +204,7 @@
 				72D223092177B167003C04F6 /* Item.swift in Sources */,
 				72AF5675216B5FC300102EA8 /* AppDelegate.swift in Sources */,
 				72D223152177B370003C04F6 /* Venue.swift in Sources */,
+				7213F69821A76D2B003A591A /* FSOAuth.m in Sources */,
 				724BCD09216E5E62002F526E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RB8S8SFW6F;
 				INFOPLIST_FILE = "burgershop-finder/Info.plist";
@@ -351,6 +361,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "app.esesmuedgars.burgershop-finder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "burgershop-finder/burgershop-finder-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -360,6 +372,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RB8S8SFW6F;
 				INFOPLIST_FILE = "burgershop-finder/Info.plist";
@@ -369,6 +382,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "app.esesmuedgars.burgershop-finder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "burgershop-finder/burgershop-finder-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
