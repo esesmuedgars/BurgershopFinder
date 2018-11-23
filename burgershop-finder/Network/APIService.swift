@@ -17,7 +17,7 @@ extension String: LocalizedError {
 class APIService {
 
     enum Callback {
-        typealias Success = (Identifiers) -> Void
+        typealias Success = (FSIdentifiers) -> Void
         typealias Successs = (Data) -> Void
         typealias Fail = (String?) -> Void
     }
@@ -30,9 +30,9 @@ class APIService {
         let parameters = [URLQueryItem(with: .clientId, value: Constants.identifier),
                           URLQueryItem(with: .clientSecret, value: Constants.secret),
                           URLQueryItem(with: .version, value: Constants.version),
-                          URLQueryItem(with: .location, value: "Tallin, Estonia"),
+                          URLQueryItem(with: .location, value: "Tallin"),
                           URLQueryItem(with: .venue, value: "Burger Joint"),
-                          URLQueryItem(with: .limit, value: "50")]
+                          URLQueryItem(with: .limit, value: "20")]
 
         let request = Endpoint.search.request(with: parameters)
 
@@ -42,11 +42,11 @@ class APIService {
                     throw "Fetch venues API call returned no data."
                 }
 
-                guard 200 ... 299 ~= response.statusCode else {
-                    throw "Expected response status code in range between 200 - 299, but received \(response.statusCode)."
+                guard 200 ..< 300 ~= response.statusCode else {
+                    throw "Expected success status code, but received \(response.statusCode)."
                 }
 
-                success(try Identifiers.parse(data: data))
+                success(try FSIdentifiers.parse(data: data))
             } catch {
                 fail(error.localizedDescription.errorDescription)
             }
@@ -66,10 +66,10 @@ class APIService {
                     throw "Inspect venue API call returned no data."
                 }
 
-                guard 200 ... 299 ~= response.statusCode else {
-                    throw "Expected response status code in range between 200 - 299, but received \(response.statusCode)."
+                guard 200 ..< 300 ~= response.statusCode else {
+                    throw "Expected success status code, but received \(response.statusCode)."
                 }
-                let details = try JSONDecoder().decode(Details.self, from: data)
+                let details = try JSONDecoder().decode(FSDetails.self, from: data)
                 print(details.response.venue.id)
                 // FIXME:
             } catch {

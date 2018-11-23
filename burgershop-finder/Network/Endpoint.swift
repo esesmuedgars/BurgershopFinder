@@ -9,15 +9,12 @@
 import Foundation
 
 enum Endpoint {
-    case explore
     case search
     case details(withIdentifier: String)
 
     private var rawValue: String {
         get {
             switch self {
-            case .explore:
-                return "explore"
             case .search:
                 return "search"
             case .details(let identifier):

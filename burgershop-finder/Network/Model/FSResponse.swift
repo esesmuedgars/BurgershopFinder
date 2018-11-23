@@ -1,5 +1,5 @@
 //
-//  Response.swift
+//  FSResponse.swift
 //  burgershop-finder
 //
 //  Created by e.vanags on 17/10/2018.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Response: Codable {
-    var venue: Venue
+struct FSResponse: Codable {
+    var venue: FSVenue
 }

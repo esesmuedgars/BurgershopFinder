@@ -1,5 +1,5 @@
 //
-//  Location.swift
+//  FSLocation.swift
 //  burgershop-finder
 //
 //  Created by e.vanags on 10/10/2018.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class Location: NSObject, Codable {
+final class FSLocation: NSObject, Codable {
     var address: String?
     var latitude: Double
     var longitude: Double

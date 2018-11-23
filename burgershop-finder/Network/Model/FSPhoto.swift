@@ -1,5 +1,5 @@
 //
-//  Photo.swift
+//  FSPhoto.swift
 //  burgershop-finder
 //
 //  Created by e.vanags on 17/10/2018.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct Photo: Codable {
-    private var groups: Groups
+struct FSPhoto: Codable {
+    private var groups: FSGroups
 
-    var group: Group {
+    var group: FSGroup {
         get {
             return groups.first(where: { $0.type == "venue" })!
         }

@@ -1,5 +1,5 @@
 //
-//  Item.swift
+//  FSItem.swift
 //  burgershop-finder
 //
 //  Created by e.vanags on 17/10/2018.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-typealias Items = [Item]
+typealias FSItems = [FSItem]
 
-struct Item: Codable {
+struct FSItem: Codable {
     private var prefix: String
     private var suffix: String
 

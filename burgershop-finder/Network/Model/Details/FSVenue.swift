@@ -1,5 +1,5 @@
 //
-//  Venue.swift
+//  FSVenue.swift
 //  burgershop-finder
 //
 //  Created by e.vanags on 17/10/2018.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct Venue: Codable {
+struct FSVenue: Codable {
     var id: String
     var name: String
-    var location: Location
-    var photo: Photo
+    var location: FSLocation
+    var photo: FSPhoto
 
     enum CodingKeys: String, CodingKey {
         case id

@@ -1,5 +1,5 @@
 //
-//  Details.swift
+//  FSDetails.swift
 //  burgershop-finder
 //
 //  Created by e.vanags on 17/10/2018.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Details: Codable {
-    var response: Response
+struct FSDetails: Codable {
+    var response: FSResponse
 }

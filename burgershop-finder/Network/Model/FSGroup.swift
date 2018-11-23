@@ -1,5 +1,5 @@
 //
-//  Group.swift
+//  FSGroup.swift
 //  burgershop-finder
 //
 //  Created by e.vanags on 17/10/2018.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-typealias Groups = [Group]
+typealias FSGroups = [FSGroup]
 
-struct Group: Codable {
+struct FSGroup: Codable {
     var type: String
-    var items: Items
+    var items: FSItems
 }
