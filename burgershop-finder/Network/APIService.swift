@@ -77,4 +77,16 @@ class APIService {
             }
         }.resume()
     }
+
+    // #debug
+    func inspectVenue(with token: String) {
+        let string = "https://api.foursquare.com/v2/venues/57ab6aac38fa3daa126ddd6f?oauth_token=\(token)&v=20180929"
+        let url = URL(string: string)!
+        let request = URLRequest(url: url)
+
+        URLSession.shared.dataTask(with: request) { (_, response, _) in
+            guard let response = response as? HTTPURLResponse else { return }
+            print(response)
+        }.resume()
+    }
 }
