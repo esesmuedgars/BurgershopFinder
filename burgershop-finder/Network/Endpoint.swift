@@ -23,12 +23,15 @@ enum Endpoint {
         }
     }
 
-    static private let base = "https://api.foursquare.com/v2/venues"
+    private var base: String {
+        return "https://api.foursquare.com/v2/venues"
+    }
 }
 
 enum Parameter: String {
-    case clientId = "client_id"
-    case clientSecret = "client_secret"
+    case identifier = "client_id"
+    case secret = "client_secret"
+    case token = "oauth_token"
     case version = "v"
     case location = "near"
     case venue = "query"
@@ -43,7 +46,7 @@ extension URLQueryItem {
 
 extension Endpoint {
     func url() -> URL {
-        var url = URL(string: Endpoint.base)!
+        var url = URL(string: base)!
         url.appendPathComponent(rawValue)
         return url
     }

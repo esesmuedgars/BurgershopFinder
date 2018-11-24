@@ -2,20 +2,46 @@
 //  Constants.swift
 //  burgershop-finder
 //
-//  Created by e.vanags on 10/10/2018.
+//  Created by e.vanags on 24/11/2018.
 //  Copyright © 2018 esesmuedgars. All rights reserved.
 //
 
 import Foundation
 
-enum Constants {
+struct Constants {
+
+    static var scheme: String {
+        return "fsburgershopfinder"
+    }
+
+    /// Add `callbackURI` string to your application `Redirect URI(s)`.
+    static var callbackURI: String {
+        return "fsburgershopfinder://authorized"
+    }
+
+    /// Replace `client_id` with your Foursquare application `Client ID` string.
     static var identifier: String {
-        return "ZEQXGVOW2EVMR2VR5PPQVUR5A2UP2VLTP4KJDX0AJTB103J3" // FIXME: deleted
+        return "client_id"
     }
+
+    /// Replace `client_secret` with your Foursquare application `Client Secret` string.
     static var secret: String {
-        return "0YVZ4G0YETNJOOJIISC1EBF1TAFPSV222MKJDFGOEAP2XQ5I" // FIXME: deleted
+        return "client_secret"
     }
+
     static var version: String {
         return "20180927"
+    }
+
+    static var location: String {
+        return "Tallin"
+    }
+
+    static var venue: String {
+        return "Burger Joint"
+    }
+
+    static var limit: String {
+        return "20"
     }
 }

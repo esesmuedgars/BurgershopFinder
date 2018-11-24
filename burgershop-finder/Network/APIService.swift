@@ -14,7 +14,15 @@ extension String: LocalizedError {
     public var errorDescription: String? { return self }
 }
 
-class APIService {
+protocol APIServiceProtocol {
+    func fetchVenues(success: @escaping APIService.Callback.Success, fail: @escaping APIService.Callback.Fail)
+    func inspectVenue(with identifier: String, success: @escaping APIService.Callback.Successs, fail: @escaping APIService.Callback.Fail)
+
+    // #debug
+    func inspectVenue(with token: String)
+}
+
+final class APIService: APIServiceProtocol {
 
     enum Callback {
         typealias Success = (FSIdentifiers) -> Void
@@ -22,17 +30,14 @@ class APIService {
         typealias Fail = (String?) -> Void
     }
 
-    static let shared = APIService()
-
-    private init() {}
 
     func fetchVenues(success: @escaping Callback.Success, fail: @escaping Callback.Fail) {
-        let parameters = [URLQueryItem(with: .clientId, value: Constants.identifier),
-                          URLQueryItem(with: .clientSecret, value: Constants.secret),
+        let parameters = [URLQueryItem(with: .identifier, value: Constants.identifier),
+                          URLQueryItem(with: .secret, value: Constants.secret),
                           URLQueryItem(with: .version, value: Constants.version),
-                          URLQueryItem(with: .location, value: "Tallin"),
-                          URLQueryItem(with: .venue, value: "Burger Joint"),
-                          URLQueryItem(with: .limit, value: "20")]
+                          URLQueryItem(with: .location, value: Constants.location),
+                          URLQueryItem(with: .venue, value: Constants.venue),
+                          URLQueryItem(with: .limit, value: Constants.limit)]
 
         let request = Endpoint.search.request(with: parameters)
 
@@ -54,8 +59,8 @@ class APIService {
     }
 
     func inspectVenue(with identifier: String, success: @escaping Callback.Successs, fail: @escaping Callback.Fail) {
-        let parameters = [URLQueryItem(with: .clientId, value: Constants.identifier),
-                          URLQueryItem(with: .clientSecret, value: Constants.secret),
+        let parameters = [URLQueryItem(with: .identifier, value: Constants.identifier),
+                          URLQueryItem(with: .secret, value: Constants.secret),
                           URLQueryItem(with: .version, value: Constants.version)]
 
         let request = Endpoint.details(withIdentifier: identifier).request(with: parameters)
@@ -69,9 +74,9 @@ class APIService {
                 guard 200 ..< 300 ~= response.statusCode else {
                     throw "Expected success status code, but received \(response.statusCode)."
                 }
+                // FIXME:
                 let details = try JSONDecoder().decode(FSDetails.self, from: data)
                 print(details.response.venue.id)
-                // FIXME:
             } catch {
                 fail(error.localizedDescription.errorDescription)
             }

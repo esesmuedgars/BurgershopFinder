@@ -8,20 +8,14 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
 
-    private lazy var authorized = false
+    private lazy var viewModel = HomeViewModel()
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        if !authorized {
-            authorized = AuthManager.shared.authorize(presenter: self)
-        }
-
-        if let authToken = AuthManager.shared.authToken {
-            APIService.shared.inspectVenue(with: authToken)
-        }
+        viewModel.authorize(self)
     }
 }
 
