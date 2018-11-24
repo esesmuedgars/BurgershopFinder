@@ -42,6 +42,6 @@ struct Constants {
     }
 
     static var limit: String {
-        return "20"
+        return "12"
     }
 }
