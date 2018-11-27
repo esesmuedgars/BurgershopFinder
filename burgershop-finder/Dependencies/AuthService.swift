@@ -67,8 +67,7 @@ final class AuthService: AuthServiceProtocol {
             if errorCode == .none {
                 requestAccessToken(accessCode: accessCode!)
             } else {
-                // FIXME: handle error
-                print(errorMessageForCode(errorCode: errorCode))
+                errorMessageForCode(errorCode: errorCode)
             }
         }
     }
@@ -82,8 +81,7 @@ final class AuthService: AuthServiceProtocol {
                 if (errorCode == .none) {
                     self?._authToken.value = authToken
                 } else {
-                    // FIXME: handle error
-                    print(self?.errorMessageForCode(errorCode: errorCode) as Any)
+                    self?.errorMessageForCode(errorCode: errorCode)
                 }
             } else {
                 print("An error occured when attempting to connect to the Foursquare server.")
@@ -91,24 +89,22 @@ final class AuthService: AuthServiceProtocol {
         }
     }
 
-    private func errorMessageForCode(errorCode: FSOAuthErrorCode) -> String {
-        var resultText: String = ""
+    private func errorMessageForCode(errorCode: FSOAuthErrorCode) {
         switch errorCode {
         case .none:
             break
         case .invalidClient:
-            resultText = "Invalid client error"
+            print("Invalid client error")
         case .invalidGrant:
-            resultText = "Invalid grant error"
+            print("Invalid grant error")
         case .invalidRequest:
-            resultText = "Invalid request error"
+            print("Invalid request error")
         case .unauthorizedClient:
-            resultText = "Invalid unauthorized client error"
+            print("Invalid unauthorized client error")
         case .unsupportedGrantType:
-            resultText = "Invalid unsupported grant error"
+            print("Invalid unsupported grant error")
         case .unknown:
-            resultText = "Unknown error"
+            print("Unknown error")
         }
-        return resultText
     }
 }

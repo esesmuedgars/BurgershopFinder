@@ -12,7 +12,8 @@ import RxCocoa
 
 final class VenueCellModel {
 
-    private let venueId: String
+    let venueId: String
+
     private let apiService: APIServiceProtocol
     private let authService: AuthServiceProtocol
 

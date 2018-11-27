@@ -26,7 +26,6 @@ final class APIService: APIServiceProtocol {
         let request = Endpoint.search.request(with: parameters)
 
         return URLSession.shared.rx.response(request: request)
-//            .debug(#function)
             .flatMap { arguments -> Observable<FSIdentifiers> in
                 let (response, data) = arguments
 
@@ -54,7 +53,6 @@ final class APIService: APIServiceProtocol {
         let request = Endpoint.details(withIdentifier: identifier).request(with: parameters)
 
         return URLSession.shared.rx.response(request: request)
-//            .debug(#function)
             .flatMap { arguments -> Observable<FSDetails> in
                 let (response, data) = arguments
 

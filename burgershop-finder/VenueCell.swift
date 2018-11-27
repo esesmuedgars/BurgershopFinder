@@ -41,35 +41,27 @@ final class VenueCell: UICollectionViewCell {
     }
 
     private func addHandlers() {
-        viewModel.venueDetails.map { (details) -> UIImage? in
-            guard let details = details else {
-                print("details are nil")
-                return #imageLiteral(resourceName: "Cheeseburger.pdf")
-            }
+        viewModel.venueDetails.map { [weak self] (details) -> UIImage? in
+            guard let identifier = self?.viewModel.venueId else { return UIImage(named: "Cheeseburger") }
 
-            guard let photos = details.photos else {
-                print("no venue in groups: \(details.photos)")
-                return #imageLiteral(resourceName: "Cheeseburger.pdf")
-            }
-
-            if let url = photos.first {
-                return UIImage(item: url)
-            } else if let url = photos.last {
-                return UIImage(item: url)
+            if let image = CacheManager.shared.cache.get(forKey: identifier) {
+                return image
             } else {
-                print("Not first nor last: \(details.photos)")
-                return #imageLiteral(resourceName: "Cheeseburger.pdf")
+                CacheManager.shared.cache.set(UIImage(named: "Cheeseburger"), forKey: identifier)
+                guard let photos = details?.photos else { return UIImage(named: "Cheeseburger") }
+
+                if let photo = photos.first {
+                    let image = UIImage(photo)
+                    CacheManager.shared.cache.set(image, forKey: identifier)
+                    return image
+                } else {
+                    return UIImage(named: "Cheeseburger")
+                }
             }
         }.observeOn(MainScheduler.asyncInstance)
-            .bind(to: imageView.rx.image)
+        .bind(to: imageView.rx.image)
         .disposed(by: viewModel.disposeBag)
     }
 }
 
-extension UIImage {
-    convenience init?(item: FSItem) {
-        guard let data = try? Data(contentsOf: item.url) else { return nil }
 
-        self.init(data: data)
-    }
-}

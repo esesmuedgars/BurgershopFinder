@@ -17,19 +17,32 @@ extension String: LocalizedError {
 }
 
 extension Reactive where Base : UICollectionView {
-
     public func items<S, Cell, O>(cellType: Cell.Type) -> (O) -> (@escaping (Int, S.Iterator.Element, Cell) -> Void) -> Disposable where S : Sequence, S == O.E, Cell : UICollectionViewCell, O : ObservableType {
         return items(cellIdentifier: String(describing: cellType), cellType: cellType)
     }
 }
 
-/// Called from AppDelegate of application target.
-/// Test targed gets its own registerDependencies() implementation,
-/// with its own types (mocks) where needed.
 extension DependencyAssembler {
-
     static func registerDependencies() {
         register(dependencies: MainDependencies())
     }
 }
 
+extension NSCache where KeyType == NSString, ObjectType == UIImage {
+    func get(forKey key: String) -> UIImage? {
+        return object(forKey: NSString(string: key))
+    }
+
+    func set(_ image: UIImage?, forKey key: String) {
+        if let image = image {
+            setObject(image, forKey: NSString(string: key))
+        }
+    }
+}
+
+extension UIImage {
+    convenience init?(_ photo: FSItem) {
+        guard let data = try? Data(contentsOf: photo.url) else { return nil }
+        self.init(data: data)
+    }
+}

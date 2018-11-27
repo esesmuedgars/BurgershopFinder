@@ -22,6 +22,8 @@
 		72C4E6A421ADBB64009FB99C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4E6A321ADBB64009FB99C /* Extensions.swift */; };
 		72C4E6A621ADD19E009FB99C /* VenueCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4E6A521ADD19E009FB99C /* VenueCellModel.swift */; };
 		72C4E6A821ADE4C6009FB99C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C4E6A721ADE4C6009FB99C /* Assets.xcassets */; };
+		72C4E6AA21ADE714009FB99C /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4E6A921ADE714009FB99C /* CacheManager.swift */; };
+		72C4E6AC21ADE822009FB99C /* DependencyAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4E6AB21ADE822009FB99C /* DependencyAssembler.swift */; };
 		72D223092177B167003C04F6 /* FSItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D223082177B167003C04F6 /* FSItem.swift */; };
 		72D2230D2177B1BD003C04F6 /* FSGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D2230C2177B1BD003C04F6 /* FSGroup.swift */; };
 		72D2230F2177B23D003C04F6 /* FSPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D2230E2177B23D003C04F6 /* FSPhoto.swift */; };
@@ -33,7 +35,7 @@
 		72D62DCA21AA1AC600FF4BD9 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D62DC921AA1AC600FF4BD9 /* GradientView.swift */; };
 		72E572BE21A9B09D009F1278 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E572BD21A9B09D009F1278 /* HomeViewModel.swift */; };
 		72E572C021A9C786009F1278 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E572BF21A9C786009F1278 /* Constants.swift */; };
-		72E572C221A9CE2B009F1278 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E572C121A9CE2B009F1278 /* Dependencies.swift */; };
+		72E572C221A9CE2B009F1278 /* MainDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E572C121A9CE2B009F1278 /* MainDependencies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		72C4E6A321ADBB64009FB99C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		72C4E6A521ADD19E009FB99C /* VenueCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCellModel.swift; sourceTree = "<group>"; };
 		72C4E6A721ADE4C6009FB99C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		72C4E6A921ADE714009FB99C /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		72C4E6AB21ADE822009FB99C /* DependencyAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyAssembler.swift; sourceTree = "<group>"; };
 		72D223082177B167003C04F6 /* FSItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSItem.swift; sourceTree = "<group>"; };
 		72D2230C2177B1BD003C04F6 /* FSGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSGroup.swift; sourceTree = "<group>"; };
 		72D2230E2177B23D003C04F6 /* FSPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPhoto.swift; sourceTree = "<group>"; };
@@ -67,7 +71,7 @@
 		72D62DC921AA1AC600FF4BD9 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		72E572BD21A9B09D009F1278 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		72E572BF21A9C786009F1278 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		72E572C121A9CE2B009F1278 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		72E572C121A9CE2B009F1278 /* MainDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDependencies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,10 +115,12 @@
 		724BCD14216E7EB3002F526E /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				72C4E6AB21ADE822009FB99C /* DependencyAssembler.swift */,
+				72E572C121A9CE2B009F1278 /* MainDependencies.swift */,
 				7213F69A21A7729F003A591A /* AuthService.swift */,
-				724BCD13216E7E93002F526E /* Model */,
 				72AF5686216B635300102EA8 /* APIService.swift */,
 				72AF5688216B662F00102EA8 /* Endpoint.swift */,
+				724BCD13216E7E93002F526E /* Model */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -152,17 +158,17 @@
 				724BCD14216E7EB3002F526E /* Dependencies */,
 				72E572BD21A9B09D009F1278 /* HomeViewModel.swift */,
 				72AF5676216B5FC300102EA8 /* HomeViewController.swift */,
+				72C4E6A521ADD19E009FB99C /* VenueCellModel.swift */,
+				72C4E6A121ADB49F009FB99C /* VenueCell.swift */,
+				72C4E6A921ADE714009FB99C /* CacheManager.swift */,
+				72E572BF21A9C786009F1278 /* Constants.swift */,
+				72C4E6A321ADBB64009FB99C /* Extensions.swift */,
+				72D62DC721AA1A3900FF4BD9 /* MapView.swift */,
+				72D62DC921AA1AC600FF4BD9 /* GradientView.swift */,
+				72AF5674216B5FC300102EA8 /* AppDelegate.swift */,
 				72AF5678216B5FC300102EA8 /* Main.storyboard */,
 				72AF567D216B5FC400102EA8 /* LaunchScreen.storyboard */,
 				72AF5680216B5FC400102EA8 /* Info.plist */,
-				72AF5674216B5FC300102EA8 /* AppDelegate.swift */,
-				72E572BF21A9C786009F1278 /* Constants.swift */,
-				72E572C121A9CE2B009F1278 /* Dependencies.swift */,
-				72D62DC721AA1A3900FF4BD9 /* MapView.swift */,
-				72D62DC921AA1AC600FF4BD9 /* GradientView.swift */,
-				72C4E6A121ADB49F009FB99C /* VenueCell.swift */,
-				72C4E6A521ADD19E009FB99C /* VenueCellModel.swift */,
-				72C4E6A321ADBB64009FB99C /* Extensions.swift */,
 				72C4E6A721ADE4C6009FB99C /* Assets.xcassets */,
 			);
 			path = "burgershop-finder";
@@ -268,11 +274,13 @@
 				72AF5677216B5FC300102EA8 /* HomeViewController.swift in Sources */,
 				72D223112177B325003C04F6 /* FSDetails.swift in Sources */,
 				72D2230D2177B1BD003C04F6 /* FSGroup.swift in Sources */,
-				72E572C221A9CE2B009F1278 /* Dependencies.swift in Sources */,
+				72E572C221A9CE2B009F1278 /* MainDependencies.swift in Sources */,
 				72E572BE21A9B09D009F1278 /* HomeViewModel.swift in Sources */,
 				72D223192177B9D7003C04F6 /* FSIdentifier.swift in Sources */,
+				72C4E6AA21ADE714009FB99C /* CacheManager.swift in Sources */,
 				7213F69B21A7729F003A591A /* AuthService.swift in Sources */,
 				72D62DC821AA1A3900FF4BD9 /* MapView.swift in Sources */,
+				72C4E6AC21ADE822009FB99C /* DependencyAssembler.swift in Sources */,
 				724BCD11216E7E7F002F526E /* FSLocation.swift in Sources */,
 				72C4E6A221ADB49F009FB99C /* VenueCell.swift in Sources */,
 				72C4E6A421ADBB64009FB99C /* Extensions.swift in Sources */,

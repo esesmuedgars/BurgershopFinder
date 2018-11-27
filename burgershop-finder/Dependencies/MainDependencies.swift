@@ -1,5 +1,5 @@
 //
-//  Dependencies.swift
+//  MainDependencies.swift
 //  burgershop-finder
 //
 //  Created by e.vanags on 24/11/2018.
@@ -9,29 +9,19 @@
 import Foundation
 
 protocol Dependencies {
-    func apiService() -> APIServiceProtocol
     func authService() -> AuthServiceProtocol
+    func apiService() -> APIServiceProtocol
 }
 
 final class MainDependencies: Dependencies {
-
-    private let _apiService = APIService()
-    func apiService() -> APIServiceProtocol {
-        return _apiService
-    }
 
     private let _authService = AuthService()
     func authService() -> AuthServiceProtocol {
         return _authService
     }
-}
 
-struct DependencyAssembler {
-
-    private(set) static var dependencies: Dependencies!
-
-    static func register(dependencies: Dependencies) {
-        self.dependencies = dependencies
+    private let _apiService = APIService()
+    func apiService() -> APIServiceProtocol {
+        return _apiService
     }
 }
-
