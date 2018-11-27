@@ -20,6 +20,7 @@ protocol AuthServiceProtocol {
     func requestToken(_ url: URL)
 
     var authToken: Observable<String?> { get }
+    var rawToken: String? { get }
 }
 
 final class AuthService: AuthServiceProtocol {
@@ -27,6 +28,10 @@ final class AuthService: AuthServiceProtocol {
     private lazy var _authToken: Variable<String?> = Variable(nil)
     var authToken: Observable<String?> {
         return _authToken.asObservable()
+    }
+
+    var rawToken: String? {
+        return _authToken.value
     }
 
     private var authService: FSOAuth {
@@ -40,20 +45,18 @@ final class AuthService: AuthServiceProtocol {
                                                    allowShowingAppStore: true,
                                                    presentFrom: viewController)
 
-        var resultText: String = ""
         switch(statuscode) {
         case .success:
             break
         case .errorInvalidCallback:
-            resultText = "Invalid callback URI"
+            print("Invalid callback URI")
         case .errorFoursquareNotInstalled:
-            resultText = "Foursquare is not installed"
+            print("Foursquare is not installed")
         case .errorInvalidClientID:
-            resultText = "Invalid client id"
+            print("Invalid client identifier")
         case .errorFoursquareOAuthNotSupported:
-            resultText = "Installed Foursquare App doesn't support oAuth"
+            print("Installed Foursquare App doesn't support oAuth")
         }
-        print(resultText)
     }
 
     func requestToken(_ url: URL) {
@@ -77,8 +80,6 @@ final class AuthService: AuthServiceProtocol {
                                        clientSecret: Constants.secret) { [weak self] (authToken, requestCompleted, errorCode) in
             if requestCompleted {
                 if (errorCode == .none) {
-                    // FIXME: use authToken!
-                    print("request completed")
                     self?._authToken.value = authToken
                 } else {
                     // FIXME: handle error

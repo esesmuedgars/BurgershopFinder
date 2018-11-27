@@ -1,5 +1,5 @@
 //
-//  UIMapView.swift
+//  MapView.swift
 //  burgershop-finder
 //
 //  Created by e.vanags on 25/11/2018.
@@ -28,7 +28,7 @@ class SetupMapView: MKMapView {
 }
 
 @IBDesignable
-final class UIMapView: SetupMapView {
+final class MapView: SetupMapView {
 
     @IBInspectable
     var cornerRadius: CGFloat = 0 {

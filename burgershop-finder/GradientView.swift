@@ -1,5 +1,5 @@
 //
-//  UIGradientView.swift
+//  GradientView.swift
 //  burgershop-finder
 //
 //  Created by e.vanags on 25/11/2018.
@@ -28,7 +28,7 @@ class SetupView: UIView {
 }
 
 @IBDesignable
-final class UIGradientView: SetupView {
+final class GradientView: SetupView {
     override func setup() {
         autoresizingMask = [.flexibleWidth, .flexibleHeight]
         layer.frame = bounds

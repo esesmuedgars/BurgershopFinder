@@ -11,9 +11,9 @@ import Foundation
 struct FSPhoto: Codable {
     private var groups: FSGroups
 
-    var group: FSGroup {
+    var group: FSGroup? {
         get {
-            return groups.first(where: { $0.type == "venue" })!
+            return groups.first(where: { $0.type == "venue" })
         }
     }
 }

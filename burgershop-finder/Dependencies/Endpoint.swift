@@ -29,8 +29,6 @@ enum Endpoint {
 }
 
 enum Parameter: String {
-    case identifier = "client_id"
-    case secret = "client_secret"
     case token = "oauth_token"
     case version = "v"
     case location = "near"

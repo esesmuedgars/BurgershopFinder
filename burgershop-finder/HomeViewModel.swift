@@ -14,7 +14,7 @@ final class HomeViewModel {
     private let apiService: APIServiceProtocol
     private let authService: AuthServiceProtocol
 
-    private lazy var userAuthorized = Bool()
+    private lazy var userAuthorized = false
 
     private(set) lazy var disposeBag = DisposeBag()
 
@@ -28,16 +28,30 @@ final class HomeViewModel {
         self.apiService = apiService
         self.authService = authService
 
-        authService.authToken.map { authToken -> Bool in
+        authService.authToken.skip(1)
+            .map { authToken -> Bool in
                 return authToken != nil
             }.subscribe { [weak self] event in
-                self?.userAuthorized = event.element!
+                print("🦋 \(event.element!)")
+                self?.fetchVenues()
+//                self?.userAuthorized = event.element!
             }.disposed(by: disposeBag)
     }
 
     func authorize(_ viewController: UIViewController) {
+        print("🦑 \(!userAuthorized)")
         if !userAuthorized {
             authService.authorize(viewController)
+            userAuthorized = true
         }
+    }
+
+    private func fetchVenues() {
+        apiService.fetchVenues(authToken: authService.rawToken!)
+            .subscribe(onNext: { [weak self] items in
+                self?._items.value = items
+            }, onError: { error in
+                print(error)
+            }).disposed(by: disposeBag)
     }
 }

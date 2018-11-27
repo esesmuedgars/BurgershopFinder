@@ -15,10 +15,13 @@
 		72AF5675216B5FC300102EA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF5674216B5FC300102EA8 /* AppDelegate.swift */; };
 		72AF5677216B5FC300102EA8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF5676216B5FC300102EA8 /* HomeViewController.swift */; };
 		72AF567A216B5FC300102EA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72AF5678216B5FC300102EA8 /* Main.storyboard */; };
-		72AF567C216B5FC400102EA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72AF567B216B5FC400102EA8 /* Assets.xcassets */; };
 		72AF567F216B5FC400102EA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72AF567D216B5FC400102EA8 /* LaunchScreen.storyboard */; };
 		72AF5687216B635300102EA8 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF5686216B635300102EA8 /* APIService.swift */; };
 		72AF5689216B662F00102EA8 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF5688216B662F00102EA8 /* Endpoint.swift */; };
+		72C4E6A221ADB49F009FB99C /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4E6A121ADB49F009FB99C /* VenueCell.swift */; };
+		72C4E6A421ADBB64009FB99C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4E6A321ADBB64009FB99C /* Extensions.swift */; };
+		72C4E6A621ADD19E009FB99C /* VenueCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4E6A521ADD19E009FB99C /* VenueCellModel.swift */; };
+		72C4E6A821ADE4C6009FB99C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C4E6A721ADE4C6009FB99C /* Assets.xcassets */; };
 		72D223092177B167003C04F6 /* FSItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D223082177B167003C04F6 /* FSItem.swift */; };
 		72D2230D2177B1BD003C04F6 /* FSGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D2230C2177B1BD003C04F6 /* FSGroup.swift */; };
 		72D2230F2177B23D003C04F6 /* FSPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D2230E2177B23D003C04F6 /* FSPhoto.swift */; };
@@ -26,8 +29,8 @@
 		72D223132177B35D003C04F6 /* FSResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D223122177B35D003C04F6 /* FSResponse.swift */; };
 		72D223152177B370003C04F6 /* FSVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D223142177B370003C04F6 /* FSVenue.swift */; };
 		72D223192177B9D7003C04F6 /* FSIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D223182177B9D7003C04F6 /* FSIdentifier.swift */; };
-		72D62DC821AA1A3900FF4BD9 /* UIMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D62DC721AA1A3900FF4BD9 /* UIMapView.swift */; };
-		72D62DCA21AA1AC600FF4BD9 /* UIGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D62DC921AA1AC600FF4BD9 /* UIGradientView.swift */; };
+		72D62DC821AA1A3900FF4BD9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D62DC721AA1A3900FF4BD9 /* MapView.swift */; };
+		72D62DCA21AA1AC600FF4BD9 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D62DC921AA1AC600FF4BD9 /* GradientView.swift */; };
 		72E572BE21A9B09D009F1278 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E572BD21A9B09D009F1278 /* HomeViewModel.swift */; };
 		72E572C021A9C786009F1278 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E572BF21A9C786009F1278 /* Constants.swift */; };
 		72E572C221A9CE2B009F1278 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E572C121A9CE2B009F1278 /* Dependencies.swift */; };
@@ -45,11 +48,14 @@
 		72AF5674216B5FC300102EA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72AF5676216B5FC300102EA8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		72AF5679216B5FC300102EA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		72AF567B216B5FC400102EA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72AF567E216B5FC400102EA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72AF5680216B5FC400102EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72AF5686216B635300102EA8 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		72AF5688216B662F00102EA8 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		72C4E6A121ADB49F009FB99C /* VenueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
+		72C4E6A321ADBB64009FB99C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		72C4E6A521ADD19E009FB99C /* VenueCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCellModel.swift; sourceTree = "<group>"; };
+		72C4E6A721ADE4C6009FB99C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72D223082177B167003C04F6 /* FSItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSItem.swift; sourceTree = "<group>"; };
 		72D2230C2177B1BD003C04F6 /* FSGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSGroup.swift; sourceTree = "<group>"; };
 		72D2230E2177B23D003C04F6 /* FSPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPhoto.swift; sourceTree = "<group>"; };
@@ -57,8 +63,8 @@
 		72D223122177B35D003C04F6 /* FSResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSResponse.swift; sourceTree = "<group>"; };
 		72D223142177B370003C04F6 /* FSVenue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSVenue.swift; sourceTree = "<group>"; };
 		72D223182177B9D7003C04F6 /* FSIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSIdentifier.swift; sourceTree = "<group>"; };
-		72D62DC721AA1A3900FF4BD9 /* UIMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMapView.swift; sourceTree = "<group>"; };
-		72D62DC921AA1AC600FF4BD9 /* UIGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGradientView.swift; sourceTree = "<group>"; };
+		72D62DC721AA1A3900FF4BD9 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		72D62DC921AA1AC600FF4BD9 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		72E572BD21A9B09D009F1278 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		72E572BF21A9C786009F1278 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		72E572C121A9CE2B009F1278 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
@@ -102,14 +108,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		724BCD14216E7EB3002F526E /* Network */ = {
+		724BCD14216E7EB3002F526E /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				7213F69A21A7729F003A591A /* AuthService.swift */,
 				724BCD13216E7E93002F526E /* Model */,
 				72AF5686216B635300102EA8 /* APIService.swift */,
 				72AF5688216B662F00102EA8 /* Endpoint.swift */,
 			);
-			path = Network;
+			path = Dependencies;
 			sourceTree = "<group>";
 		};
 		729C490821A8CF5E0071903F /* Frameworks */ = {
@@ -142,19 +149,21 @@
 			isa = PBXGroup;
 			children = (
 				7213F69921A76D8A003A591A /* FSOAuth */,
-				724BCD14216E7EB3002F526E /* Network */,
-				7213F69A21A7729F003A591A /* AuthService.swift */,
+				724BCD14216E7EB3002F526E /* Dependencies */,
 				72E572BD21A9B09D009F1278 /* HomeViewModel.swift */,
 				72AF5676216B5FC300102EA8 /* HomeViewController.swift */,
 				72AF5678216B5FC300102EA8 /* Main.storyboard */,
-				72AF567B216B5FC400102EA8 /* Assets.xcassets */,
 				72AF567D216B5FC400102EA8 /* LaunchScreen.storyboard */,
 				72AF5680216B5FC400102EA8 /* Info.plist */,
 				72AF5674216B5FC300102EA8 /* AppDelegate.swift */,
 				72E572BF21A9C786009F1278 /* Constants.swift */,
 				72E572C121A9CE2B009F1278 /* Dependencies.swift */,
-				72D62DC721AA1A3900FF4BD9 /* UIMapView.swift */,
-				72D62DC921AA1AC600FF4BD9 /* UIGradientView.swift */,
+				72D62DC721AA1A3900FF4BD9 /* MapView.swift */,
+				72D62DC921AA1AC600FF4BD9 /* GradientView.swift */,
+				72C4E6A121ADB49F009FB99C /* VenueCell.swift */,
+				72C4E6A521ADD19E009FB99C /* VenueCellModel.swift */,
+				72C4E6A321ADBB64009FB99C /* Extensions.swift */,
+				72C4E6A721ADE4C6009FB99C /* Assets.xcassets */,
 			);
 			path = "burgershop-finder";
 			sourceTree = "<group>";
@@ -220,7 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72AF567F216B5FC400102EA8 /* LaunchScreen.storyboard in Resources */,
-				72AF567C216B5FC400102EA8 /* Assets.xcassets in Resources */,
+				72C4E6A821ADE4C6009FB99C /* Assets.xcassets in Resources */,
 				72AF567A216B5FC300102EA8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,15 +272,18 @@
 				72E572BE21A9B09D009F1278 /* HomeViewModel.swift in Sources */,
 				72D223192177B9D7003C04F6 /* FSIdentifier.swift in Sources */,
 				7213F69B21A7729F003A591A /* AuthService.swift in Sources */,
-				72D62DC821AA1A3900FF4BD9 /* UIMapView.swift in Sources */,
+				72D62DC821AA1A3900FF4BD9 /* MapView.swift in Sources */,
 				724BCD11216E7E7F002F526E /* FSLocation.swift in Sources */,
+				72C4E6A221ADB49F009FB99C /* VenueCell.swift in Sources */,
+				72C4E6A421ADBB64009FB99C /* Extensions.swift in Sources */,
 				72E572C021A9C786009F1278 /* Constants.swift in Sources */,
 				72AF5687216B635300102EA8 /* APIService.swift in Sources */,
+				72C4E6A621ADD19E009FB99C /* VenueCellModel.swift in Sources */,
 				72D223132177B35D003C04F6 /* FSResponse.swift in Sources */,
 				72AF5689216B662F00102EA8 /* Endpoint.swift in Sources */,
 				72D2230F2177B23D003C04F6 /* FSPhoto.swift in Sources */,
 				72D223092177B167003C04F6 /* FSItem.swift in Sources */,
-				72D62DCA21AA1AC600FF4BD9 /* UIGradientView.swift in Sources */,
+				72D62DCA21AA1AC600FF4BD9 /* GradientView.swift in Sources */,
 				72AF5675216B5FC300102EA8 /* AppDelegate.swift in Sources */,
 				72D223152177B370003C04F6 /* FSVenue.swift in Sources */,
 				7213F69821A76D2B003A591A /* FSOAuth.m in Sources */,

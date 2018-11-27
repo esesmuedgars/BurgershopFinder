@@ -15,10 +15,9 @@ protocol Dependencies {
 
 final class MainDependencies: Dependencies {
 
-//    private let _apiService = APIService()
+    private let _apiService = APIService()
     func apiService() -> APIServiceProtocol {
-//        return _apiService
-        return APIService()
+        return _apiService
     }
 
     private let _authService = AuthService()
@@ -29,7 +28,6 @@ final class MainDependencies: Dependencies {
 
 struct DependencyAssembler {
 
-    // this property shold not be modified externally. Use register(dependencies: )
     private(set) static var dependencies: Dependencies!
 
     static func register(dependencies: Dependencies) {
@@ -37,12 +35,3 @@ struct DependencyAssembler {
     }
 }
 
-/// Called from AppDelegate of application target.
-/// Test targed gets its own registerDependencies() implementation,
-/// with its own types (mocks) where needed.
-extension DependencyAssembler {
-
-    static func registerDependencies() {
-        register(dependencies: MainDependencies())
-    }
-}
