@@ -10,6 +10,7 @@
 		7213F69821A76D2B003A591A /* FSOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 7213F69721A76D2B003A591A /* FSOAuth.m */; };
 		7213F69B21A7729F003A591A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7213F69A21A7729F003A591A /* AuthService.swift */; };
 		724BCD11216E7E7F002F526E /* FSLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724BCD10216E7E7F002F526E /* FSLocation.swift */; };
+		726547CE21AE8FCB00F4DD77 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726547CD21AE8FCB00F4DD77 /* Common.swift */; };
 		729C490B21A8CF5E0071903F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729C490921A8CF5E0071903F /* RxCocoa.framework */; };
 		729C490C21A8CF5E0071903F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729C490A21A8CF5E0071903F /* RxSwift.framework */; };
 		72AF5675216B5FC300102EA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF5674216B5FC300102EA8 /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 		7213F69721A76D2B003A591A /* FSOAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSOAuth.m; sourceTree = "<group>"; };
 		7213F69A21A7729F003A591A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		724BCD10216E7E7F002F526E /* FSLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSLocation.swift; sourceTree = "<group>"; };
+		726547CD21AE8FCB00F4DD77 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		729C490921A8CF5E0071903F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		729C490A21A8CF5E0071903F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		72AF5671216B5FC300102EA8 /* burgershop-finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "burgershop-finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +172,7 @@
 				72AF567D216B5FC400102EA8 /* LaunchScreen.storyboard */,
 				72AF5680216B5FC400102EA8 /* Info.plist */,
 				72C4E6A721ADE4C6009FB99C /* Assets.xcassets */,
+				726547CD21AE8FCB00F4DD77 /* Common.swift */,
 			);
 			path = "burgershop-finder";
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				724BCD11216E7E7F002F526E /* FSLocation.swift in Sources */,
 				72C4E6A221ADB49F009FB99C /* VenueCell.swift in Sources */,
 				72C4E6A421ADBB64009FB99C /* Extensions.swift in Sources */,
+				726547CE21AE8FCB00F4DD77 /* Common.swift in Sources */,
 				72E572C021A9C786009F1278 /* Constants.swift in Sources */,
 				72AF5687216B635300102EA8 /* APIService.swift in Sources */,
 				72C4E6A621ADD19E009FB99C /* VenueCellModel.swift in Sources */,

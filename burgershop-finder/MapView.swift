@@ -6,26 +6,7 @@
 //  Copyright © 2018 esesmuedgars. All rights reserved.
 //
 
-import MapKit
-
-class SetupMapView: MKMapView {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setup()
-    }
-
-    func setup() {}
-}
+import UIKit
 
 @IBDesignable
 final class MapView: SetupMapView {

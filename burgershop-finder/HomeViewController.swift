@@ -20,6 +20,7 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         addHandlers()
+        CacheManager.shared.cache.removeAllObjects() // #debug
     }
 
     private func addHandlers() {
@@ -38,7 +39,6 @@ final class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Did select item at row: \(indexPath.row).")
     }
 }
 

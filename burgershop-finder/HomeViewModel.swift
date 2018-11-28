@@ -32,14 +32,12 @@ final class HomeViewModel {
             .map { authToken -> Bool in
                 return authToken != nil
             }.subscribe { [weak self] event in
-                print("🦋 \(event.element!)")
                 self?.fetchVenues()
 //                self?.userAuthorized = event.element!
             }.disposed(by: disposeBag)
     }
 
     func authorize(_ viewController: UIViewController) {
-        print("🦑 \(!userAuthorized)")
         if !userAuthorized {
             authService.authorize(viewController)
             userAuthorized = true
