@@ -34,7 +34,9 @@ final class VenueCell: SetupCell {
         }
     }
 
-    func configure(viewModel: VenueCellModel) {
+    func configure(with viewModel: VenueCellModel?) {
+        guard let viewModel = viewModel else { return }
+        
         self.viewModel = viewModel
 
         addHandlers()

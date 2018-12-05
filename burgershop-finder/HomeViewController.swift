@@ -12,21 +12,36 @@ import RxCocoa
 
 final class HomeViewController: UIViewController {
 
+    @IBOutlet private weak var titleLabel: TitleLabel!
+    @IBOutlet private weak var mapView: MapView!
     @IBOutlet private weak var collectionView: UICollectionView!
 
     private lazy var viewModel = HomeViewModel()
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        titleLabel.text = "Venues"
+
         addHandlers()
+        
         CacheManager.shared.cache.removeAllObjects() // #debug
     }
 
     private func addHandlers() {
-        viewModel.items.bind(to: collectionView.rx.items(cellType: VenueCell.self)) { (_, identifier, cell) in
-            let viewModel = VenueCellModel(forVenueWith: identifier)
-            cell.configure(viewModel: viewModel)
+        viewModel.details.observeOn(MainScheduler.instance)
+            .subscribe { [weak mapView] event in
+                guard let item = event.element, let annotation = item?.location else { return }
+                mapView?.addAnnotation(annotation)
+        }.disposed(by: viewModel.disposeBag)
+
+        viewModel.items.bind(to: collectionView.rx.items(cellType: VenueCell.self)) { [weak viewModel] (_, identifier, cell) in
+            let cellModel = viewModel?.cellModel(forVenueWith: identifier)
+            cell.configure(with: cellModel)
         }.disposed(by: viewModel.disposeBag)
     }
 
@@ -44,7 +59,7 @@ extension HomeViewController: UICollectionViewDelegate {
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = (collectionView.frame.width - 30) / 2
+        let size = (collectionView.frame.width - 50) / 2
 
         return CGSize(width: size, height: size)
     }

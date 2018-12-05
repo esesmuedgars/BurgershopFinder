@@ -32,4 +32,8 @@ final class FSLocation: NSObject, Codable {
         self.latitude = try container.decode(Double.self, forKey: .latitude)
         self.longitude = try container.decode(Double.self, forKey: .longitude)
     }
+
+    func asTuple() -> (latitude: Double, longitude: Double) {
+        return (latitude, longitude)
+    }
 }

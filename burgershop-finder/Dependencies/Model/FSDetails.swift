@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MapKit
 
 struct FSDetails: Codable {
     private var response: FSResponse
@@ -15,8 +16,12 @@ struct FSDetails: Codable {
         return response.venue.name
     }
 
-    var location: FSLocation {
-        return response.venue.location
+    var location: MKAnnotation {
+        let (latitude, longitude) = response.venue.location.asTuple()
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+
+        return annotation
     }
 
     var photos: FSItems? {

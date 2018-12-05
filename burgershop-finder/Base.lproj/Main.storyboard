@@ -18,18 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4OT-vh-QiN">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4OT-vh-QiN" customClass="CollectionView" customModule="burgershop_finder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="432" width="375" height="235"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nSx-wK-RLU">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="30"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VenueCell" id="8kH-rc-cau" customClass="VenueCell" customModule="burgershop_finder" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                        <rect key="frame" x="20" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -64,12 +64,41 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="zyX-NK-z8E"/>
                                 </connections>
                             </collectionView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="10I-2U-A3x" customClass="MapView" customModule="burgershop_finder" customModuleProvider="target">
+                                <rect key="frame" x="20" y="112" width="335" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="IF5-k2-UEv"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="Gray"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venues" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwv-WA-a4o" customClass="TitleLabel" customModule="burgershop_finder" customModuleProvider="target">
+                                <rect key="frame" x="20" y="40" width="335" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" name="White"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4OT-vh-QiN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NNf-n8-iHb"/>
+                            <constraint firstItem="10I-2U-A3x" firstAttribute="top" secondItem="Xwv-WA-a4o" secondAttribute="bottom" constant="30" id="3pN-Jz-Szv"/>
+                            <constraint firstItem="Xwv-WA-a4o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="5JD-Zc-sKG"/>
                             <constraint firstItem="4OT-vh-QiN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NyI-EC-Vwh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xwv-WA-a4o" secondAttribute="trailing" constant="20" id="RZa-NO-KQa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4OT-vh-QiN" secondAttribute="bottom" id="RcI-Rm-WPe"/>
+                            <constraint firstItem="10I-2U-A3x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gKr-gZ-7fN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="10I-2U-A3x" secondAttribute="trailing" constant="20" id="gRH-QI-x2T"/>
+                            <constraint firstItem="Xwv-WA-a4o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pmH-eJ-BmS"/>
+                            <constraint firstItem="4OT-vh-QiN" firstAttribute="top" secondItem="10I-2U-A3x" secondAttribute="bottom" constant="20" id="wk6-qn-o1E"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4OT-vh-QiN" secondAttribute="trailing" id="zpW-2f-G8P"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -84,10 +113,13 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="4OT-vh-QiN" id="GHT-ib-hgn"/>
+                        <outlet property="mapView" destination="10I-2U-A3x" id="bsK-ka-9jH"/>
+                        <outlet property="titleLabel" destination="Xwv-WA-a4o" id="M9y-hV-Z6y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="132.68365817091455"/>
         </scene>
     </scenes>
     <resources>
@@ -100,6 +132,9 @@
         </namedColor>
         <namedColor name="Purple">
             <color red="0.35294117647058826" green="0.35294117647058826" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

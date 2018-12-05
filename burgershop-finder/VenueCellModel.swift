@@ -45,7 +45,6 @@ final class VenueCellModel {
 
     private func addHandlers() {
         venueDetails.skip(1).subscribe { [weak self] event in
-            print("🔻 VenueCellModel.addHandlers() venueDetails.onNext")
             guard let details = event.element, let photos = details?.photos else {
                 self?.cacheImage(UIImage(named: "Cheeseburger"))
                 return
@@ -59,10 +58,8 @@ final class VenueCellModel {
 
     func inspectVenue() {
         if let image = cache.get(forKey: venueId) {
-            print("🔸 VenueCellModel.inspectVenue() cache.get(forKey:)")
             _venueImage.value = image
         } else {
-            print("🔸 VenueCellModel.inspectVenue() apiService.inspectVenue(authToken:venueId:)")
             apiService.inspectVenue(authToken: authService.rawToken!, venueId: venueId)
                 .subscribe(onNext: { [weak self] details in
                     self?._venueDetails.value = details
@@ -74,7 +71,6 @@ final class VenueCellModel {
 
     private func cacheImage(_ image: UIImage?) {
         guard cache.get(forKey: venueId) == nil else { return }
-        print("🔹 VenueCellModel.cacheImage(_:)")
 
         cache.set(image, forKey: venueId)
         _venueImage.value = image

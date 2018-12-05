@@ -46,3 +46,21 @@ extension UIImage {
         self.init(data: data)
     }
 }
+
+extension UIFont {
+    private static var fontName: String {
+        return "Arial-BoldMT"
+    }
+
+    static func withSize(_ size: CGFloat) -> UIFont? {
+        return UIFont(name: fontName, size: size)
+    }
+}
+
+extension NSAttributedString {
+    convenience init(_ string: String?) {
+        let attributes: [NSAttributedString.Key: Any] = [.kern: -1]
+
+        self.init(string: string ?? String(), attributes: attributes)
+    }
+}

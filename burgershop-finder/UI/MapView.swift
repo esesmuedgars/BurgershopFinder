@@ -17,5 +17,19 @@ final class MapView: SetupMapView {
             layer.cornerRadius = cornerRadius
         }
     }
+
+    @IBInspectable
+    public var borderWith: CGFloat = 0 {
+        didSet {
+            layer.borderWidth = borderWith
+        }
+    }
+
+    @IBInspectable
+    public var borderColor: UIColor? = nil {
+        didSet {
+            layer.borderColor = borderColor?.cgColor
+        }
+    }
 }
 
