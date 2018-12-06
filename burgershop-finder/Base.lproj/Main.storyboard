@@ -14,103 +14,130 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="burgershop_finder" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GradientView" customModule="burgershop_finder" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4OT-vh-QiN" customClass="CollectionView" customModule="burgershop_finder" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="432" width="375" height="235"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nSx-wK-RLU">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="30"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VenueCell" id="8kH-rc-cau" customClass="VenueCell" customModule="burgershop_finder" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cheeseburger" translatesAutoresizingMaskIntoConstraints="NO" id="Uej-Q5-muI">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                </imageView>
-                                            </subviews>
-                                        </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="fap-kU-BKG">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lf9-17-7y7" customClass="GradientView" customModule="burgershop_finder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venues" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwv-WA-a4o" customClass="TitleLabel" customModule="burgershop_finder" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="40" width="335" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <color key="textColor" name="White"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="10I-2U-A3x" customClass="MapView" customModule="burgershop_finder" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="112" width="335" height="400"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="400" id="IF5-k2-UEv"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="Gray"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </mapView>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4OT-vh-QiN" customClass="CollectionView" customModule="burgershop_finder" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="532" width="375" height="135"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nSx-wK-RLU">
+                                                    <size key="itemSize" width="50" height="50"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="40"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VenueCell" id="8kH-rc-cau" customClass="VenueCell" customModule="burgershop_finder" customModuleProvider="target">
+                                                        <rect key="frame" x="20" y="0.0" width="50" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cheeseburger" translatesAutoresizingMaskIntoConstraints="NO" id="Uej-Q5-muI">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                        </view>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="Uej-Q5-muI" secondAttribute="bottom" id="9Ab-38-jEz"/>
+                                                            <constraint firstItem="Uej-Q5-muI" firstAttribute="top" secondItem="8kH-rc-cau" secondAttribute="top" id="hAX-92-LX6"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Uej-Q5-muI" secondAttribute="trailing" id="mjz-Yk-r21"/>
+                                                            <constraint firstItem="Uej-Q5-muI" firstAttribute="leading" secondItem="8kH-rc-cau" secondAttribute="leading" id="rYk-eb-bPh"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="Gray"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="imageView" destination="Uej-Q5-muI" id="f0R-OU-6YR"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zyX-NK-z8E"/>
+                                                </connections>
+                                            </collectionView>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="Uej-Q5-muI" secondAttribute="bottom" id="9Ab-38-jEz"/>
-                                            <constraint firstItem="Uej-Q5-muI" firstAttribute="top" secondItem="8kH-rc-cau" secondAttribute="top" id="hAX-92-LX6"/>
-                                            <constraint firstAttribute="trailing" secondItem="Uej-Q5-muI" secondAttribute="trailing" id="mjz-Yk-r21"/>
-                                            <constraint firstItem="Uej-Q5-muI" firstAttribute="leading" secondItem="8kH-rc-cau" secondAttribute="leading" id="rYk-eb-bPh"/>
+                                            <constraint firstItem="4OT-vh-QiN" firstAttribute="top" secondItem="10I-2U-A3x" secondAttribute="bottom" constant="20" id="6cd-1q-lOP"/>
+                                            <constraint firstItem="10I-2U-A3x" firstAttribute="leading" secondItem="lf9-17-7y7" secondAttribute="leading" constant="20" id="D10-bo-rJM"/>
+                                            <constraint firstAttribute="trailing" secondItem="10I-2U-A3x" secondAttribute="trailing" constant="20" id="KfT-7Q-wIO"/>
+                                            <constraint firstAttribute="bottom" secondItem="4OT-vh-QiN" secondAttribute="bottom" id="Sfz-wh-SjT"/>
+                                            <constraint firstItem="Xwv-WA-a4o" firstAttribute="leading" secondItem="lf9-17-7y7" secondAttribute="leading" constant="20" id="UtR-af-Jaw"/>
+                                            <constraint firstItem="Xwv-WA-a4o" firstAttribute="top" secondItem="lf9-17-7y7" secondAttribute="top" constant="40" id="ZA3-8e-8Y0"/>
+                                            <constraint firstItem="4OT-vh-QiN" firstAttribute="leading" secondItem="lf9-17-7y7" secondAttribute="leading" id="bIY-RU-yji"/>
+                                            <constraint firstAttribute="trailing" secondItem="Xwv-WA-a4o" secondAttribute="trailing" constant="20" id="k55-Qb-Ove"/>
+                                            <constraint firstAttribute="trailing" secondItem="4OT-vh-QiN" secondAttribute="trailing" id="mCi-aW-2Ti"/>
+                                            <constraint firstItem="10I-2U-A3x" firstAttribute="top" secondItem="Xwv-WA-a4o" secondAttribute="bottom" constant="30" id="qVd-0G-x84"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
-                                                <real key="value" value="1"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                                <color key="value" name="Purple"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="Gray"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                                <color key="value" name="Pink"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <outlet property="imageView" destination="Uej-Q5-muI" id="f0R-OU-6YR"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zyX-NK-z8E"/>
-                                </connections>
-                            </collectionView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="10I-2U-A3x" customClass="MapView" customModule="burgershop_finder" customModuleProvider="target">
-                                <rect key="frame" x="20" y="112" width="335" height="300"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="IF5-k2-UEv"/>
+                                    <constraint firstAttribute="trailing" secondItem="lf9-17-7y7" secondAttribute="trailing" id="M3n-11-VbO"/>
+                                    <constraint firstAttribute="bottom" secondItem="lf9-17-7y7" secondAttribute="bottom" id="QfW-G0-Y2W"/>
+                                    <constraint firstItem="lf9-17-7y7" firstAttribute="top" secondItem="fap-kU-BKG" secondAttribute="top" id="Ryh-IB-Ydg"/>
+                                    <constraint firstItem="lf9-17-7y7" firstAttribute="leading" secondItem="fap-kU-BKG" secondAttribute="leading" id="sB4-Ad-4EE"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" name="Gray"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venues" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwv-WA-a4o" customClass="TitleLabel" customModule="burgershop_finder" customModuleProvider="target">
-                                <rect key="frame" x="20" y="40" width="335" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <color key="textColor" name="White"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Purple"/>
                         <constraints>
-                            <constraint firstItem="10I-2U-A3x" firstAttribute="top" secondItem="Xwv-WA-a4o" secondAttribute="bottom" constant="30" id="3pN-Jz-Szv"/>
-                            <constraint firstItem="Xwv-WA-a4o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="5JD-Zc-sKG"/>
-                            <constraint firstItem="4OT-vh-QiN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NyI-EC-Vwh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xwv-WA-a4o" secondAttribute="trailing" constant="20" id="RZa-NO-KQa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4OT-vh-QiN" secondAttribute="bottom" id="RcI-Rm-WPe"/>
-                            <constraint firstItem="10I-2U-A3x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gKr-gZ-7fN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="10I-2U-A3x" secondAttribute="trailing" constant="20" id="gRH-QI-x2T"/>
-                            <constraint firstItem="Xwv-WA-a4o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pmH-eJ-BmS"/>
-                            <constraint firstItem="4OT-vh-QiN" firstAttribute="top" secondItem="10I-2U-A3x" secondAttribute="bottom" constant="20" id="wk6-qn-o1E"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4OT-vh-QiN" secondAttribute="trailing" id="zpW-2f-G8P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fap-kU-BKG" secondAttribute="trailing" id="7QJ-4b-fD1"/>
+                            <constraint firstItem="lf9-17-7y7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="9yj-ul-9co"/>
+                            <constraint firstItem="fap-kU-BKG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bxs-2y-X4q"/>
+                            <constraint firstItem="fap-kU-BKG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lsO-VY-EW4"/>
+                            <constraint firstItem="lf9-17-7y7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" priority="250" id="uXj-YC-yet"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fap-kU-BKG" secondAttribute="bottom" id="vBw-gw-yq6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
-                                <color key="value" name="Purple"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
-                                <color key="value" name="Pink"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="4OT-vh-QiN" id="GHT-ib-hgn"/>
                         <outlet property="mapView" destination="10I-2U-A3x" id="bsK-ka-9jH"/>

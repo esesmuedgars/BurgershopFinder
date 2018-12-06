@@ -1,5 +1,5 @@
 //
-//  Common.swift
+//  Commons.swift
 //  burgershop-finder
 //
 //  Created by e.vanags on 28/11/2018.
@@ -14,8 +14,7 @@ protocol SetupProtocol {
     func setupFromNib()
 }
 
-// MARK: SetupMapView
-class SetupMapView: MKMapView, SetupProtocol {
+class SetupLabel: UILabel, SetupProtocol {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -36,7 +35,6 @@ class SetupMapView: MKMapView, SetupProtocol {
     func setupFromNib() {}
 }
 
-// MARK: SetupView
 class SetupView: UIView, SetupProtocol {
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -58,7 +56,48 @@ class SetupView: UIView, SetupProtocol {
     func setupFromNib() {}
 }
 
-// MARK: SetupCell
+class SetupMapView: MKMapView, SetupProtocol {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupFromNib()
+    }
+
+    func setup() {}
+
+    func setupFromNib() {}
+}
+
+class SetupCollectionView: UICollectionView, SetupProtocol {
+    override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
+        super.init(frame: frame, collectionViewLayout: layout)
+        setup()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupFromNib()
+    }
+
+    func setup() {}
+
+    func setupFromNib() {}
+}
+
 class SetupCell: UICollectionViewCell, SetupProtocol {
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -77,27 +116,5 @@ class SetupCell: UICollectionViewCell, SetupProtocol {
 
     func setup() {}
     
-    func setupFromNib() {}
-}
-
-// MARK: SetupLabel
-class SetupLabel: UILabel, SetupProtocol {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setupFromNib()
-    }
-
-    func setup() {}
-
     func setupFromNib() {}
 }

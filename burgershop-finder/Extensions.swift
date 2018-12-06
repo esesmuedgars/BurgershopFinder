@@ -64,3 +64,11 @@ extension NSAttributedString {
         self.init(string: string ?? String(), attributes: attributes)
     }
 }
+
+extension UICollectionView {
+    var isEmpty: Bool {
+        get {
+            return numberOfItems(inSection: 0) == 0
+        }
+    }
+}
