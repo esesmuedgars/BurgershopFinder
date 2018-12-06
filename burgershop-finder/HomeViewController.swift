@@ -14,7 +14,7 @@ final class HomeViewController: UIViewController {
 
     @IBOutlet private weak var titleLabel: TitleLabel!
     @IBOutlet private weak var mapView: MapView!
-    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: CollectionView!
 
     private lazy var viewModel = HomeViewModel()
 
@@ -35,6 +35,7 @@ final class HomeViewController: UIViewController {
     private func addHandlers() {
         viewModel.details.observeOn(MainScheduler.instance)
             .subscribe { [weak mapView] event in
+                // TODO: check how often this is called
                 guard let item = event.element, let annotation = item?.location else { return }
                 mapView?.addAnnotation(annotation)
         }.disposed(by: viewModel.disposeBag)
@@ -49,11 +50,6 @@ final class HomeViewController: UIViewController {
         super.viewDidAppear(animated)
 
         viewModel.authorize(self)
-    }
-}
-
-extension HomeViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
 }
 
