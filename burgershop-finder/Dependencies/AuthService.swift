@@ -27,7 +27,18 @@ final class AuthService: AuthServiceProtocol {
 
     private lazy var _authToken: Variable<String?> = Variable(nil)
     var authToken: Observable<String?> {
-        return _authToken.asObservable()
+        return _authToken.asObservable().skip(1).flatMap { authToken -> Observable<String?> in
+            return Observable<String?>.create { observer -> Disposable in
+                if let authToken = authToken {
+                    observer.onNext(authToken)
+                    observer.onCompleted()
+                } else {
+                    observer.onError("Failed to retrieve token.")
+                }
+
+                return Disposables.create()
+            }
+        }
     }
 
     var rawToken: String? {
@@ -47,7 +58,7 @@ final class AuthService: AuthServiceProtocol {
 
         switch(statuscode) {
         case .success:
-            break
+            return
         case .errorInvalidCallback:
             print("Invalid callback URI")
         case .errorFoursquareNotInstalled:
@@ -57,6 +68,8 @@ final class AuthService: AuthServiceProtocol {
         case .errorFoursquareOAuthNotSupported:
             print("Installed Foursquare App doesn't support oAuth")
         }
+
+        _authToken.value = nil
     }
 
     func requestToken(_ url: URL) {
@@ -92,7 +105,7 @@ final class AuthService: AuthServiceProtocol {
     private func errorMessageForCode(errorCode: FSOAuthErrorCode) {
         switch errorCode {
         case .none:
-            break
+            return
         case .invalidClient:
             print("Invalid client error")
         case .invalidGrant:
@@ -106,5 +119,7 @@ final class AuthService: AuthServiceProtocol {
         case .unknown:
             print("Unknown error")
         }
+
+        _authToken.value = nil
     }
 }

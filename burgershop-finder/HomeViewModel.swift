@@ -35,7 +35,7 @@ final class HomeViewModel {
             return library.values
         }
 
-        return models.flatMap { (cellModel) -> Observable<FSDetails?> in
+        return models.flatMapLatest { (cellModel) -> Observable<FSDetails?> in
             let details = cellModel.map { $0.venueDetails }
             return Observable.merge(details)
         }
@@ -46,13 +46,12 @@ final class HomeViewModel {
         self.apiService = apiService
         self.authService = authService
 
-        authService.authToken.skip(1)
-            .map { authToken -> Bool in
-                return authToken != nil
-            }.subscribe { [weak self] event in
-                self?.fetchVenues()
-//                self?.userAuthorized = event.element!
-            }.disposed(by: disposeBag)
+        authService.authToken.subscribe(onNext: { [weak self] authToken in
+                self?.fetchVenues(authToken: authToken!)
+            }, onError: { [weak self] error in
+                self?.userAuthorized = false
+                print(error)
+            }).disposed(by: disposeBag)
     }
 
     func authorize(_ viewController: UIViewController) {
@@ -62,8 +61,8 @@ final class HomeViewModel {
         }
     }
 
-    private func fetchVenues() {
-        apiService.fetchVenues(authToken: authService.rawToken!)
+    private func fetchVenues(authToken: String) {
+        apiService.fetchVenues(authToken: authToken)
             .subscribe(onNext: { [weak self] items in
                 self?._items.value = items
             }, onError: { error in

@@ -16,15 +16,16 @@ struct FSDetails: Codable {
         return response.venue.name
     }
 
-    var location: MKAnnotation {
+    var coordinate: CLLocationCoordinate2D {
         let (latitude, longitude) = response.venue.location.asTuple()
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-
-        return annotation
+        return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 
-    var photos: FSItems? {
-        return response.venue.photo.group?.items
+    var image: UIImage? {
+        guard let photo = response.venue.photo.group?.items.first else {
+            return UIImage(named: "Cheeseburger")
+        }
+
+        return UIImage(photo)
     }
 }
