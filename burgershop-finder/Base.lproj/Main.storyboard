@@ -46,6 +46,9 @@
                                                         <color key="value" name="Gray"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="DDR-98-hic"/>
+                                                </connections>
                                             </mapView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4OT-vh-QiN" customClass="CollectionView" customModule="burgershop_finder" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="532" width="375" height="135"/>

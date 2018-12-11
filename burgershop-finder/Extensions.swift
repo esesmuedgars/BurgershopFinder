@@ -45,6 +45,12 @@ extension UIImage {
         guard let data = try? Data(contentsOf: photo.url) else { return nil }
         self.init(data: data)
     }
+
+    func withSize(_ size: CGSize) -> UIImage? {
+        UIGraphicsBeginImageContext(size)
+        draw(in: CGRect(origin: .zero, size: size))
+        return UIGraphicsGetImageFromCurrentImageContext()
+    }
 }
 
 extension UIFont {

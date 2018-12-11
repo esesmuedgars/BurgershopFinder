@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import MapKit
 
 final class HomeViewController: UIViewController {
 
@@ -35,8 +36,9 @@ final class HomeViewController: UIViewController {
     private func addHandlers() {
         viewModel.details.observeOn(MainScheduler.instance)
             .subscribe { [weak mapView] event in
-                // TODO: check how often this is called
-                guard let item = event.element, let annotation = item?.location else { return }
+                guard let details = event.element else { return }
+
+                let annotation = PointAnnotation(details)
                 mapView?.addAnnotation(annotation)
         }.disposed(by: viewModel.disposeBag)
 
@@ -58,5 +60,24 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         let size = (collectionView.frame.width - 50) / 2
 
         return CGSize(width: size, height: size)
+    }
+}
+
+extension HomeViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard let annotation = annotation as? PointAnnotation else { return nil }
+
+        let identifier = "VenueAnnotation"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? AnnotationView
+
+        if annotationView == nil {
+            annotationView = AnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView?.canShowCallout = true
+            annotationView?.setImage(annotation.image)
+        } else {
+            annotationView?.annotation = annotation
+        }
+
+        return annotationView
     }
 }

@@ -48,5 +48,3 @@ final class VenueCell: SetupCell {
             .disposed(by: viewModel.disposeBag)
     }
 }
-
-

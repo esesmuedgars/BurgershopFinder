@@ -77,6 +77,27 @@ class SetupMapView: MKMapView, SetupProtocol {
     func setupFromNib() {}
 }
 
+class SetupAnnotationView: MKAnnotationView, SetupProtocol {
+    override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
+        super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
+        setup()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupFromNib()
+    }
+
+    func setup() {}
+
+    func setupFromNib() {}
+}
+
 class SetupCollectionView: UICollectionView, SetupProtocol {
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
