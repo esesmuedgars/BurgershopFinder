@@ -16,4 +16,9 @@ struct FSPhoto: Codable {
             return groups.first(where: { $0.type == "venue" })
         }
     }
+
+    // TODO: Revisit
+    init() {
+        self.groups = []
+    }
 }

@@ -22,12 +22,6 @@ extension Reactive where Base : UICollectionView {
     }
 }
 
-extension DependencyAssembler {
-    static func registerDependencies() {
-        register(dependencies: MainDependencies())
-    }
-}
-
 extension NSCache where KeyType == NSString, ObjectType == UIImage {
     func get(forKey key: String) -> UIImage? {
         return object(forKey: NSString(string: key))

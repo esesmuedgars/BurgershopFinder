@@ -13,9 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    private func isDebugModeEnabled() -> Bool {
+        return ProcessInfo.processInfo.environment["DEBUG_MODE"] == "enable"
+    }
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        DependencyAssembler.registerDependencies()
+        let dependencies: Dependencies = isDebugModeEnabled() ? TestDependencies() : MainDependencies()
+        DependencyAssembler.register(dependencies: dependencies)
 
         return true
     }

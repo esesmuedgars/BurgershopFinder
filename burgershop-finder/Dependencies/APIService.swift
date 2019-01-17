@@ -9,12 +9,11 @@
 import Foundation
 import RxSwift
 
-protocol APIServiceProtocol {
-    func fetchVenues(authToken token: String) -> Observable<FSIdentifiers>
-    func inspectVenue(authToken token: String, venueId identifier: String) -> Observable<FSDetails>
-}
-
 final class APIService: APIServiceProtocol {
+
+    var description: String {
+        return "application programming interface service"
+    }
 
     func fetchVenues(authToken token: String) -> Observable<FSIdentifiers> {
         let parameters = [URLQueryItem(with: .token, value: token),
