@@ -28,16 +28,4 @@ struct FSDetails: Codable {
 
         return UIImage(photo)
     }
-
-    // TODO: Revisit
-    init(venueId id: String = String(),
-         venueName name: String = String(),
-         venueAddress address: String? = nil,
-         venueLatitude latitude: Double = 0,
-         venueLongitude longitude: Double = 0) {
-
-        let location = FSLocation(address: address, latitude: latitude, longitude: longitude)
-        let venue = FSVenue(id: id, name: name, location: location, photo: FSPhoto())
-        self.response = FSResponse(venue: venue)
-    }
 }

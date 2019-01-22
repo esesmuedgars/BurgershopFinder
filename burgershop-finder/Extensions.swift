@@ -72,3 +72,10 @@ extension UICollectionView {
         }
     }
 }
+
+extension Data {
+    init(contentsOf path: String, isDirectory: Bool = false, options: Data.ReadingOptions) throws {
+        let url = URL(fileURLWithPath: path, isDirectory: isDirectory)
+        try self.init(contentsOf: url, options: options)
+    }
+}

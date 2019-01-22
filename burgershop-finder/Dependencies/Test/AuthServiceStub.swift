@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import RxSwift
 
-// TODO: Revisit
 final class AuthServiceStub: AuthServiceProtocol {
 
     var description: String {
@@ -22,7 +21,9 @@ final class AuthServiceStub: AuthServiceProtocol {
         return _authToken.asObservable().skip(1)
     }
 
-    var rawToken: String? = nil
+    var rawToken: String? {
+        return _authToken.value
+    }
 
     func authorize(_ viewController: UIViewController) {
         _authToken.value = "TOKEN123"

@@ -17,6 +17,8 @@
 		72534D4021F10AB7007EC465 /* APIServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72534D3F21F10AB7007EC465 /* APIServiceStub.swift */; };
 		72587F5D21B9806200EA7B03 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72587F5C21B9806200EA7B03 /* CollectionView.swift */; };
 		726547CE21AE8FCB00F4DD77 /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726547CD21AE8FCB00F4DD77 /* Commons.swift */; };
+		726DF03821F7BCE300EC0934 /* identifiers.json in Resources */ = {isa = PBXBuildFile; fileRef = 726DF03721F7BCE300EC0934 /* identifiers.json */; };
+		726DF03B21F7C5D200EC0934 /* details.json in Resources */ = {isa = PBXBuildFile; fileRef = 726DF03A21F7C5D200EC0934 /* details.json */; };
 		729C490B21A8CF5E0071903F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729C490921A8CF5E0071903F /* RxCocoa.framework */; };
 		729C490C21A8CF5E0071903F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729C490A21A8CF5E0071903F /* RxSwift.framework */; };
 		72AF5675216B5FC300102EA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF5674216B5FC300102EA8 /* AppDelegate.swift */; };
@@ -60,6 +62,8 @@
 		72534D3F21F10AB7007EC465 /* APIServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceStub.swift; sourceTree = "<group>"; };
 		72587F5C21B9806200EA7B03 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		726547CD21AE8FCB00F4DD77 /* Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
+		726DF03721F7BCE300EC0934 /* identifiers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = identifiers.json; sourceTree = "<group>"; };
+		726DF03A21F7C5D200EC0934 /* details.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = details.json; sourceTree = "<group>"; };
 		729C490921A8CF5E0071903F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		729C490A21A8CF5E0071903F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		72AF5671216B5FC300102EA8 /* burgershop-finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "burgershop-finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,8 +168,18 @@
 				72534D3921F109DA007EC465 /* TestDependencies.swift */,
 				72534D3D21F10A95007EC465 /* AuthServiceStub.swift */,
 				72534D3F21F10AB7007EC465 /* APIServiceStub.swift */,
+				726DF03921F7BE2100EC0934 /* Data */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		726DF03921F7BE2100EC0934 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				726DF03721F7BCE300EC0934 /* identifiers.json */,
+				726DF03A21F7C5D200EC0934 /* details.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		729C490821A8CF5E0071903F /* Frameworks */ = {
@@ -278,6 +292,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				72AF567F216B5FC400102EA8 /* LaunchScreen.storyboard in Resources */,
+				726DF03821F7BCE300EC0934 /* identifiers.json in Resources */,
+				726DF03B21F7C5D200EC0934 /* details.json in Resources */,
 				72C4E6A821ADE4C6009FB99C /* Assets.xcassets in Resources */,
 				72AF567A216B5FC300102EA8 /* Main.storyboard in Resources */,
 			);
