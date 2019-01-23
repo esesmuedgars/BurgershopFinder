@@ -1,0 +1,147 @@
+{
+    "meta": {
+        "code": 200,
+        "requestId": "5c48d4b74434b947fb3788d9"
+    },
+    "notifications": [
+        {
+            "type": "notificationTray",
+            "item": {
+                "unreadCount": 0
+            }
+        }
+    ],
+    "response": {
+        "venue": {
+            "id": "56bf9fe0cd10e4bda53a0a93",
+            "name": "Burgerito Meat & Burgers",
+            "contact": { },
+            "location": {
+                "address": "Pärnu mnt 19",
+                "lat": 59.431725,
+                "lng": 24.746052,
+                "labeledLatLngs": [
+                    {
+                        "label": "display",
+                        "lat": 59.431725,
+                        "lng": 24.746052
+                    }
+                ],
+                "cc": "EE",
+                "city": "Tallinn",
+                "state": "Harju",
+                "country": "Estonia",
+                "formattedAddress": [
+                    "Pärnu mnt 19",
+                    "Tallinn",
+                    "Estonia"
+                ]
+            },
+            "canonicalUrl": "https://foursquare.com/v/burgerito-meat--burgers/56bf9fe0cd10e4bda53a0a93",
+            "categories": [
+                {
+                    "id": "4bf58dd8d48988d16c941735",
+                    "name": "Burger Joint",
+                    "pluralName": "Burger Joints",
+                    "shortName": "Burgers",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/burger_",
+                        "suffix": ".png"
+                    },
+                    "primary": true
+                }
+            ],
+            "verified": false,
+            "stats": {
+                "tipCount": 0
+            },
+            "price": {
+                "tier": 1,
+                "message": "Cheap",
+                "currency": "€"
+            },
+            "likes": {
+                "count": 0,
+                "groups": [ ]
+            },
+            "like": false,
+            "dislike": false,
+            "ok": false,
+            "allowMenuUrlEdit": true,
+            "beenHere": {
+                "count": 0,
+                "unconfirmedCount": 0,
+                "marked": false,
+                "lastCheckinExpiredAt": 0
+            },
+            "specials": {
+                "count": 0,
+                "items": [ ]
+            },
+            "photos": {
+                "count": 0,
+                "groups": [
+                    {
+                        "type": "checkin",
+                        "name": "Friends' check-in photos",
+                        "count": 0,
+                        "items": [ ]
+                    }
+                ],
+                "summary": "No photos"
+            },
+            "reasons": {
+                "count": 0,
+                "items": [ ]
+            },
+            "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": [ ]
+            },
+            "createdAt": 1455398880,
+            "tips": {
+                "count": 0,
+                "groups": [
+                    {
+                        "type": "following",
+                        "name": "Tips from people you follow",
+                        "count": 0,
+                        "items": [ ]
+                    }
+                ]
+            },
+            "shortUrl": "http://4sq.com/1Khr1to",
+            "timeZone": "Europe/Tallinn",
+            "listed": {
+                "count": 0,
+                "groups": [ ]
+            },
+            "pageUpdates": {
+                "count": 0,
+                "items": [ ]
+            },
+            "inbox": {
+                "count": 0,
+                "items": [ ]
+            },
+            "attributes": {
+                "groups": [
+                    {
+                        "type": "price",
+                        "name": "Price",
+                        "summary": "€",
+                        "count": 1,
+                        "items": [
+                            {
+                                "displayName": "Price",
+                                "displayValue": "€",
+                                "priceTier": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

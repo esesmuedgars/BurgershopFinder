@@ -1,0 +1,288 @@
+{
+    "meta": {
+        "code": 200,
+        "requestId": "5c48d445f594df0eae1280eb"
+    },
+    "notifications": [
+        {
+            "type": "notificationTray",
+            "item": {
+                "unreadCount": 0
+            }
+        }
+    ],
+    "response": {
+        "venue": {
+            "id": "57a0938c498eab14ca08b93f",
+            "name": "burger & ribi",
+            "contact": { },
+            "location": {
+                "address": "Raekoja pl.",
+                "lat": 59.437213,
+                "lng": 24.745246,
+                "labeledLatLngs": [
+                    {
+                        "label": "display",
+                        "lat": 59.437213,
+                        "lng": 24.745246
+                    }
+                ],
+                "cc": "EE",
+                "neighborhood": "Vanalinn",
+                "city": "Tallinn",
+                "state": "Harju",
+                "country": "Estonia",
+                "formattedAddress": [
+                    "Raekoja pl.",
+                    "Tallinn",
+                    "Estonia"
+                ]
+            },
+            "canonicalUrl": "https://foursquare.com/v/burger--ribi/57a0938c498eab14ca08b93f",
+            "categories": [
+                {
+                    "id": "4bf58dd8d48988d16c941735",
+                    "name": "Burger Joint",
+                    "pluralName": "Burger Joints",
+                    "shortName": "Burgers",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/burger_",
+                        "suffix": ".png"
+                    },
+                    "primary": true
+                },
+                {
+                    "id": "4bf58dd8d48988d1df931735",
+                    "name": "BBQ Joint",
+                    "pluralName": "BBQ Joints",
+                    "shortName": "BBQ",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/bbqalt_",
+                        "suffix": ".png"
+                    }
+                }
+            ],
+            "verified": false,
+            "stats": {
+                "tipCount": 5
+            },
+            "price": {
+                "tier": 1,
+                "message": "Cheap",
+                "currency": "€"
+            },
+            "likes": {
+                "count": 3,
+                "groups": [
+                    {
+                        "type": "others",
+                        "count": 3,
+                        "items": [
+                            {
+                                "id": "128864730",
+                                "firstName": "Paul",
+                                "lastName": "Gay",
+                                "gender": "male",
+                                "photo": {
+                                    "prefix": "https://fastly.4sqi.net/img/user/",
+                                    "suffix": "/128864730_TkMDMNNA_ueev5W4mlHx2b_1rElgQnzpdWx5ulHZ_DAxlgRHSn2KSlOSDqVw6jom5xlgePa6M.jpg"
+                                }
+                            },
+                            {
+                                "id": "139834132",
+                                "firstName": "Изотов",
+                                "lastName": "Павел",
+                                "gender": "male",
+                                "photo": {
+                                    "prefix": "https://fastly.4sqi.net/img/user/",
+                                    "suffix": "/139834132_Y9MAIehN_uAiyO1Sm9oe654p3n51wglg62qJO2-gDNU8xfCPhDvxEpBfoDd2ppfouQQboEWvc.jpg"
+                                }
+                            },
+                            {
+                                "id": "62032841",
+                                "firstName": "Виталий",
+                                "gender": "male",
+                                "photo": {
+                                    "prefix": "https://fastly.4sqi.net/img/user/",
+                                    "suffix": "/62032841-YIRBFLUTYNHQXZBE.jpg"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "summary": "Paul Gay, Изотов Павел & Виталий"
+            },
+            "like": false,
+            "dislike": false,
+            "ok": false,
+            "rating": 5.2,
+            "ratingColor": "FF9600",
+            "ratingSignals": 10,
+            "allowMenuUrlEdit": true,
+            "beenHere": {
+                "count": 0,
+                "unconfirmedCount": 0,
+                "marked": false,
+                "lastCheckinExpiredAt": 0
+            },
+            "specials": {
+                "count": 0,
+                "items": [ ]
+            },
+            "photos": {
+                "count": 16,
+                "groups": [
+                    {
+                        "type": "checkin",
+                        "name": "Friends' check-in photos",
+                        "count": 0,
+                        "items": [ ]
+                    },
+                    {
+                        "type": "venue",
+                        "name": "Venue photos",
+                        "count": 16,
+                        "items": [
+                            {
+                                "id": "5b8a8a17f709c1002ced7f72",
+                                "createdAt": 1535805975,
+                                "source": {
+                                    "name": "Swarm for iOS",
+                                    "url": "https://www.swarmapp.com"
+                                },
+                                "prefix": "https://fastly.4sqi.net/img/general/",
+                                "suffix": "/968872_2bhFfZw9NSFPAT-wiubIhZn1vIWp8I0RCaH30j02iMI.jpg",
+                                "width": 1440,
+                                "height": 1800,
+                                "user": {
+                                    "id": "968872",
+                                    "firstName": "emojischwein",
+                                    "gender": "male",
+                                    "photo": {
+                                        "prefix": "https://fastly.4sqi.net/img/user/",
+                                        "suffix": "/968872_liIrf99S_veIqgzbrls2dajpMUHWLy8jxUa4nkBCBbrBvSVD6-08OWaiRySO92bm43N_Jy5U3.jpg"
+                                    }
+                                },
+                                "visibility": "public"
+                            }
+                        ]
+                    }
+                ],
+                "summary": "0 photos"
+            },
+            "reasons": {
+                "count": 0,
+                "items": [ ]
+            },
+            "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": [ ]
+            },
+            "createdAt": 1470141324,
+            "tips": {
+                "count": 5,
+                "groups": [
+                    {
+                        "type": "following",
+                        "name": "Tips from people you follow",
+                        "count": 0,
+                        "items": [ ]
+                    },
+                    {
+                        "type": "others",
+                        "name": "All tips",
+                        "count": 5,
+                        "items": [
+                            {
+                                "id": "599da0376bd36b509ea2490c",
+                                "createdAt": 1503502391,
+                                "text": "Location, food and atmosphere",
+                                "type": "user",
+                                "canonicalUrl": "https://foursquare.com/item/599da0376bd36b509ea2490c",
+                                "likes": {
+                                    "count": 0,
+                                    "groups": [ ]
+                                },
+                                "like": false,
+                                "logView": true,
+                                "agreeCount": 0,
+                                "disagreeCount": 0,
+                                "todo": {
+                                    "count": 0
+                                },
+                                "user": {
+                                    "id": "128864730",
+                                    "firstName": "Paul",
+                                    "lastName": "Gay",
+                                    "gender": "male",
+                                    "photo": {
+                                        "prefix": "https://fastly.4sqi.net/img/user/",
+                                        "suffix": "/128864730_TkMDMNNA_ueev5W4mlHx2b_1rElgQnzpdWx5ulHZ_DAxlgRHSn2KSlOSDqVw6jom5xlgePa6M.jpg"
+                                    }
+                                },
+                                "authorInteractionType": "liked"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "shortUrl": "http://4sq.com/2aMle2T",
+            "timeZone": "Europe/Tallinn",
+            "listed": {
+                "count": 0,
+                "groups": [ ]
+            },
+            "pageUpdates": {
+                "count": 0,
+                "items": [ ]
+            },
+            "inbox": {
+                "count": 0,
+                "items": [ ]
+            },
+            "attributes": {
+                "groups": [
+                    {
+                        "type": "price",
+                        "name": "Price",
+                        "summary": "€",
+                        "count": 1,
+                        "items": [
+                            {
+                                "displayName": "Price",
+                                "displayValue": "€",
+                                "priceTier": 1
+                            }
+                        ]
+                    },
+                    {
+                        "type": "serves",
+                        "name": "Menus",
+                        "summary": "Dinner",
+                        "count": 8,
+                        "items": [
+                            {
+                                "displayName": "Dinner",
+                                "displayValue": "Dinner"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bestPhoto": {
+                "id": "5b8a8a17f709c1002ced7f72",
+                "createdAt": 1535805975,
+                "source": {
+                    "name": "Swarm for iOS",
+                    "url": "https://www.swarmapp.com"
+                },
+                "prefix": "https://fastly.4sqi.net/img/general/",
+                "suffix": "/968872_2bhFfZw9NSFPAT-wiubIhZn1vIWp8I0RCaH30j02iMI.jpg",
+                "width": 1440,
+                "height": 1800,
+                "visibility": "public"
+            }
+        }
+    }
+}
