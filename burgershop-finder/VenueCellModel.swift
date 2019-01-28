@@ -44,14 +44,15 @@ final class VenueCellModel {
     }
 
     private func addHandlers() {
-        venueDetails.skip(1).subscribe { [weak self] event in
-            guard let details = event.element, let image = details?.image else {
-                self?.cacheImage(UIImage(named: "Cheeseburger"))
-                return
-            }
+        venueDetails.skip(1)
+            .subscribe { [weak self] event in
+                guard let details = event.element, let image = details?.image else {
+                    self?.cacheImage(UIImage(named: "Cheeseburger"))
+                    return
+                }
 
-            self?.cacheImage(image)
-        }.disposed(by: disposeBag)
+                self?.cacheImage(image)
+            }.disposed(by: disposeBag)
     }
 
     func inspectVenue() {

@@ -10,20 +10,11 @@ import Foundation
 import UIKit
 import RxSwift
 
-protocol AuthServiceProtocol {
-
-    /// Authorize user with Foursquare server.
-    /// Will call `application(_:open:options:)` method of `UIApplicationDelegate` subclass on success.
-    ///
-    /// - Parameter viewController: `UIViewController` subclass which will present `FSOAuth` created WebView.
-    func authorize(_ viewController: UIViewController)
-    func requestToken(_ url: URL)
-
-    var authToken: Observable<String?> { get }
-    var rawToken: String? { get }
-}
-
 final class AuthService: AuthServiceProtocol {
+
+    var description: String {
+        return "authorization service"
+    }
 
     private lazy var _authToken: Variable<String?> = Variable(nil)
     var authToken: Observable<String?> {

@@ -1,0 +1,498 @@
+{
+    "meta": {
+        "code": 200,
+        "requestId": "5c48d4aadb04f57dcf36a991"
+    },
+    "notifications": [
+        {
+            "type": "notificationTray",
+            "item": {
+                "unreadCount": 0
+            }
+        }
+    ],
+    "response": {
+        "venue": {
+            "id": "5943e0bbee628b769b845e00",
+            "name": "Dereku Burger",
+            "contact": {
+                "phone": "+37255672010",
+                "formattedPhone": "+372 5567 2010",
+                "facebook": "494011477287735",
+                "facebookUsername": "DerekuBurger",
+                "facebookName": "Dereku Burger"
+            },
+            "location": {
+                "address": "Fr. R. Faehlmanni 3",
+                "lat": 59.435088328142726,
+                "lng": 24.76977794821897,
+                "labeledLatLngs": [
+                    {
+                        "label": "display",
+                        "lat": 59.435088328142726,
+                        "lng": 24.76977794821897
+                    }
+                ],
+                "postalCode": "10125",
+                "cc": "EE",
+                "city": "Tallinn",
+                "state": "Harju",
+                "country": "Estonia",
+                "formattedAddress": [
+                    "Fr. R. Faehlmanni 3",
+                    "10125 Tallinn",
+                    "Estonia"
+                ]
+            },
+            "canonicalUrl": "https://foursquare.com/v/dereku-burger/5943e0bbee628b769b845e00",
+            "categories": [
+                {
+                    "id": "4bf58dd8d48988d16c941735",
+                    "name": "Burger Joint",
+                    "pluralName": "Burger Joints",
+                    "shortName": "Burgers",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/burger_",
+                        "suffix": ".png"
+                    },
+                    "primary": true
+                }
+            ],
+            "verified": false,
+            "stats": {
+                "tipCount": 10
+            },
+            "url": "https://wolt.com/est/tallinn/dereku-burger/",
+            "price": {
+                "tier": 1,
+                "message": "Cheap",
+                "currency": "€"
+            },
+            "likes": {
+                "count": 19,
+                "groups": [
+                    {
+                        "type": "others",
+                        "count": 19,
+                        "items": [ ]
+                    }
+                ],
+                "summary": "19 Likes"
+            },
+            "like": false,
+            "dislike": false,
+            "ok": false,
+            "rating": 7.6,
+            "ratingColor": "C5DE35",
+            "ratingSignals": 34,
+            "menu": {
+                "type": "Menu",
+                "label": "Menu",
+                "anchor": "View Menu",
+                "url": "https://www.facebook.com/pg/DerekuBurger/menu/",
+                "mobileUrl": "https://www.facebook.com/pg/DerekuBurger/menu/",
+                "externalUrl": "https://www.facebook.com/pg/DerekuBurger/menu/"
+            },
+            "allowMenuUrlEdit": true,
+            "beenHere": {
+                "count": 0,
+                "unconfirmedCount": 0,
+                "marked": false,
+                "lastCheckinExpiredAt": 0
+            },
+            "specials": {
+                "count": 0,
+                "items": [ ]
+            },
+            "photos": {
+                "count": 6,
+                "groups": [
+                    {
+                        "type": "checkin",
+                        "name": "Friends' check-in photos",
+                        "count": 0,
+                        "items": [ ]
+                    },
+                    {
+                        "type": "venue",
+                        "name": "Venue photos",
+                        "count": 6,
+                        "items": [
+                            {
+                                "id": "5a85cbcbcbcdee35fe77e227",
+                                "createdAt": 1518717899,
+                                "source": {
+                                    "name": "Swarm for iOS",
+                                    "url": "https://www.swarmapp.com"
+                                },
+                                "prefix": "https://fastly.4sqi.net/img/general/",
+                                "suffix": "/63067910_gKF87GU3u7aYuekH9707FjQF1l2_95NUe5PgALW9gcs.jpg",
+                                "width": 1920,
+                                "height": 1440,
+                                "user": {
+                                    "id": "63067910",
+                                    "firstName": "Anastasiia",
+                                    "lastName": "Klimova",
+                                    "gender": "female",
+                                    "photo": {
+                                        "prefix": "https://fastly.4sqi.net/img/user/",
+                                        "suffix": "/63067910-YSAXDJMPY4NROIYR.jpg"
+                                    }
+                                },
+                                "visibility": "public"
+                            }
+                        ]
+                    }
+                ],
+                "summary": "0 photos"
+            },
+            "reasons": {
+                "count": 0,
+                "items": [ ]
+            },
+            "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": [ ]
+            },
+            "createdAt": 1497620667,
+            "tips": {
+                "count": 10,
+                "groups": [
+                    {
+                        "type": "following",
+                        "name": "Tips from people you follow",
+                        "count": 0,
+                        "items": [ ]
+                    },
+                    {
+                        "type": "others",
+                        "name": "All tips",
+                        "count": 10,
+                        "items": [
+                            {
+                                "id": "5a50b3b00457b748a9b4ece9",
+                                "createdAt": 1515238320,
+                                "text": "Very nice place, good service and excellent food.",
+                                "type": "user",
+                                "canonicalUrl": "https://foursquare.com/item/5a50b3b00457b748a9b4ece9",
+                                "likes": {
+                                    "count": 1,
+                                    "groups": [
+                                        {
+                                            "type": "others",
+                                            "count": 1,
+                                            "items": [
+                                                {
+                                                    "id": "150856945",
+                                                    "firstName": "Denis",
+                                                    "lastName": "Tuzhik",
+                                                    "gender": "male",
+                                                    "photo": {
+                                                        "prefix": "https://fastly.4sqi.net/img/user/",
+                                                        "suffix": "/150856945_8hDiAFpM_R_BuIq6j_Tnqyw0Z3mIB5zK427TixjQJVuP4yAYLkZ1ulcp-fElyzJrNo-YJWbC-"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "summary": "1 like"
+                                },
+                                "like": false,
+                                "logView": true,
+                                "agreeCount": 2,
+                                "disagreeCount": 0,
+                                "todo": {
+                                    "count": 0
+                                },
+                                "user": {
+                                    "id": "145890744",
+                                    "firstName": "Eike",
+                                    "lastName": "Hellerma",
+                                    "gender": "female",
+                                    "photo": {
+                                        "prefix": "https://fastly.4sqi.net/img/user/",
+                                        "suffix": "/145890744_ffKoww4U_IPgVzaL-5wCHEZLhIm49Dw-pZbqugO74RSbAwDLRJfTWBTvGw0cRUyuBz3PIpvpd.jpg"
+                                    }
+                                },
+                                "authorInteractionType": "liked"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "shortUrl": "http://4sq.com/2s8MuQ6",
+            "timeZone": "Europe/Tallinn",
+            "listed": {
+                "count": 12,
+                "groups": [
+                    {
+                        "type": "others",
+                        "name": "Lists from other people",
+                        "count": 12,
+                        "items": [
+                            {
+                                "id": "5618fdab498e59442d0b2d9c",
+                                "name": "TLN: Food",
+                                "description": "",
+                                "type": "others",
+                                "user": {
+                                    "id": "682203",
+                                    "firstName": "Alle Pirjo",
+                                    "lastName": "V.",
+                                    "gender": "female",
+                                    "photo": {
+                                        "prefix": "https://fastly.4sqi.net/img/user/",
+                                        "suffix": "/25UYLH2ZRIX0SXEH.jpg"
+                                    }
+                                },
+                                "editable": false,
+                                "public": true,
+                                "collaborative": false,
+                                "url": "/user/682203/list/tln-food",
+                                "canonicalUrl": "https://foursquare.com/user/682203/list/tln-food",
+                                "createdAt": 1444478379,
+                                "updatedAt": 1528308000,
+                                "followers": {
+                                    "count": 0
+                                },
+                                "listItems": {
+                                    "count": 54,
+                                    "items": [
+                                        {
+                                            "id": "v5943e0bbee628b769b845e00",
+                                            "createdAt": 1526901005
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "59806fbd23a2e64d75c068dd",
+                                "name": "Tallin 2017",
+                                "description": "",
+                                "type": "others",
+                                "user": {
+                                    "id": "4194090",
+                                    "firstName": "Juho",
+                                    "lastName": "Tikkanen",
+                                    "gender": "male",
+                                    "photo": {
+                                        "prefix": "https://fastly.4sqi.net/img/user/",
+                                        "suffix": "/4194090_7OCLdR2q_lUUsIYM2MnWNiV1_reRcMxMaWfJL4zXU4sNpslEWu57gP_Liea9bdxooenrksfPo"
+                                    }
+                                },
+                                "editable": false,
+                                "public": true,
+                                "collaborative": false,
+                                "url": "/juhotik/list/tallin-2017",
+                                "canonicalUrl": "https://foursquare.com/juhotik/list/tallin-2017",
+                                "createdAt": 1501589437,
+                                "updatedAt": 1536352062,
+                                "followers": {
+                                    "count": 0
+                                },
+                                "listItems": {
+                                    "count": 52,
+                                    "items": [
+                                        {
+                                            "id": "v5943e0bbee628b769b845e00",
+                                            "createdAt": 1501617602
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "hours": {
+                "status": "Closed until 11:00 AM tomorrow",
+                "richStatus": {
+                    "entities": [ ],
+                    "text": "Closed until 11:00 AM tomorrow"
+                },
+                "isOpen": false,
+                "isLocalHoliday": false,
+                "dayData": [ ],
+                "timeframes": [
+                    {
+                        "days": "Mon–Thu, Sun",
+                        "includesToday": true,
+                        "open": [
+                            {
+                                "renderedTime": "11:00 AM–10:00 PM"
+                            }
+                        ],
+                        "segments": [ ]
+                    },
+                    {
+                        "days": "Fri–Sat",
+                        "open": [
+                            {
+                                "renderedTime": "11:00 AM–11:00 PM"
+                            }
+                        ],
+                        "segments": [ ]
+                    }
+                ]
+            },
+            "pageUpdates": {
+                "count": 0,
+                "items": [ ]
+            },
+            "inbox": {
+                "count": 0,
+                "items": [ ]
+            },
+            "attributes": {
+                "groups": [
+                    {
+                        "type": "price",
+                        "name": "Price",
+                        "summary": "€",
+                        "count": 1,
+                        "items": [
+                            {
+                                "displayName": "Price",
+                                "displayValue": "€",
+                                "priceTier": 1
+                            }
+                        ]
+                    },
+                    {
+                        "type": "reservations",
+                        "name": "Reservations",
+                        "summary": "Reservations",
+                        "count": 3,
+                        "items": [
+                            {
+                                "displayName": "Reservations",
+                                "displayValue": "Yes"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "payments",
+                        "name": "Credit Cards",
+                        "summary": "Credit Cards",
+                        "count": 5,
+                        "items": [
+                            {
+                                "displayName": "Credit Cards",
+                                "displayValue": "Yes (incl. Visa & MasterCard)"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "outdoorSeating",
+                        "name": "Outdoor Seating",
+                        "summary": "Outdoor Seating",
+                        "count": 1,
+                        "items": [
+                            {
+                                "displayName": "Outdoor Seating",
+                                "displayValue": "Yes"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "wifi",
+                        "name": "Wi-Fi",
+                        "summary": "Free Wi-Fi",
+                        "count": 1,
+                        "items": [
+                            {
+                                "displayName": "Wi-Fi",
+                                "displayValue": "Free"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "serves",
+                        "name": "Menus",
+                        "summary": "Dessert, Lunch & more",
+                        "count": 8,
+                        "items": [
+                            {
+                                "displayName": "Breakfast",
+                                "displayValue": "Breakfast"
+                            },
+                            {
+                                "displayName": "Brunch",
+                                "displayValue": "Brunch"
+                            },
+                            {
+                                "displayName": "Lunch",
+                                "displayValue": "Lunch"
+                            },
+                            {
+                                "displayName": "Dinner",
+                                "displayValue": "Dinner"
+                            },
+                            {
+                                "displayName": "Dessert",
+                                "displayValue": "Dessert"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "drinks",
+                        "name": "Drinks",
+                        "summary": "Beer, Wine & Full Bar",
+                        "count": 5,
+                        "items": [
+                            {
+                                "displayName": "Beer",
+                                "displayValue": "Beer"
+                            },
+                            {
+                                "displayName": "Wine",
+                                "displayValue": "Wine"
+                            },
+                            {
+                                "displayName": "Full Bar",
+                                "displayValue": "Full Bar"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "diningOptions",
+                        "name": "Dining Options",
+                        "summary": "Delivery",
+                        "count": 5,
+                        "items": [
+                            {
+                                "displayName": "Delivery",
+                                "displayValue": "Delivery"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bestPhoto": {
+                "id": "5a85cbcbcbcdee35fe77e227",
+                "createdAt": 1518717899,
+                "source": {
+                    "name": "Swarm for iOS",
+                    "url": "https://www.swarmapp.com"
+                },
+                "prefix": "https://fastly.4sqi.net/img/general/",
+                "suffix": "/63067910_gKF87GU3u7aYuekH9707FjQF1l2_95NUe5PgALW9gcs.jpg",
+                "width": 1920,
+                "height": 1440,
+                "visibility": "public"
+            },
+            "colors": {
+                "highlightColor": {
+                    "photoId": "5a85cbcbcbcdee35fe77e227",
+                    "value": -14675952
+                },
+                "highlightTextColor": {
+                    "photoId": "5a85cbcbcbcdee35fe77e227",
+                    "value": -1
+                },
+                "algoVersion": 3
+            }
+        }
+    }
+}

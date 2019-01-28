@@ -1,0 +1,218 @@
+{
+    "meta": {
+        "code": 200,
+        "requestId": "5c48d4936a6071298ef1786e"
+    },
+    "notifications": [
+        {
+            "type": "notificationTray",
+            "item": {
+                "unreadCount": 0
+            }
+        }
+    ],
+    "response": {
+        "venue": {
+            "id": "5b951037b6b04b002cdb7aaf",
+            "name": "Beer & Burger",
+            "contact": { },
+            "location": {
+                "lat": 59.434126,
+                "lng": 24.756608,
+                "labeledLatLngs": [
+                    {
+                        "label": "display",
+                        "lat": 59.434126,
+                        "lng": 24.756608
+                    }
+                ],
+                "postalCode": "10143",
+                "cc": "EE",
+                "city": "Tallín",
+                "state": "Harju",
+                "country": "Estonia",
+                "formattedAddress": [
+                    "10143 Tallín",
+                    "Estonia"
+                ]
+            },
+            "canonicalUrl": "https://foursquare.com/v/beer--burger/5b951037b6b04b002cdb7aaf",
+            "categories": [
+                {
+                    "id": "4bf58dd8d48988d16c941735",
+                    "name": "Burger Joint",
+                    "pluralName": "Burger Joints",
+                    "shortName": "Burgers",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/burger_",
+                        "suffix": ".png"
+                    },
+                    "primary": true
+                },
+                {
+                    "id": "56aa371ce4b08b9a8d57356c",
+                    "name": "Beer Bar",
+                    "pluralName": "Beer Bars",
+                    "shortName": "Beer Bar",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/pub_",
+                        "suffix": ".png"
+                    }
+                }
+            ],
+            "verified": false,
+            "stats": {
+                "tipCount": 0
+            },
+            "price": {
+                "tier": 1,
+                "message": "Cheap",
+                "currency": "€"
+            },
+            "likes": {
+                "count": 0,
+                "groups": [ ]
+            },
+            "like": false,
+            "dislike": false,
+            "ok": false,
+            "allowMenuUrlEdit": true,
+            "beenHere": {
+                "count": 0,
+                "unconfirmedCount": 0,
+                "marked": false,
+                "lastCheckinExpiredAt": 0
+            },
+            "specials": {
+                "count": 0,
+                "items": [ ]
+            },
+            "photos": {
+                "count": 0,
+                "groups": [
+                    {
+                        "type": "checkin",
+                        "name": "Friends' check-in photos",
+                        "count": 0,
+                        "items": [ ]
+                    }
+                ],
+                "summary": "No photos"
+            },
+            "reasons": {
+                "count": 0,
+                "items": [ ]
+            },
+            "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": [ ]
+            },
+            "createdAt": 1536495671,
+            "tips": {
+                "count": 0,
+                "groups": [
+                    {
+                        "type": "following",
+                        "name": "Tips from people you follow",
+                        "count": 0,
+                        "items": [ ]
+                    }
+                ]
+            },
+            "shortUrl": "https://4sq.com/2wYhrrY",
+            "timeZone": "Europe/Tallinn",
+            "listed": {
+                "count": 1,
+                "groups": [
+                    {
+                        "type": "others",
+                        "name": "Lists from other people",
+                        "count": 1,
+                        "items": [
+                            {
+                                "id": "5b735f281f8ed600395bb25b",
+                                "name": "Tallinn",
+                                "description": "",
+                                "type": "others",
+                                "user": {
+                                    "id": "10622206",
+                                    "firstName": "Kévin",
+                                    "lastName": "K.H",
+                                    "gender": "male",
+                                    "photo": {
+                                        "prefix": "https://fastly.4sqi.net/img/user/",
+                                        "suffix": "/BJ50POTBNJ4H1E1T.jpg"
+                                    }
+                                },
+                                "editable": false,
+                                "public": true,
+                                "collaborative": false,
+                                "url": "/kornkevin/list/tallinn",
+                                "canonicalUrl": "https://foursquare.com/kornkevin/list/tallinn",
+                                "createdAt": 1534287656,
+                                "updatedAt": 1538307461,
+                                "photo": {
+                                    "id": "58624044d98f36440538f9b0",
+                                    "createdAt": 1482833988,
+                                    "prefix": "https://fastly.4sqi.net/img/general/",
+                                    "suffix": "/8783535_HGYVgZvXMxzDZhRWtr148rzjKgXHwjm_zRzcT6o84J8.jpg",
+                                    "width": 1440,
+                                    "height": 1920,
+                                    "user": {
+                                        "id": "8783535",
+                                        "firstName": "Nerijus",
+                                        "lastName": "Pudziuvelis",
+                                        "gender": "male",
+                                        "photo": {
+                                            "prefix": "https://fastly.4sqi.net/img/user/",
+                                            "suffix": "/3XJO5VV2HKIIIAKP.jpg"
+                                        }
+                                    },
+                                    "visibility": "public"
+                                },
+                                "followers": {
+                                    "count": 0
+                                },
+                                "listItems": {
+                                    "count": 36,
+                                    "items": [
+                                        {
+                                            "id": "v5b951037b6b04b002cdb7aaf",
+                                            "createdAt": 1538296608
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "pageUpdates": {
+                "count": 0,
+                "items": [ ]
+            },
+            "inbox": {
+                "count": 0,
+                "items": [ ]
+            },
+            "attributes": {
+                "groups": [
+                    {
+                        "type": "price",
+                        "name": "Price",
+                        "summary": "€",
+                        "count": 1,
+                        "items": [
+                            {
+                                "displayName": "Price",
+                                "displayValue": "€",
+                                "priceTier": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

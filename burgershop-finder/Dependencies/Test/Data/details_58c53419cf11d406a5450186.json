@@ -1,0 +1,330 @@
+{
+    "meta": {
+        "code": 200,
+        "requestId": "5c48d41cf594df0e38ad90b1"
+    },
+    "notifications": [
+        {
+            "type": "notificationTray",
+            "item": {
+                "unreadCount": 0
+            }
+        }
+    ],
+    "response": {
+        "venue": {
+            "id": "58c53419cf11d406a5450186",
+            "name": "Burger King",
+            "contact": { },
+            "location": {
+                "address": "Tallink M/S Megastar",
+                "lat": 59.44467381247656,
+                "lng": 24.771834682043117,
+                "labeledLatLngs": [
+                    {
+                        "label": "display",
+                        "lat": 59.44467381247656,
+                        "lng": 24.771834682043117
+                    }
+                ],
+                "cc": "EE",
+                "city": "Tallinn",
+                "country": "Estonia",
+                "formattedAddress": [
+                    "Tallink M/S Megastar",
+                    "Tallinn",
+                    "Estonia"
+                ]
+            },
+            "canonicalUrl": "https://foursquare.com/v/burger-king/58c53419cf11d406a5450186",
+            "categories": [
+                {
+                    "id": "4bf58dd8d48988d16e941735",
+                    "name": "Fast Food Restaurant",
+                    "pluralName": "Fast Food Restaurants",
+                    "shortName": "Fast Food",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/fastfood_",
+                        "suffix": ".png"
+                    },
+                    "primary": true
+                },
+                {
+                    "id": "4bf58dd8d48988d16c941735",
+                    "name": "Burger Joint",
+                    "pluralName": "Burger Joints",
+                    "shortName": "Burgers",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/burger_",
+                        "suffix": ".png"
+                    }
+                }
+            ],
+            "verified": false,
+            "stats": {
+                "tipCount": 0
+            },
+            "url": "https://www.tallinksilja.fi/megastar#tabs-content-4",
+            "price": {
+                "tier": 1,
+                "message": "Cheap",
+                "currency": "€"
+            },
+            "likes": {
+                "count": 1,
+                "groups": [
+                    {
+                        "type": "others",
+                        "count": 1,
+                        "items": [
+                            {
+                                "id": "20777962",
+                                "firstName": "Silver",
+                                "lastName": "Paling",
+                                "gender": "male",
+                                "photo": {
+                                    "prefix": "https://fastly.4sqi.net/img/user/",
+                                    "suffix": "/20777962-2E4BERSQFLZF4VNY.jpg"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "summary": "Silver Paling"
+            },
+            "like": false,
+            "dislike": false,
+            "ok": false,
+            "allowMenuUrlEdit": true,
+            "beenHere": {
+                "count": 0,
+                "unconfirmedCount": 0,
+                "marked": false,
+                "lastCheckinExpiredAt": 0
+            },
+            "specials": {
+                "count": 0,
+                "items": [ ]
+            },
+            "photos": {
+                "count": 7,
+                "groups": [
+                    {
+                        "type": "checkin",
+                        "name": "Friends' check-in photos",
+                        "count": 0,
+                        "items": [ ]
+                    },
+                    {
+                        "type": "venue",
+                        "name": "Venue photos",
+                        "count": 7,
+                        "items": [
+                            {
+                                "id": "5afe5c3f396de0002c5eeb42",
+                                "createdAt": 1526619199,
+                                "source": {
+                                    "name": "Swarm for Android",
+                                    "url": "https://www.swarmapp.com"
+                                },
+                                "prefix": "https://fastly.4sqi.net/img/general/",
+                                "suffix": "/1872548_7Kw_YAg33_pCbJbu2NVrujX8KwwlL0K2J457HSVApOo.jpg",
+                                "width": 2672,
+                                "height": 1504,
+                                "user": {
+                                    "id": "1872548",
+                                    "firstName": "Juliana Ayu",
+                                    "lastName": "Yahya",
+                                    "gender": "none",
+                                    "photo": {
+                                        "prefix": "https://fastly.4sqi.net/img/user/",
+                                        "suffix": "/TE2T0OGXA5121UMN.jpg"
+                                    }
+                                },
+                                "visibility": "public"
+                            }
+                        ]
+                    }
+                ],
+                "summary": "0 photos"
+            },
+            "reasons": {
+                "count": 0,
+                "items": [ ]
+            },
+            "description": "Ravintola sijaitsee kannella 9, laivan keskiosassa. BURGER KING® -ravintolan ostoksista ei kerry Club One -bonuspisteitä. Maksuvälineenä ei käy ateriakupongit, juomakupongit, laivaraha, American Express/Diners Club -luottokortit eikä BURGER KING® -ravintolan omat lahjakortit tai asiakaskortit.",
+            "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": [ ]
+            },
+            "createdAt": 1489318937,
+            "tips": {
+                "count": 0,
+                "groups": [
+                    {
+                        "type": "following",
+                        "name": "Tips from people you follow",
+                        "count": 0,
+                        "items": [ ]
+                    }
+                ]
+            },
+            "shortUrl": "http://4sq.com/2myEuU0",
+            "timeZone": "Europe/Tallinn",
+            "listed": {
+                "count": 0,
+                "groups": [ ]
+            },
+            "pageUpdates": {
+                "count": 0,
+                "items": [ ]
+            },
+            "inbox": {
+                "count": 0,
+                "items": [ ]
+            },
+            "parent": {
+                "id": "588b76b551d19e231e4f67d2",
+                "name": "Tallink M/S Megastar",
+                "location": {
+                    "address": "HEL-TAL-HEL",
+                    "lat": 59.82031566979112,
+                    "lng": 24.850604999810457,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 59.82031566979112,
+                            "lng": 24.850604999810457
+                        }
+                    ],
+                    "cc": "FI",
+                    "city": "Tallinn",
+                    "state": "Harju",
+                    "country": "Finland",
+                    "formattedAddress": [
+                        "HEL-TAL-HEL",
+                        "Tallinn",
+                        "Finland"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d12d951735",
+                        "name": "Boat or Ferry",
+                        "pluralName": "Boats or Ferries",
+                        "shortName": "Boat / Ferry",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/travel/boat_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ]
+            },
+            "hierarchy": [
+                {
+                    "name": "Tallink M/S Megastar",
+                    "lang": "LV",
+                    "id": "588b76b551d19e231e4f67d2",
+                    "canonicalUrl": "https://foursquare.com/v/tallink-ms-megastar/588b76b551d19e231e4f67d2"
+                }
+            ],
+            "attributes": {
+                "groups": [
+                    {
+                        "type": "price",
+                        "name": "Price",
+                        "summary": "€",
+                        "count": 1,
+                        "items": [
+                            {
+                                "displayName": "Price",
+                                "displayValue": "€",
+                                "priceTier": 1
+                            }
+                        ]
+                    },
+                    {
+                        "type": "payments",
+                        "name": "Credit Cards",
+                        "summary": "Credit Cards",
+                        "count": 5,
+                        "items": [
+                            {
+                                "displayName": "Credit Cards",
+                                "displayValue": "Yes"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "outdoorSeating",
+                        "name": "Outdoor Seating",
+                        "count": 1,
+                        "items": [
+                            {
+                                "displayName": "Outdoor Seating",
+                                "displayValue": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "serves",
+                        "name": "Menus",
+                        "summary": "Lunch, Brunch & more",
+                        "count": 8,
+                        "items": [
+                            {
+                                "displayName": "Breakfast",
+                                "displayValue": "Breakfast"
+                            },
+                            {
+                                "displayName": "Brunch",
+                                "displayValue": "Brunch"
+                            },
+                            {
+                                "displayName": "Lunch",
+                                "displayValue": "Lunch"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "diningOptions",
+                        "name": "Dining Options",
+                        "count": 5,
+                        "items": [
+                            {
+                                "displayName": "Delivery",
+                                "displayValue": "No Delivery"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bestPhoto": {
+                "id": "5afe5c3f396de0002c5eeb42",
+                "createdAt": 1526619199,
+                "source": {
+                    "name": "Swarm for Android",
+                    "url": "https://www.swarmapp.com"
+                },
+                "prefix": "https://fastly.4sqi.net/img/general/",
+                "suffix": "/1872548_7Kw_YAg33_pCbJbu2NVrujX8KwwlL0K2J457HSVApOo.jpg",
+                "width": 2672,
+                "height": 1504,
+                "visibility": "public"
+            },
+            "colors": {
+                "highlightColor": {
+                    "photoId": "5afe5c3f396de0002c5eeb42",
+                    "value": -15198192
+                },
+                "highlightTextColor": {
+                    "photoId": "5afe5c3f396de0002c5eeb42",
+                    "value": -1
+                },
+                "algoVersion": 3
+            }
+        }
+    }
+}

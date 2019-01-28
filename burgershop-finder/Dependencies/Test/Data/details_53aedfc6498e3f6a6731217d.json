@@ -1,0 +1,551 @@
+{
+    "meta": {
+        "code": 200,
+        "requestId": "5c48d456dd579760586c9c66"
+    },
+    "notifications": [
+        {
+            "type": "notificationTray",
+            "item": {
+                "unreadCount": 0
+            }
+        }
+    ],
+    "response": {
+        "venue": {
+            "id": "53aedfc6498e3f6a6731217d",
+            "name": "Dereku burger",
+            "contact": {
+                "phone": "+37255672010",
+                "formattedPhone": "+372 5567 2010"
+            },
+            "location": {
+                "address": "Aia 8",
+                "crossStreet": "Inseneri",
+                "lat": 59.4380328100894,
+                "lng": 24.752064812033336,
+                "labeledLatLngs": [
+                    {
+                        "label": "display",
+                        "lat": 59.4380328100894,
+                        "lng": 24.752064812033336
+                    }
+                ],
+                "postalCode": "10111",
+                "cc": "EE",
+                "city": "Tallinn",
+                "state": "Harju",
+                "country": "Estonia",
+                "formattedAddress": [
+                    "Aia 8 (Inseneri)",
+                    "10111 Tallinn",
+                    "Estonia"
+                ]
+            },
+            "canonicalUrl": "https://foursquare.com/v/dereku-burger/53aedfc6498e3f6a6731217d",
+            "categories": [
+                {
+                    "id": "4bf58dd8d48988d16c941735",
+                    "name": "Burger Joint",
+                    "pluralName": "Burger Joints",
+                    "shortName": "Burgers",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/burger_",
+                        "suffix": ".png"
+                    },
+                    "primary": true
+                }
+            ],
+            "verified": false,
+            "stats": {
+                "tipCount": 19
+            },
+            "price": {
+                "tier": 1,
+                "message": "Cheap",
+                "currency": "€"
+            },
+            "likes": {
+                "count": 41,
+                "groups": [
+                    {
+                        "type": "others",
+                        "count": 41,
+                        "items": [ ]
+                    }
+                ],
+                "summary": "41 Likes"
+            },
+            "like": false,
+            "dislike": false,
+            "ok": false,
+            "rating": 6.6,
+            "ratingColor": "FFC800",
+            "ratingSignals": 70,
+            "allowMenuUrlEdit": true,
+            "beenHere": {
+                "count": 0,
+                "unconfirmedCount": 0,
+                "marked": false,
+                "lastCheckinExpiredAt": 0
+            },
+            "specials": {
+                "count": 0,
+                "items": [ ]
+            },
+            "photos": {
+                "count": 21,
+                "groups": [
+                    {
+                        "type": "checkin",
+                        "name": "Friends' check-in photos",
+                        "count": 0,
+                        "items": [ ]
+                    },
+                    {
+                        "type": "venue",
+                        "name": "Venue photos",
+                        "count": 21,
+                        "items": [
+                            {
+                                "id": "5544e161498eb81305b09534",
+                                "createdAt": 1430577505,
+                                "source": {
+                                    "name": "Foursquare for iOS",
+                                    "url": "https://foursquare.com/download/#/iphone"
+                                },
+                                "prefix": "https://fastly.4sqi.net/img/general/",
+                                "suffix": "/493631_1A4HBGloHE14XKkXVubqfZAV09DYhv6YvGGoOZru1nM.jpg",
+                                "width": 1920,
+                                "height": 1440,
+                                "user": {
+                                    "id": "493631",
+                                    "firstName": "AnneM",
+                                    "gender": "female",
+                                    "photo": {
+                                        "prefix": "https://fastly.4sqi.net/img/user/",
+                                        "suffix": "/493631-Z0VFGDYDINLXDXUH.jpg"
+                                    }
+                                },
+                                "visibility": "public"
+                            }
+                        ]
+                    }
+                ],
+                "summary": "0 photos"
+            },
+            "reasons": {
+                "count": 1,
+                "items": [
+                    {
+                        "summary": "Lots of people like this place",
+                        "type": "general",
+                        "reasonName": "rawLikesReason"
+                    }
+                ]
+            },
+            "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": [ ]
+            },
+            "createdAt": 1403969478,
+            "tips": {
+                "count": 19,
+                "groups": [
+                    {
+                        "type": "following",
+                        "name": "Tips from people you follow",
+                        "count": 0,
+                        "items": [ ]
+                    },
+                    {
+                        "type": "others",
+                        "name": "All tips",
+                        "count": 19,
+                        "items": [
+                            {
+                                "id": "54d23404498e015797f01b0b",
+                                "createdAt": 1423062020,
+                                "text": "I love the verge burger. I have had many verge burgers over the years and the Dereku verge burger is the best I have ever had!",
+                                "type": "user",
+                                "canonicalUrl": "https://foursquare.com/item/54d23404498e015797f01b0b",
+                                "likes": {
+                                    "count": 1,
+                                    "groups": [
+                                        {
+                                            "type": "others",
+                                            "count": 1,
+                                            "items": [
+                                                {
+                                                    "id": "122277818",
+                                                    "firstName": "Andres",
+                                                    "lastName": "Kõljalg",
+                                                    "gender": "male",
+                                                    "photo": {
+                                                        "prefix": "https://fastly.4sqi.net/img/user/",
+                                                        "suffix": "/122277818-MY2ICEFSWGFMBLSR.jpg"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "summary": "1 like"
+                                },
+                                "like": false,
+                                "logView": true,
+                                "agreeCount": 1,
+                                "disagreeCount": 0,
+                                "todo": {
+                                    "count": 0
+                                },
+                                "user": {
+                                    "id": "117581811",
+                                    "firstName": "Ken",
+                                    "lastName": "Dixon",
+                                    "gender": "male",
+                                    "photo": {
+                                        "prefix": "https://fastly.4sqi.net/img/user/",
+                                        "suffix": "/blank_boy.png",
+                                        "default": true
+                                    }
+                                },
+                                "authorInteractionType": "liked"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "shortUrl": "http://4sq.com/1iPkyYA",
+            "timeZone": "Europe/Tallinn",
+            "listed": {
+                "count": 38,
+                "groups": [
+                    {
+                        "type": "others",
+                        "name": "Lists from other people",
+                        "count": 38,
+                        "items": [
+                            {
+                                "id": "532b687b498e3a19243e38fc",
+                                "name": "#Tallinn",
+                                "description": "My favourite places @ Tallinn, Estonia",
+                                "type": "others",
+                                "user": {
+                                    "id": "1247440",
+                                    "firstName": "Kalle",
+                                    "lastName": "Niɘmi",
+                                    "gender": "male",
+                                    "photo": {
+                                        "prefix": "https://fastly.4sqi.net/img/user/",
+                                        "suffix": "/1247440-XYZGCFE2SLV5JUC4"
+                                    }
+                                },
+                                "editable": false,
+                                "public": true,
+                                "collaborative": false,
+                                "url": "/user/1247440/list/tallinn",
+                                "canonicalUrl": "https://foursquare.com/user/1247440/list/tallinn",
+                                "createdAt": 1395353723,
+                                "updatedAt": 1457884976,
+                                "photo": {
+                                    "id": "54aeffbc498e7b47998ee143",
+                                    "createdAt": 1420754876,
+                                    "prefix": "https://fastly.4sqi.net/img/general/",
+                                    "suffix": "/555518_ScLqIGmdOyZu4FhcIFajcUUw5wkewfTr4VS6wcfMDQc.jpg",
+                                    "width": 1440,
+                                    "height": 1440,
+                                    "user": {
+                                        "id": "555518",
+                                        "firstName": "Martin",
+                                        "lastName": "Raag",
+                                        "gender": "male",
+                                        "photo": {
+                                            "prefix": "https://fastly.4sqi.net/img/user/",
+                                            "suffix": "/555518-YDK3VMEXGUUAPDNU.jpg"
+                                        }
+                                    },
+                                    "visibility": "public"
+                                },
+                                "followers": {
+                                    "count": 2
+                                },
+                                "listItems": {
+                                    "count": 51,
+                                    "items": [
+                                        {
+                                            "id": "v53aedfc6498e3f6a6731217d",
+                                            "createdAt": 1420543336
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "5519b3fd498e1a1bc70df83d",
+                                "name": "Tallinn & Tartu",
+                                "description": "",
+                                "type": "others",
+                                "user": {
+                                    "id": "107013",
+                                    "firstName": "Alex",
+                                    "lastName": "Lobov",
+                                    "gender": "male",
+                                    "photo": {
+                                        "prefix": "https://fastly.4sqi.net/img/user/",
+                                        "suffix": "/107013_YwTO86bJ_1lwsOs6a_XXfku-FaSJWCPF2YuOiSKQ6dUmvv12NMtvDtnaNUG0paNDlUzxTG_Av.jpg"
+                                    }
+                                },
+                                "editable": false,
+                                "public": true,
+                                "collaborative": false,
+                                "url": "/alexlobov/list/tallinn--tartu",
+                                "canonicalUrl": "https://foursquare.com/alexlobov/list/tallinn--tartu",
+                                "createdAt": 1427747837,
+                                "updatedAt": 1526571605,
+                                "photo": {
+                                    "id": "50e75056e4b01db20415a421",
+                                    "createdAt": 1357336662,
+                                    "prefix": "https://fastly.4sqi.net/img/general/",
+                                    "suffix": "/34054045_664RSOy8sx_ZwLIGhfQ4ac7fTa2E15g6KtCunByLR24.jpg",
+                                    "width": 720,
+                                    "height": 720,
+                                    "user": {
+                                        "id": "34054045",
+                                        "firstName": "xushaha",
+                                        "gender": "female",
+                                        "photo": {
+                                            "prefix": "https://fastly.4sqi.net/img/user/",
+                                            "suffix": "/VONFN425PJUPL5NW.jpg"
+                                        }
+                                    },
+                                    "visibility": "public"
+                                },
+                                "followers": {
+                                    "count": 1
+                                },
+                                "listItems": {
+                                    "count": 73,
+                                    "items": [
+                                        {
+                                            "id": "t5523fc58498ee59418fbe79e",
+                                            "createdAt": 1428421731,
+                                            "tip": {
+                                                "id": "5523fc58498ee59418fbe79e",
+                                                "createdAt": 1428421720,
+                                                "text": "Excellent burgers, among Tallinn's best.",
+                                                "type": "user",
+                                                "canonicalUrl": "https://foursquare.com/item/5523fc58498ee59418fbe79e",
+                                                "likes": {
+                                                    "count": 0,
+                                                    "groups": [ ]
+                                                },
+                                                "like": false,
+                                                "logView": true,
+                                                "agreeCount": 0,
+                                                "disagreeCount": 0,
+                                                "todo": {
+                                                    "count": 0
+                                                },
+                                                "saves": { },
+                                                "user": {
+                                                    "id": "107013",
+                                                    "firstName": "Alex",
+                                                    "lastName": "Lobov",
+                                                    "gender": "male",
+                                                    "photo": {
+                                                        "prefix": "https://fastly.4sqi.net/img/user/",
+                                                        "suffix": "/107013_YwTO86bJ_1lwsOs6a_XXfku-FaSJWCPF2YuOiSKQ6dUmvv12NMtvDtnaNUG0paNDlUzxTG_Av.jpg"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "pageUpdates": {
+                "count": 0,
+                "items": [ ]
+            },
+            "inbox": {
+                "count": 0,
+                "items": [ ]
+            },
+            "attributes": {
+                "groups": [
+                    {
+                        "type": "price",
+                        "name": "Price",
+                        "summary": "€",
+                        "count": 1,
+                        "items": [
+                            {
+                                "displayName": "Price",
+                                "displayValue": "€",
+                                "priceTier": 1
+                            }
+                        ]
+                    },
+                    {
+                        "type": "reservations",
+                        "name": "Reservations",
+                        "count": 3,
+                        "items": [
+                            {
+                                "displayName": "Reservations",
+                                "displayValue": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "payments",
+                        "name": "Credit Cards",
+                        "summary": "Credit Cards",
+                        "count": 5,
+                        "items": [
+                            {
+                                "displayName": "Credit Cards",
+                                "displayValue": "Yes"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "outdoorSeating",
+                        "name": "Outdoor Seating",
+                        "summary": "Outdoor Seating",
+                        "count": 1,
+                        "items": [
+                            {
+                                "displayName": "Outdoor Seating",
+                                "displayValue": "Yes"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "wifi",
+                        "name": "Wi-Fi",
+                        "summary": "Wi-Fi",
+                        "count": 1,
+                        "items": [
+                            {
+                                "displayName": "Wi-Fi",
+                                "displayValue": "Yes"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "serves",
+                        "name": "Menus",
+                        "summary": "Lunch",
+                        "count": 8,
+                        "items": [
+                            {
+                                "displayName": "Lunch",
+                                "displayValue": "Lunch"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "drinks",
+                        "name": "Drinks",
+                        "summary": "Beer & Wine",
+                        "count": 5,
+                        "items": [
+                            {
+                                "displayName": "Beer",
+                                "displayValue": "Beer"
+                            },
+                            {
+                                "displayName": "Wine",
+                                "displayValue": "Wine"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "diningOptions",
+                        "name": "Dining Options",
+                        "summary": "Bar Service, Take-out & Delivery",
+                        "count": 5,
+                        "items": [
+                            {
+                                "displayName": "Bar Service",
+                                "displayValue": "Bar Service"
+                            },
+                            {
+                                "displayName": "Take-out",
+                                "displayValue": "Take-out"
+                            },
+                            {
+                                "displayName": "Delivery",
+                                "displayValue": "Delivery"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "parking",
+                        "name": "Parking",
+                        "summary": "Parking",
+                        "count": 5,
+                        "items": [
+                            {
+                                "displayName": "Parking",
+                                "displayValue": "Yes"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "restroom",
+                        "name": "Restroom",
+                        "summary": "Restroom",
+                        "count": 1,
+                        "items": [
+                            {
+                                "displayName": "Restroom",
+                                "displayValue": "Yes"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "wheelchairAccessible",
+                        "name": "Wheelchair Accessible",
+                        "summary": "Wheelchair Accessible",
+                        "count": 1,
+                        "items": [
+                            {
+                                "displayName": "Wheelchair Accessible",
+                                "displayValue": "Yes"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bestPhoto": {
+                "id": "5544e161498eb81305b09534",
+                "createdAt": 1430577505,
+                "source": {
+                    "name": "Foursquare for iOS",
+                    "url": "https://foursquare.com/download/#/iphone"
+                },
+                "prefix": "https://fastly.4sqi.net/img/general/",
+                "suffix": "/493631_1A4HBGloHE14XKkXVubqfZAV09DYhv6YvGGoOZru1nM.jpg",
+                "width": 1920,
+                "height": 1440,
+                "visibility": "public"
+            },
+            "colors": {
+                "highlightColor": {
+                    "photoId": "5544e161498eb81305b09534",
+                    "value": -12576752
+                },
+                "highlightTextColor": {
+                    "photoId": "5544e161498eb81305b09534",
+                    "value": -1
+                },
+                "algoVersion": 3
+            }
+        }
+    }
+}

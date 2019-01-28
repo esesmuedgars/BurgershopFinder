@@ -1,0 +1,196 @@
+{
+    "meta": {
+        "code": 200,
+        "requestId": "5c48d477351e3d7740a5b6d8"
+    },
+    "notifications": [
+        {
+            "type": "notificationTray",
+            "item": {
+                "unreadCount": 0
+            }
+        }
+    ],
+    "response": {
+        "venue": {
+            "id": "5a8a9495178a2a50af1dd657",
+            "name": "Burger King Tallink M/S Star",
+            "contact": { },
+            "location": {
+                "lat": 59.443475,
+                "lng": 24.765942,
+                "labeledLatLngs": [
+                    {
+                        "label": "display",
+                        "lat": 59.443475,
+                        "lng": 24.765942
+                    }
+                ],
+                "postalCode": "10120",
+                "cc": "EE",
+                "city": "Tallinn",
+                "state": "Harju",
+                "country": "Estonia",
+                "formattedAddress": [
+                    "10120 Tallinn",
+                    "Estonia"
+                ]
+            },
+            "canonicalUrl": "https://foursquare.com/v/burger-king-tallink-ms-star/5a8a9495178a2a50af1dd657",
+            "categories": [
+                {
+                    "id": "4bf58dd8d48988d16c941735",
+                    "name": "Burger Joint",
+                    "pluralName": "Burger Joints",
+                    "shortName": "Burgers",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/burger_",
+                        "suffix": ".png"
+                    },
+                    "primary": true
+                }
+            ],
+            "verified": false,
+            "stats": {
+                "tipCount": 0
+            },
+            "price": {
+                "tier": 1,
+                "message": "Cheap",
+                "currency": "€"
+            },
+            "likes": {
+                "count": 0,
+                "groups": [ ]
+            },
+            "like": false,
+            "dislike": false,
+            "ok": false,
+            "allowMenuUrlEdit": true,
+            "beenHere": {
+                "count": 0,
+                "unconfirmedCount": 0,
+                "marked": false,
+                "lastCheckinExpiredAt": 0
+            },
+            "specials": {
+                "count": 0,
+                "items": [ ]
+            },
+            "photos": {
+                "count": 0,
+                "groups": [
+                    {
+                        "type": "checkin",
+                        "name": "Friends' check-in photos",
+                        "count": 0,
+                        "items": [ ]
+                    }
+                ],
+                "summary": "No photos"
+            },
+            "reasons": {
+                "count": 0,
+                "items": [ ]
+            },
+            "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": [ ]
+            },
+            "createdAt": 1519031445,
+            "tips": {
+                "count": 0,
+                "groups": [
+                    {
+                        "type": "following",
+                        "name": "Tips from people you follow",
+                        "count": 0,
+                        "items": [ ]
+                    }
+                ]
+            },
+            "shortUrl": "http://4sq.com/2ECtCAK",
+            "timeZone": "Europe/Tallinn",
+            "listed": {
+                "count": 0,
+                "groups": [ ]
+            },
+            "pageUpdates": {
+                "count": 0,
+                "items": [ ]
+            },
+            "inbox": {
+                "count": 0,
+                "items": [ ]
+            },
+            "parent": {
+                "id": "53cfb54b498ef5c7e5064803",
+                "name": "Tallink M/S Star Comfort Class",
+                "location": {
+                    "address": "Tallink M/S Star",
+                    "crossStreet": "Tallinn-Helsinki-Tallinn",
+                    "lat": 59.44323519555288,
+                    "lng": 24.765390115372945,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 59.44323519555288,
+                            "lng": 24.765390115372945
+                        }
+                    ],
+                    "cc": "EE",
+                    "country": "Estonia",
+                    "formattedAddress": [
+                        "Tallink M/S Star (Tallinn-Helsinki-Tallinn)",
+                        "Estonia"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4f04b25d2fb6e1c99f3db0c0",
+                        "name": "Travel Lounge",
+                        "pluralName": "Travel Lounges",
+                        "shortName": "Lounge",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/default_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ]
+            },
+            "hierarchy": [
+                {
+                    "name": "Tallink M/S Star Comfort Class",
+                    "lang": "LV",
+                    "id": "53cfb54b498ef5c7e5064803",
+                    "canonicalUrl": "https://foursquare.com/v/tallink-ms-star-comfort-class/53cfb54b498ef5c7e5064803"
+                },
+                {
+                    "name": "Tallink M/S Star",
+                    "lang": "LV",
+                    "id": "4c08aa16ffb8c9b64ca76861",
+                    "canonicalUrl": "https://foursquare.com/v/tallink-ms-star/4c08aa16ffb8c9b64ca76861"
+                }
+            ],
+            "attributes": {
+                "groups": [
+                    {
+                        "type": "price",
+                        "name": "Price",
+                        "summary": "€",
+                        "count": 1,
+                        "items": [
+                            {
+                                "displayName": "Price",
+                                "displayValue": "€",
+                                "priceTier": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

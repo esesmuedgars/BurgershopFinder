@@ -1,0 +1,255 @@
+{
+    "meta": {
+        "code": 200,
+        "requestId": "5c478ea7dd57976058793842"
+    },
+    "notifications": [
+        {
+            "type": "notificationTray",
+            "item": {
+                "unreadCount": 0
+            }
+        }
+    ],
+    "response": {
+        "venue": {
+            "id": "500ab27fe4b0e68937e2d7d9",
+            "name": "Burger",
+            "contact": { },
+            "location": {
+                "address": "Toompuiestee",
+                "lat": 59.441099320145675,
+                "lng": 24.738340488091445,
+                "labeledLatLngs": [
+                    {
+                        "label": "display",
+                        "lat": 59.441099320145675,
+                        "lng": 24.738340488091445
+                    }
+                ],
+                "cc": "EE",
+                "neighborhood": "Kalamaja",
+                "city": "Tallinn",
+                "state": "Harju",
+                "country": "Estonia",
+                "formattedAddress": [
+                    "Toompuiestee",
+                    "Tallinn",
+                    "Estonia"
+                ]
+            },
+            "canonicalUrl": "https://foursquare.com/v/burger/500ab27fe4b0e68937e2d7d9",
+            "categories": [
+                {
+                    "id": "4bf58dd8d48988d16c941735",
+                    "name": "Burger Joint",
+                    "pluralName": "Burger Joints",
+                    "shortName": "Burgers",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/burger_",
+                        "suffix": ".png"
+                    },
+                    "primary": true
+                }
+            ],
+            "verified": false,
+            "stats": {
+                "tipCount": 1
+            },
+            "price": {
+                "tier": 1,
+                "message": "Cheap",
+                "currency": "€"
+            },
+            "likes": {
+                "count": 0,
+                "groups": [ ]
+            },
+            "like": false,
+            "dislike": false,
+            "ok":false,
+            "allowMenuUrlEdit":true,
+            "beenHere":{
+                "count": 0,
+                "unconfirmedCount":0,
+                "marked":false,
+                "lastCheckinExpiredAt":0
+            },
+            "specials":{
+                "count": 0,
+                "items": [ ]
+            },
+            "photos":{
+                "count": 2,
+                "groups": [
+                    {
+                        "type": "checkin",
+                        "name": "Friends' check-in photos",
+                        "count": 0,
+                        "items": [ ]
+                    },
+                    {
+                        "type": "venue",
+                        "name": "Venue photos",
+                        "count": 2,
+                        "items": [
+                            {
+                                "id": "5308a5f8498e5f23861903b9",
+                                "createdAt": 1393075704,
+                                "source": {
+                                    "name": "Foursquare for Android",
+                                    "url": "https://foursquare.com/download/#/android"
+                                },
+                                "prefix": "https://fastly.4sqi.net/img/general/",
+                                "suffix": "/33835706_9UPLxjDjbIIcaBYL-FV5T_IXHNCj15JyTNC6NKrBGqI.jpg",
+                                "width": 720,
+                                "height": 960,
+                                "user": {
+                                    "id": "33835706",
+                                    "firstName": "Jaanus",
+                                    "lastName": "Kalju",
+                                    "gender": "male",
+                                    "photo": {
+                                        "prefix": "https://fastly.4sqi.net/img/user/",
+                                        "suffix": "/JQSTXZ1JUXGLFYHG.jpg"
+                                    }
+                                },
+                                "visibility": "public"
+                            }
+                        ]
+                    }
+                ],
+                "summary": "0 photos"
+            },
+            "reasons": {
+                "count": 0,
+                "items": [ ]
+            },
+            "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": [ ]
+            },
+            "createdAt": 1342878335,
+            "tips": {
+                "count": 1,
+                "groups": [
+                    {
+                        "type": "following",
+                        "name": "Tips from people you follow",
+                        "count": 0,
+                        "items": [ ]
+                    },
+                    {
+                        "type": "others",
+                        "name": "All tips",
+                        "count": 1,
+                        "items": [
+                            {
+                                "id": "5251c700498e820f5296e3f8",
+                                "createdAt": 1381091072,
+                                "text": "Nothing special but its a quick stop if you need something to eat and have no time nor desire to wait... Just a quick bite.",
+                                "type": "user",
+                                "canonicalUrl": "https://foursquare.com/item/5251c700498e820f5296e3f8",
+                                "likes": {
+                                    "count": 1,
+                                    "groups": [
+                                        {
+                                            "type": "others",
+                                            "count": 1,
+                                            "items": [
+                                                {
+                                                    "id": "4662291",
+                                                    "firstName": "Richard T.",
+                                                    "gender": "male",
+                                                    "photo": {
+                                                        "prefix": "https://fastly.4sqi.net/img/user/",
+                                                        "suffix": "/3ZXAKVQYW11KTEKJ.jpg"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "summary": "1 like"
+                                },
+                                "like": false,
+                                "logView": true,
+                                "editedAt": 1381091107,
+                                "agreeCount": 1,
+                                "disagreeCount": 0,
+                                "todo": {
+                                    "count": 0
+                                },
+                                "user": {
+                                    "id": "42539373",
+                                    "firstName": "Roman",
+                                    "lastName": "Melihhov",
+                                    "gender": "male",
+                                    "photo": {
+                                        "prefix": "https://fastly.4sqi.net/img/user/",
+                                        "suffix": "/42539373-4OI3Z4DMTVVB5HVG"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "shortUrl": "http://4sq.com/MfrhGv",
+            "timeZone": "Europe/Tallinn",
+            "listed": {
+                "count": 0,
+                "groups": [ ]
+            },
+            "pageUpdates": {
+                "count": 0,
+                "items": [ ]
+            },
+            "inbox": {
+                "count": 0,
+                "items": [ ]
+            },
+            "attributes": {
+                "groups": [
+                    {
+                        "type": "price",
+                        "name": "Price",
+                        "summary": "€",
+                        "count": 1,
+                        "items": [
+                            {
+                                "displayName": "Price",
+                                "displayValue": "€",
+                                "priceTier": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bestPhoto": {
+                "id": "5308a5f8498e5f23861903b9",
+                "createdAt": 1393075704,
+                "source": {
+                    "name": "Foursquare for Android",
+                    "url": "https://foursquare.com/download/#/android"
+                },
+                "prefix": "https://fastly.4sqi.net/img/general/",
+                "suffix": "/33835706_9UPLxjDjbIIcaBYL-FV5T_IXHNCj15JyTNC6NKrBGqI.jpg",
+                "width": 720,
+                "height": 960,
+                "visibility": "public"
+            },
+            "colors": {
+                "highlightColor": {
+                    "photoId": "5308a5f8498e5f23861903b9",
+                    "value": -8884104
+                },
+                "highlightTextColor": {
+                    "photoId": "5308a5f8498e5f23861903b9",
+                    "value": -1
+                },
+                "algoVersion": 3
+            }
+        }
+    }
+}

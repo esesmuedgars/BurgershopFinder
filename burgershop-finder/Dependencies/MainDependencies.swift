@@ -8,11 +8,6 @@
 
 import Foundation
 
-protocol Dependencies {
-    func authService() -> AuthServiceProtocol
-    func apiService() -> APIServiceProtocol
-}
-
 final class MainDependencies: Dependencies {
 
     private let _authService = AuthService()

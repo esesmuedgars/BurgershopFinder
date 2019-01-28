@@ -1,0 +1,530 @@
+{
+    "meta": {
+        "code": 200,
+        "requestId": "5c4785111ed2193ef1da1c50"
+    },
+    "notifications": [
+        {
+            "type": "notificationTray",
+            "item": {
+                "unreadCount": 0
+            }
+        }
+    ],
+    "response": {
+        "venues": [
+            {
+                "id": "500ab27fe4b0e68937e2d7d9",
+                "name": "Burger",
+                "location": {
+                    "address": "Toompuiestee",
+                    "lat": 59.441099320145675,
+                    "lng": 24.738340488091445,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 59.441099320145675,
+                            "lng": 24.738340488091445
+                        }
+                    ],
+                    "cc": "EE",
+                    "neighborhood": "Kalamaja",
+                    "city": "Tallinn",
+                    "state": "Harju",
+                    "country": "Estonia",
+                    "formattedAddress": [
+                        "Toompuiestee",
+                        "Tallinn",
+                        "Estonia"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16c941735",
+                        "name": "Burger Joint",
+                        "pluralName": "Burger Joints",
+                        "shortName": "Burgers",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/burger_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1548190993",
+                "hasPerk": false
+            },
+            {
+                "id": "58c53419cf11d406a5450186",
+                "name": "Burger King",
+                "location": {
+                    "address": "Tallink M/S Megastar",
+                    "lat": 59.44467381247656,
+                    "lng": 24.771834682043117,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 59.44467381247656,
+                            "lng": 24.771834682043117
+                        }
+                    ],
+                    "cc": "EE",
+                    "city": "Tallinn",
+                    "country": "Estonia",
+                    "formattedAddress": [
+                        "Tallink M/S Megastar",
+                        "Tallinn",
+                        "Estonia"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16e941735",
+                        "name": "Fast Food Restaurant",
+                        "pluralName": "Fast Food Restaurants",
+                        "shortName": "Fast Food",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/fastfood_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1548190993",
+                "hasPerk": false
+            },
+            {
+                "id": "57a0938c498eab14ca08b93f",
+                "name": "burger & ribi",
+                "location": {
+                    "address": "Raekoja pl.",
+                    "lat": 59.437213,
+                    "lng": 24.745246,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 59.437213,
+                            "lng": 24.745246
+                        }
+                    ],
+                    "cc": "EE",
+                    "neighborhood": "Vanalinn",
+                    "city": "Tallinn",
+                    "state": "Harju",
+                    "country": "Estonia",
+                    "formattedAddress": [
+                        "Raekoja pl.",
+                        "Tallinn",
+                        "Estonia"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16c941735",
+                        "name": "Burger Joint",
+                        "pluralName": "Burger Joints",
+                        "shortName": "Burgers",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/burger_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1548190993",
+                "hasPerk": false
+            },
+            {
+                "id": "53aedfc6498e3f6a6731217d",
+                "name": "Dereku burger",
+                "location": {
+                    "address": "Aia 8",
+                    "crossStreet": "Inseneri",
+                    "lat": 59.4380328100894,
+                    "lng": 24.752064812033336,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 59.4380328100894,
+                            "lng": 24.752064812033336
+                        }
+                    ],
+                    "postalCode": "10111",
+                    "cc": "EE",
+                    "city": "Tallinn",
+                    "state": "Harju",
+                    "country": "Estonia",
+                    "formattedAddress": [
+                        "Aia 8 (Inseneri)",
+                        "10111 Tallinn",
+                        "Estonia"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16c941735",
+                        "name": "Burger Joint",
+                        "pluralName": "Burger Joints",
+                        "shortName": "Burgers",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/burger_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1548190993",
+                "hasPerk": false
+            },
+            {
+                "id": "5a8a9495178a2a50af1dd657",
+                "name": "Burger King Tallink M/S Star",
+                "location": {
+                    "lat": 59.443475,
+                    "lng": 24.765942,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 59.443475,
+                            "lng": 24.765942
+                        }
+                    ],
+                    "postalCode": "10120",
+                    "cc": "EE",
+                    "city": "Tallinn",
+                    "state": "Harju",
+                    "country": "Estonia",
+                    "formattedAddress": [
+                        "10120 Tallinn",
+                        "Estonia"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16c941735",
+                        "name": "Burger Joint",
+                        "pluralName": "Burger Joints",
+                        "shortName": "Burgers",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/burger_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1548190993",
+                "hasPerk": false
+            },
+            {
+                "id": "54be8895498ea3c0de8ebadd",
+                "name": "Burger Box",
+                "location": {
+                    "address": "Kopli 4",
+                    "lat": 59.4412855444457,
+                    "lng": 24.73683335268594,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 59.4412855444457,
+                            "lng": 24.73683335268594
+                        }
+                    ],
+                    "cc": "EE",
+                    "neighborhood": "Kalamaja",
+                    "city": "Tallinn",
+                    "state": "Harju",
+                    "country": "Estonia",
+                    "formattedAddress": [
+                        "Kopli 4",
+                        "Tallinn",
+                        "Estonia"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16c941735",
+                        "name": "Burger Joint",
+                        "pluralName": "Burger Joints",
+                        "shortName": "Burgers",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/burger_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1548190993",
+                "hasPerk": false
+            },
+            {
+                "id": "5ad4752e1987ec57f4745c9e",
+                "name": "Mini Burger Factory",
+                "location": {
+                    "address": "Pikk 47",
+                    "lat": 59.439873,
+                    "lng": 24.747081,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 59.439873,
+                            "lng": 24.747081
+                        }
+                    ],
+                    "postalCode": "10133",
+                    "cc": "EE",
+                    "city": "Tallinn",
+                    "state": "Harju",
+                    "country": "Estonia",
+                    "formattedAddress": [
+                        "Pikk 47",
+                        "10133 Tallinn",
+                        "Estonia"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16c941735",
+                        "name": "Burger Joint",
+                        "pluralName": "Burger Joints",
+                        "shortName": "Burgers",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/burger_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1548190993",
+                "hasPerk": false
+            },
+            {
+                "id": "53513584498ea10a3b8c2a02",
+                "name": "Estonian Burger Factory",
+                "location": {
+                    "address": "Pärnu mnt 41a",
+                    "lat": 59.428821,
+                    "lng": 24.743954,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 59.428821,
+                            "lng": 24.743954
+                        }
+                    ],
+                    "cc": "EE",
+                    "neighborhood": "Tatari",
+                    "city": "Tallinn",
+                    "state": "Harju",
+                    "country": "Estonia",
+                    "formattedAddress": [
+                        "Pärnu mnt 41a",
+                        "Tallinn",
+                        "Estonia"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16c941735",
+                        "name": "Burger Joint",
+                        "pluralName": "Burger Joints",
+                        "shortName": "Burgers",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/burger_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1548190993",
+                "hasPerk": false
+            },
+            {
+                "id": "5b951037b6b04b002cdb7aaf",
+                "name": "Beer & Burger",
+                "location": {
+                    "lat": 59.434126,
+                    "lng": 24.756608,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 59.434126,
+                            "lng": 24.756608
+                        }
+                    ],
+                    "postalCode": "10143",
+                    "cc": "EE",
+                    "city": "Tallín",
+                    "state": "Harju",
+                    "country": "Estonia",
+                    "formattedAddress": [
+                        "10143 Tallín",
+                        "Estonia"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16c941735",
+                        "name": "Burger Joint",
+                        "pluralName": "Burger Joints",
+                        "shortName": "Burgers",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/burger_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1548190993",
+                "hasPerk": false
+            },
+            {
+                "id": "5943e0bbee628b769b845e00",
+                "name": "Dereku Burger",
+                "location": {
+                    "address": "Fr. R. Faehlmanni 3",
+                    "lat": 59.435088328142726,
+                    "lng": 24.76977794821897,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 59.435088328142726,
+                            "lng": 24.76977794821897
+                        }
+                    ],
+                    "postalCode": "10125",
+                    "cc": "EE",
+                    "city": "Tallinn",
+                    "state": "Harju",
+                    "country": "Estonia",
+                    "formattedAddress": [
+                        "Fr. R. Faehlmanni 3",
+                        "10125 Tallinn",
+                        "Estonia"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16c941735",
+                        "name": "Burger Joint",
+                        "pluralName": "Burger Joints",
+                        "shortName": "Burgers",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/burger_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1548190993",
+                "hasPerk": false
+            },
+            {
+                "id": "56bf9fe0cd10e4bda53a0a93",
+                "name": "Burgerito Meat & Burgers",
+                "location": {
+                    "address": "Pärnu mnt 19",
+                    "lat": 59.431725,
+                    "lng": 24.746052,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 59.431725,
+                            "lng": 24.746052
+                        }
+                    ],
+                    "cc": "EE",
+                    "city": "Tallinn",
+                    "state": "Harju",
+                    "country": "Estonia",
+                    "formattedAddress": [
+                        "Pärnu mnt 19",
+                        "Tallinn",
+                        "Estonia"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16c941735",
+                        "name": "Burger Joint",
+                        "pluralName": "Burger Joints",
+                        "shortName": "Burgers",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/burger_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1548190993",
+                "hasPerk": false
+            },
+            {
+                "id": "511b91b9e4b0c70932c1ae92",
+                "name": "Burgerbar",
+                "location": {
+                    "lat": 59.42717549523367,
+                    "lng": 24.77152236652438,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 59.42717549523367,
+                            "lng": 24.77152236652438
+                        }
+                    ],
+                    "cc": "EE",
+                    "country": "Estonia",
+                    "formattedAddress": [
+                        "Estonia"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16c941735",
+                        "name": "Burger Joint",
+                        "pluralName": "Burger Joints",
+                        "shortName": "Burgers",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/burger_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1548190993",
+                "hasPerk": false
+            }
+        ],
+        "geocode": {
+            "what": "",
+            "where": "tallin",
+            "feature": {
+                "cc": "EE",
+                "name": "Tallinn",
+                "displayName": "Tallinn, Estonia",
+                "matchedName": "Tallin, Estonia",
+                "highlightedName": "<b>Tallin</b>, Estonia",
+                "woeType": 7,
+                "slug": "tallinn-estonia",
+                "id": "geonameid:588409",
+                "longId": "72057594038516345",
+                "geometry": {
+                    "center": {
+                        "lat": 59.43696,
+                        "lng": 24.75353
+                    },
+                    "bounds": {
+                        "ne": {
+                            "lat": 59.59157194353932,
+                            "lng": 24.927038946736218
+                        },
+                        "sw": {
+                            "lat": 59.35176001556917,
+                            "lng": 24.549014025869063
+                        }
+                    }
+                }
+            },
+            "parents": [ ]
+        }
+    }
+}

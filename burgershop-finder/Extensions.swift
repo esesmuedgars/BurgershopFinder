@@ -22,12 +22,6 @@ extension Reactive where Base : UICollectionView {
     }
 }
 
-extension DependencyAssembler {
-    static func registerDependencies() {
-        register(dependencies: MainDependencies())
-    }
-}
-
 extension NSCache where KeyType == NSString, ObjectType == UIImage {
     func get(forKey key: String) -> UIImage? {
         return object(forKey: NSString(string: key))
@@ -76,5 +70,12 @@ extension UICollectionView {
         get {
             return numberOfItems(inSection: 0) == 0
         }
+    }
+}
+
+extension Data {
+    init(contentsOf path: String, isDirectory: Bool = false, options: Data.ReadingOptions) throws {
+        let url = URL(fileURLWithPath: path, isDirectory: isDirectory)
+        try self.init(contentsOf: url, options: options)
     }
 }
