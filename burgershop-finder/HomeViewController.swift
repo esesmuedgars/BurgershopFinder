@@ -34,7 +34,7 @@ final class HomeViewController: UIViewController {
     }
 
     private func addHandlers() {
-        viewModel.details.observeOn(MainScheduler.instance)
+        viewModel.details
             .subscribe { [weak mapView] event in
                 guard let details = event.element else { return }
 
@@ -42,7 +42,8 @@ final class HomeViewController: UIViewController {
                 mapView?.addAnnotation(annotation)
         }.disposed(by: viewModel.disposeBag)
 
-        viewModel.items.bind(to: collectionView.rx.items(cellType: VenueCell.self)) { [weak viewModel] (_, identifier, cell) in
+        viewModel.items
+            .bind(to: collectionView.rx.items(cellType: VenueCell.self)) { [weak viewModel] (_, identifier, cell) in
             let cellModel = viewModel?.cellModel(forVenueWith: identifier)
             cell.configure(with: cellModel)
         }.disposed(by: viewModel.disposeBag)

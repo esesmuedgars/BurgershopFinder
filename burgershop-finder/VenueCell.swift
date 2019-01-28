@@ -43,7 +43,7 @@ final class VenueCell: SetupCell {
     }
 
     private func addHandlers() {
-        viewModel.venueImage.observeOn(MainScheduler.asyncInstance)
+        viewModel.venueImage
             .bind(to: imageView.rx.image)
             .disposed(by: viewModel.disposeBag)
     }

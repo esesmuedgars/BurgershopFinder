@@ -63,7 +63,6 @@ final class HomeViewModel {
 
     private func fetchVenues(authToken: String) {
         apiService.fetchVenues(authToken: authToken)
-            .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] items in
                 self?._items.value = items
             }, onError: { error in

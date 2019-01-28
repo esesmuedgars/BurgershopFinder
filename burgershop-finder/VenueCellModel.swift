@@ -45,7 +45,6 @@ final class VenueCellModel {
 
     private func addHandlers() {
         venueDetails.skip(1)
-            .observeOn(MainScheduler.instance)
             .subscribe { [weak self] event in
                 guard let details = event.element, let image = details?.image else {
                     self?.cacheImage(UIImage(named: "Cheeseburger"))
