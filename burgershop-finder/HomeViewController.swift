@@ -35,12 +35,11 @@ final class HomeViewController: UIViewController {
 
     private func addHandlers() {
         viewModel.details
-            .subscribe { [weak mapView] event in
-                guard let details = event.element else { return }
-
+            .subscribe(onNext: { [weak mapView] details in
+                guard let details = details else { return }
                 let annotation = PointAnnotation(details)
                 mapView?.addAnnotation(annotation)
-        }.disposed(by: viewModel.disposeBag)
+            }).disposed(by: viewModel.disposeBag)
 
         viewModel.items
             .bind(to: collectionView.rx.items(cellType: VenueCell.self)) { [weak viewModel] (_, identifier, cell) in
