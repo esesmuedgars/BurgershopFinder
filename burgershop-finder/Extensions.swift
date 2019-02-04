@@ -79,3 +79,9 @@ extension Data {
         try self.init(contentsOf: url, options: options)
     }
 }
+
+extension MapView {
+    func selectAnnotation(forRow row: Int, animated: Bool = true) {
+        selectAnnotation(annotations[row], animated: animated)
+    }
+}

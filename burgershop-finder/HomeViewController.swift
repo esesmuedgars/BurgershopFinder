@@ -42,10 +42,18 @@ final class HomeViewController: UIViewController {
             }).disposed(by: viewModel.disposeBag)
 
         viewModel.items
-            .bind(to: collectionView.rx.items(cellType: VenueCell.self)) { [weak viewModel] (_, identifier, cell) in
-            let cellModel = viewModel?.cellModel(forVenueWith: identifier)
-            cell.configure(with: cellModel)
-        }.disposed(by: viewModel.disposeBag)
+            .bind(to: collectionView.rx.items(cellType: VenueCell.self)) { [weak self] (row, identifier, cell) in
+                guard let self = self else { return }
+
+                let cellModel = self.viewModel.cellModel(forVenueWith: identifier)
+                cell.configure(with: cellModel)
+
+                cell.touchUpInside.subscribe(onNext: { _ in
+                    self.mapView.selectAnnotation(forRow: row)
+                }, onError: { error in
+                    print(error)
+                }).disposed(by: self.viewModel.disposeBag)
+            }.disposed(by: viewModel.disposeBag)
     }
 
     override func viewDidAppear(_ animated: Bool) {
