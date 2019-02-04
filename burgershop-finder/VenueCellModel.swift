@@ -40,19 +40,19 @@ final class VenueCellModel {
         self.apiService = apiService
         self.authService = authService
 
-        addHandlers()
+        bindRx()
     }
 
-    private func addHandlers() {
+    private func bindRx() {
         venueDetails.skip(1)
-            .subscribe { [weak self] event in
-                guard let details = event.element, let image = details?.image else {
+            .subscribe(onNext: { [weak self] (details) in
+                guard let image = details?.image else {
                     self?.cacheImage(UIImage(named: "Cheeseburger"))
                     return
                 }
 
                 self?.cacheImage(image)
-            }.disposed(by: disposeBag)
+            }).disposed(by: disposeBag)
     }
 
     func inspectVenue() {

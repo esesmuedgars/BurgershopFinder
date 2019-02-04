@@ -11,16 +11,7 @@ import MapKit
 
 final class AnnotationView: SetupAnnotationView {
 
-    var rightButton: UIButton = {
-        let button = UIButton(type: .detailDisclosure)
-        button.addTarget(nil, action: #selector(tap), for: .touchUpInside)
-        return button
-    }()
-
-    @objc
-    private func tap() {
-        print("tap")
-    }
+    var rightButton = UIButton(type: .detailDisclosure)
 
     override func setup() {
         canShowCallout = true

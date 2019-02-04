@@ -51,10 +51,10 @@ final class VenueCell: SetupCell {
     func configure(with viewModel: VenueCellModel) {
         self.viewModel = viewModel
 
-        addHandlers()
+        bindRx()
     }
 
-    private func addHandlers() {
+    private func bindRx() {
         viewModel.venueImage
             .bind(to: imageView.rx.image)
             .disposed(by: viewModel.disposeBag)

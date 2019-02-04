@@ -19,7 +19,7 @@ final class FSLocation: NSObject, Codable {
         case longitude = "lng"
     }
 
-    init(address: String?, latitude: Double, longitude: Double) {
+    private init(address: String?, latitude: Double, longitude: Double) {
         self.address = address
         self.latitude = latitude
         self.longitude = longitude

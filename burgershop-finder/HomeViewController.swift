@@ -26,17 +26,18 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        titleLabel.text = "Venues"
+        titleLabel.setTitle("Venues")
 
-        addHandlers()
+        bindRx()
         
         CacheManager.shared.cache.removeAllObjects() // #debug
     }
 
-    private func addHandlers() {
+    private func bindRx() {
         viewModel.details
             .subscribe(onNext: { [weak mapView] details in
                 guard let details = details else { return }
+
                 let annotation = PointAnnotation(details)
                 mapView?.addAnnotation(annotation)
             }).disposed(by: viewModel.disposeBag)

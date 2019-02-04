@@ -24,6 +24,10 @@ final class TitleLabel: SetupLabel {
         font = .withSize(fontSize)
     }
 
+    public func setTitle(_ text: String? = "Title") {
+        self.text = text
+    }
+
     private func setAttributedText(_ string: String?) {
         attributedText = NSAttributedString(string)
     }

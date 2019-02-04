@@ -19,6 +19,6 @@ final class PointAnnotation: MKPointAnnotation {
 
         self.image = details.image
         self.coordinate = details.coordinate
-        self.title = details.name // TODO: Revisit
+        self.title = details.name
     }
 }
