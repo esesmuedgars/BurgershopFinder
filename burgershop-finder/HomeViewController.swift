@@ -50,7 +50,7 @@ final class HomeViewController: UIViewController {
                 cell.configure(with: cellModel)
 
                 cell.touchUpInside.subscribe(onNext: { _ in
-                    self.mapView.selectAnnotation(forRow: row)
+                    self.mapView.selectAnnotation(by: identifier)
                 }, onError: { error in
                     print(error)
                 }).disposed(by: self.viewModel.disposeBag)

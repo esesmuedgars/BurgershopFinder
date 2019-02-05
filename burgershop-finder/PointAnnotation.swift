@@ -10,6 +10,7 @@ import MapKit
 
 final class PointAnnotation: MKPointAnnotation {
 
+    public var identifier: String = "unassigned"
     public var image: UIImage?
 
     init(_ details: FSDetails?) {
@@ -17,6 +18,7 @@ final class PointAnnotation: MKPointAnnotation {
 
         guard let details = details else { return }
 
+        self.identifier = details.id
         self.image = details.image
         self.coordinate = details.coordinate
         self.title = details.name

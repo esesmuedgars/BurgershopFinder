@@ -81,7 +81,11 @@ extension Data {
 }
 
 extension MapView {
-    func selectAnnotation(forRow row: Int, animated: Bool = true) {
-        selectAnnotation(annotations[row], animated: animated)
+    func selectAnnotation(by identifier: FSIdentifier, animated: Bool = true) {
+        guard let annotations = annotations as? [PointAnnotation] else { return }
+
+        if let annotation = annotations.first(where: { $0.identifier == identifier }) {
+            selectAnnotation(annotation, animated: animated)
+        }
     }
 }
