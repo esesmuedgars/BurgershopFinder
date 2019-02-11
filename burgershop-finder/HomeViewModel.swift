@@ -25,8 +25,8 @@ final class HomeViewModel {
 
     private(set) lazy var details: BehaviorSubject<FSDetails?> = BehaviorSubject(value: nil)
 
-    init(apiService: APIServiceProtocol = DependencyAssembler.dependencies.apiService(),
-         authService: AuthServiceProtocol = DependencyAssembler.dependencies.authService()) {
+    init(apiService: APIServiceProtocol = Dependencies.shared.apiService(),
+         authService: AuthServiceProtocol = Dependencies.shared.authService()) {
         self.apiService = apiService
         self.authService = authService
 

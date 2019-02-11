@@ -1,5 +1,5 @@
 //
-//  AuthServiceStub.swift
+//  AuthService.swift
 //  burgershop-finder
 //
 //  Created by e.vanags on 17/01/2019.
@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import RxSwift
 
-final class AuthServiceStub: AuthServiceProtocol {
+final class AuthService: AuthServiceProtocol {
 
     var description: String {
         return "authorization service stub"

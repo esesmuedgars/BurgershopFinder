@@ -1,5 +1,5 @@
 //
-//  MainDependencies.swift
+//  Dependencies.swift
 //  burgershop-finder
 //
 //  Created by e.vanags on 24/11/2018.
@@ -8,7 +8,9 @@
 
 import Foundation
 
-final class MainDependencies: Dependencies {
+final class Dependencies {
+
+    private(set) static var shared = Dependencies()
 
     private let _authService = AuthService()
     func authService() -> AuthServiceProtocol {

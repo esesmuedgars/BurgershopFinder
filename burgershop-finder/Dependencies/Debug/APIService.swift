@@ -1,5 +1,5 @@
 //
-//  APIServiceStub.swift
+//  APIService.swift
 //  burgershop-finder
 //
 //  Created by e.vanags on 17/01/2019.
@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 // TODO: Revisit
-final class APIServiceStub: APIServiceProtocol {
+final class APIService: APIServiceProtocol {
 
     var description: String {
         return "application programming interface service stub"
