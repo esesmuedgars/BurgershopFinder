@@ -34,8 +34,8 @@ final class VenueCellModel {
     }
 
     init(forVenueWith venueId: String,
-         apiService: APIServiceProtocol = DependencyAssembler.dependencies.apiService(),
-         authService: AuthServiceProtocol = DependencyAssembler.dependencies.authService()) {
+         apiService: APIServiceProtocol = Dependencies.shared.apiService(),
+         authService: AuthServiceProtocol = Dependencies.shared.authService()) {
         self.venueId = venueId
         self.apiService = apiService
         self.authService = authService

@@ -9,11 +9,6 @@
 import Foundation
 import RxSwift
 
-protocol Dependencies {
-    func authService() -> AuthServiceProtocol
-    func apiService() -> APIServiceProtocol
-}
-
 protocol AuthServiceProtocol {
 
     var description: String { get }

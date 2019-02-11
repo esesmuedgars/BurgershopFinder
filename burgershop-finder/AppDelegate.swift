@@ -13,20 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    private func isDebugModeEnabled() -> Bool {
-        return ProcessInfo.processInfo.environment["DEBUG_MODE"] == "enable"
-    }
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-        let dependencies: Dependencies = isDebugModeEnabled() ? TestDependencies() : MainDependencies()
-        DependencyAssembler.register(dependencies: dependencies)
 
         return true
     }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        let authService = DependencyAssembler.dependencies.authService()
+        let authService = Dependencies.shared.authService()
         authService.requestToken(url)
 
         return true
@@ -36,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var didHandle = false
 
         if (userActivity.activityType == NSUserActivityTypeBrowsingWeb) {
-            let authService = DependencyAssembler.dependencies.authService()
+            let authService = Dependencies.shared.authService()
             authService.requestToken(userActivity.webpageURL!)
 
             didHandle = true
