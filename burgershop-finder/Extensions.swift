@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import RxSwift
+import MapKit
 
 extension String: Error {}
 
@@ -87,5 +88,17 @@ extension MapView {
         if let annotation = annotations.first(where: { $0.identifier == identifier }) {
             selectAnnotation(annotation, animated: animated)
         }
+    }
+}
+
+extension MKMapView {
+    func dequeueReusableAnnotationView<T>(ofType type: T.Type) -> T? {
+        return dequeueReusableAnnotationView(withIdentifier: String(describing: type)) as? T
+    }
+}
+
+extension UIStoryboard {
+    func instantiateViewController<Controller: UIViewController>(ofType type: Controller.Type) -> Controller? {
+        return instantiateViewController(withIdentifier: String(describing: type)) as? Controller
     }
 }

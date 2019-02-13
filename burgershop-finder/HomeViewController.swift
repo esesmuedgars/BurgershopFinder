@@ -57,6 +57,16 @@ final class HomeViewController: UIViewController {
             }.disposed(by: viewModel.disposeBag)
     }
 
+    private func presentDetails(forAnnotation annotation: PointAnnotation) {
+        guard let viewController = storyboard?.instantiateViewController(ofType: VenueDetailsViewController.self) else {
+            return
+        }
+
+        let viewModel = VenueDetailsViewModel(annotation: annotation)
+        viewController.configure(with: viewModel)
+        present(viewController, animated: true)
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
@@ -76,13 +86,16 @@ extension HomeViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard let annotation = annotation as? PointAnnotation else { return nil }
 
-        let identifier = "VenueAnnotation"
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? AnnotationView
+        var annotationView = mapView.dequeueReusableAnnotationView(ofType: AnnotationView.self)
 
         if annotationView == nil {
-            annotationView = AnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView = AnnotationView(annotation: annotation)
             annotationView?.canShowCallout = true
             annotationView?.setImage(annotation.image)
+            annotationView?.button.rx.controlEvent(.touchUpInside)
+                .subscribe({ [unowned self] _ in
+                    self.presentDetails(forAnnotation: annotation)
+            }).disposed(by: viewModel.disposeBag)
         } else {
             annotationView?.annotation = annotation
         }

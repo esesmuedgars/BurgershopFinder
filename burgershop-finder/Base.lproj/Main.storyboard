@@ -13,7 +13,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="burgershop_finder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Debug_Burgershop_Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,16 +21,16 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="fap-kU-BKG">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lf9-17-7y7" customClass="GradientView" customModule="burgershop_finder" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lf9-17-7y7" customClass="GradientView" customModule="Debug_Burgershop_Finder" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venues" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwv-WA-a4o" customClass="TitleLabel" customModule="burgershop_finder" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venues" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwv-WA-a4o" customClass="TitleLabel" customModule="Debug_Burgershop_Finder" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="40" width="335" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                 <color key="textColor" name="White"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="10I-2U-A3x" customClass="MapView" customModule="burgershop_finder" customModuleProvider="target">
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="10I-2U-A3x" customClass="MapView" customModule="Debug_Burgershop_Finder" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="112" width="335" height="400"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="400" id="IF5-k2-UEv"/>
@@ -50,7 +50,7 @@
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="DDR-98-hic"/>
                                                 </connections>
                                             </mapView>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4OT-vh-QiN" customClass="CollectionView" customModule="burgershop_finder" customModuleProvider="target">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4OT-vh-QiN" customClass="CollectionView" customModule="Debug_Burgershop_Finder" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="532" width="375" height="135"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nSx-wK-RLU">
@@ -60,7 +60,7 @@
                                                     <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="40"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VenueCell" id="8kH-rc-cau" customClass="VenueCell" customModule="burgershop_finder" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VenueCell" id="8kH-rc-cau" customClass="VenueCell" customModule="Debug_Burgershop_Finder" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="0.0" width="50" height="50"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -151,11 +151,60 @@
             </objects>
             <point key="canvasLocation" x="140" y="132.68365817091455"/>
         </scene>
+        <!--Venue Details View Controller-->
+        <scene sceneID="FOu-1c-vg8">
+            <objects>
+                <viewController storyboardIdentifier="VenueDetailsViewController" id="1zw-Hd-xaR" customClass="VenueDetailsViewController" customModule="Debug_Burgershop_Finder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7w7-Lt-VIt" customClass="GradientView" customModule="Debug_Burgershop_Finder" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEh-gn-nC6" customClass="TitleLabel" customModule="Debug_Burgershop_Finder" customModuleProvider="target">
+                                <rect key="frame" x="50" y="40" width="275" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="White"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DUC-w4-Sr7">
+                                <rect key="frame" x="50" y="81" width="275" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="yvi-Le-zcm"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MYy-Bi-3g3" firstAttribute="trailing" secondItem="pEh-gn-nC6" secondAttribute="trailing" constant="50" id="NPU-qE-GcI"/>
+                            <constraint firstItem="MYy-Bi-3g3" firstAttribute="trailing" secondItem="DUC-w4-Sr7" secondAttribute="trailing" constant="50" id="QKL-Ac-Hki"/>
+                            <constraint firstItem="DUC-w4-Sr7" firstAttribute="leading" secondItem="MYy-Bi-3g3" secondAttribute="leading" constant="50" id="VWq-WI-spG"/>
+                            <constraint firstItem="pEh-gn-nC6" firstAttribute="leading" secondItem="MYy-Bi-3g3" secondAttribute="leading" constant="50" id="dRd-yz-aN9"/>
+                            <constraint firstItem="DUC-w4-Sr7" firstAttribute="top" secondItem="pEh-gn-nC6" secondAttribute="bottom" constant="20" id="jbA-es-Ndv"/>
+                            <constraint firstItem="pEh-gn-nC6" firstAttribute="top" secondItem="MYy-Bi-3g3" secondAttribute="top" constant="20" id="l1J-sc-Mjt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MYy-Bi-3g3"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                <color key="value" name="Purple"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                <color key="value" name="Pink"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="DUC-w4-Sr7" id="7Rh-P8-gGb"/>
+                        <outlet property="titleLabel" destination="pEh-gn-nC6" id="XdJ-Aw-57U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gyV-7y-CZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="881" y="133"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Cheeseburger" width="1122" height="1122"/>
         <namedColor name="Gray">
-            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.43900001049041748" green="0.43900001049041748" blue="0.43900001049041748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Pink">
             <color red="0.82352941176470584" green="0.29411764705882354" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
