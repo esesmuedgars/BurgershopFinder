@@ -15,6 +15,7 @@ struct FSItem: Codable {
     private var suffix: String
 
     var url: URL {
-        return URL(string: String(format: "%@original%@", prefix, suffix))!
+        let url = String(format: "%@original%@", prefix, suffix)
+        return URL(string: url)!
     }
 }

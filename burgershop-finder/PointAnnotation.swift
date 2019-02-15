@@ -10,8 +10,17 @@ import MapKit
 
 final class PointAnnotation: MKPointAnnotation {
 
-    public var identifier: String = "unassigned"
-    public var image: UIImage?
+    var identifier: String?
+    var phoneNumber: String?
+    var address: String?
+    var street: String?
+    var postalCode: String?
+    var countryCode: String?
+    var county: String?
+    var price: String?
+    var likes: Int = 0
+    var rating: Float?
+    var image: UIImage?
 
     init(_ details: FSDetails?) {
         super.init()
@@ -19,8 +28,16 @@ final class PointAnnotation: MKPointAnnotation {
         guard let details = details else { return }
 
         self.identifier = details.id
-        self.image = details.image
-        self.coordinate = details.coordinate
         self.title = details.name
+        self.address = details.address
+        self.street = details.street
+        self.postalCode = details.postalCode
+        self.countryCode = details.countryCode
+        self.county = details.county
+        self.coordinate = details.coordinate
+        self.price = details.price
+        self.likes = details.likes
+        self.rating = details.rating
+        self.image = details.image
     }
 }

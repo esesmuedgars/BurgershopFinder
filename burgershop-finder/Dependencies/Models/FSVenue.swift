@@ -11,13 +11,21 @@ import Foundation
 struct FSVenue: Codable {
     var id: String
     var name: String
+    var contact: FSContact
     var location: FSLocation
+    var price: FSPrice
+    var likes: FSLikes
+    var rating: Float?
     var photo: FSPhoto
 
-    enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case id
         case name
+        case contact
         case location
+        case price
+        case likes
+        case rating
         case photo = "photos"
     }
 }
