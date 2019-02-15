@@ -19,6 +19,10 @@ final class VenueDetailsViewModel {
 
     let titleLabelAttributedText: Observable<NSAttributedString?>
     let imageViewImage: Observable<UIImage?>
+    let addressLabelAttributedText: Observable<NSAttributedString?>
+    let priceLabelAttributedText: Observable<NSAttributedString?>
+
+// "\(annotation.county),\n\(annotation.address), \(annotation.street),\n\(annotation.countryCode)-\(annotation.postalCode)"
 
     init(annotation: PointAnnotation,
          apiService: APIServiceProtocol = Dependencies.shared.apiService()) {
@@ -31,5 +35,13 @@ final class VenueDetailsViewModel {
 
         imageViewImage = Observable<UIImage?>
             .just(annotation.image)
+
+        addressLabelAttributedText = Observable<String?>
+            .just(annotation.address)
+            .map { NSAttributedString($0) }
+
+        priceLabelAttributedText = Observable<String?>
+            .just(annotation.price)
+            .map { NSAttributedString($0) }
     }
 }

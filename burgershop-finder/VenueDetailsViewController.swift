@@ -14,6 +14,8 @@ final class VenueDetailsViewController: UIViewController {
 
     @IBOutlet private var titleLabel: TitleLabel!
     @IBOutlet private var imageView: UIImageView!
+    @IBOutlet private var addressLabel: TitleLabel!
+    @IBOutlet private var priceLabel: TitleLabel!
 
     private var viewModel: VenueDetailsViewModel!
 
@@ -34,6 +36,10 @@ final class VenueDetailsViewController: UIViewController {
         bindRx()
     }
 
+    @IBAction func returnWasTapped() {
+        dismiss(animated: true)
+    }
+
     func configure(with viewModel: VenueDetailsViewModel) {
         self.viewModel = viewModel
     }
@@ -45,6 +51,14 @@ final class VenueDetailsViewController: UIViewController {
 
         viewModel.imageViewImage
             .bind(to: imageView.rx.image)
+            .disposed(by: viewModel.disposeBag)
+
+        viewModel.addressLabelAttributedText
+            .bind(to: addressLabel.rx.attributedText)
+            .disposed(by: viewModel.disposeBag)
+
+        viewModel.priceLabelAttributedText
+            .bind(to: priceLabel.rx.attributedText)
             .disposed(by: viewModel.disposeBag)
     }
 }
