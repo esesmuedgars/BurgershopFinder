@@ -60,7 +60,8 @@ extension UIFont {
 
 extension NSAttributedString {
     convenience init(_ string: String?) {
-        let attributes: [NSAttributedString.Key: Any] = [.kern: -1]
+        let attributes: [NSAttributedString.Key: Any] = [.kern: -1,
+                                                         .foregroundColor: UIColor.white]
 
         self.init(string: string ?? String(), attributes: attributes)
     }

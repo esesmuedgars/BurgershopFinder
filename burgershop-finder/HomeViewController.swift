@@ -13,9 +13,9 @@ import MapKit
 
 final class HomeViewController: UIViewController {
 
-    @IBOutlet private weak var titleLabel: TitleLabel!
-    @IBOutlet private weak var mapView: MapView!
-    @IBOutlet private weak var collectionView: CollectionView!
+    @IBOutlet private var titleLabel: TitleLabel!
+    @IBOutlet private var mapView: MapView!
+    @IBOutlet private var collectionView: CollectionView!
 
     private lazy var viewModel = HomeViewModel()
 

@@ -19,13 +19,6 @@ final class TitleLabel: SetupLabel {
         }
     }
 
-    override var tintColor: UIColor! {
-        get {
-            return .white
-        }
-        set {}
-    }
-
     override func setup() {
         let fontSize = font.pointSize
         font = .withSize(fontSize)

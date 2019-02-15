@@ -229,7 +229,6 @@
 			children = (
 				72534D3B21F10A2F007EC465 /* Protocols.swift */,
 				72E572C121A9CE2B009F1278 /* Dependencies.swift */,
-				72AF5688216B662F00102EA8 /* Endpoint.swift */,
 				72A32B6D2211F6F600717890 /* Release */,
 				72534D4121F11C97007EC465 /* Debug */,
 				724BCD13216E7E93002F526E /* Models */,
@@ -283,6 +282,7 @@
 				72AF5680216B5FC400102EA8 /* Info.plist */,
 				7213F69A21A7729F003A591A /* AuthService.swift */,
 				72AF5686216B635300102EA8 /* APIService.swift */,
+				72AF5688216B662F00102EA8 /* Endpoint.swift */,
 			);
 			path = Release;
 			sourceTree = "<group>";
