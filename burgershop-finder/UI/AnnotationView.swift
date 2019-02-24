@@ -20,7 +20,7 @@ final class AnnotationView: SetupAnnotationView {
     override func setup() {
         canShowCallout = true
 
-        let size = CGSize(width: 25, height: 35)
+        let size = CGSize(width: 20, height: 30)
         image = UIImage(named: "Marker")?.withSize(size)
         rightCalloutAccessoryView = button
 

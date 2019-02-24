@@ -144,6 +144,7 @@
                     <connections>
                         <outlet property="collectionView" destination="4OT-vh-QiN" id="GHT-ib-hgn"/>
                         <outlet property="mapView" destination="10I-2U-A3x" id="bsK-ka-9jH"/>
+                        <outlet property="scrollView" destination="fap-kU-BKG" id="I40-DL-zsy"/>
                         <outlet property="titleLabel" destination="Xwv-WA-a4o" id="M9y-hV-Z6y"/>
                     </connections>
                 </viewController>

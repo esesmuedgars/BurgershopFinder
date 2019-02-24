@@ -10,7 +10,7 @@ import MapKit
 
 final class PointAnnotation: MKPointAnnotation {
 
-    var identifier: String?
+    var identifier: String = "unidentified"
     var phoneNumber: String?
     var address: String?
     var street: String?

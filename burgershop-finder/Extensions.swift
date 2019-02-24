@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import RxSwift
 import MapKit
+import CoreLocation
 
 extension String: Error {}
 
@@ -42,9 +43,9 @@ extension UIImage {
     }
 
     func withSize(_ size: CGSize) -> UIImage? {
-        UIGraphicsBeginImageContext(size)
-        draw(in: CGRect(origin: .zero, size: size))
-        return UIGraphicsGetImageFromCurrentImageContext()
+        return UIGraphicsImageRenderer(size: size).image { [weak self] _ in
+            self?.draw(in: CGRect(origin: .zero, size: size))
+        }
     }
 }
 
@@ -83,10 +84,16 @@ extension Data {
 }
 
 extension MapView {
-    func selectAnnotation(by identifier: FSIdentifier, animated: Bool = true) {
-        guard let annotations = annotations as? [PointAnnotation] else { return }
+    func zoomTo(_ coordinate: CLLocationCoordinate2D) {
+        let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+        let region = MKCoordinateRegion(center: coordinate, span: span)
+        setRegion(region, animated: true)
+    }
 
-        if let annotation = annotations.first(where: { $0.identifier == identifier }) {
+    func selectAnnotation(by identifier: FSIdentifier, animated: Bool = true) {
+        if let annotation = annotations.compactMap({ $0 as? PointAnnotation })
+            .first(where: { $0.identifier == identifier }) {
+            zoomTo(annotation.coordinate)
             selectAnnotation(annotation, animated: animated)
         }
     }
@@ -101,5 +108,20 @@ extension MKMapView {
 extension UIStoryboard {
     func instantiateViewController<Controller: UIViewController>(ofType type: Controller.Type) -> Controller? {
         return instantiateViewController(withIdentifier: String(describing: type)) as? Controller
+    }
+}
+
+extension CLLocationCoordinate2D {
+    static var `default`: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: 59.436597148286616,
+                                      longitude: 24.750014910068785)
+    }
+}
+
+extension Array {
+    var isNotEmpty: Bool {
+        get {
+            return !isEmpty
+        }
     }
 }

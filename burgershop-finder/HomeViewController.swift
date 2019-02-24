@@ -16,6 +16,7 @@ final class HomeViewController: UIViewController {
     @IBOutlet private var titleLabel: TitleLabel!
     @IBOutlet private var mapView: MapView!
     @IBOutlet private var collectionView: CollectionView!
+    @IBOutlet private var scrollView: UIScrollView!
 
     private lazy var viewModel = HomeViewModel()
 
@@ -35,6 +36,7 @@ final class HomeViewController: UIViewController {
 
     private func bindRx() {
         viewModel.details
+            .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak mapView] details in
                 guard let details = details else { return }
 
@@ -50,14 +52,21 @@ final class HomeViewController: UIViewController {
                 cell.configure(with: cellModel)
 
                 cell.touchUpInside.subscribe(onNext: { _ in
+                    self.scrollView.setContentOffset(.zero, animated: true)
                     self.mapView.selectAnnotation(by: identifier)
                 }, onError: { error in
                     print(error)
                 }).disposed(by: self.viewModel.disposeBag)
             }.disposed(by: viewModel.disposeBag)
+
+        viewModel.userLocationUpdated
+            .drive(onNext: { [weak self] coordinate in
+                self?.mapView.zoomTo(coordinate)
+            })
+            .disposed(by: viewModel.disposeBag)
     }
 
-    private func presentDetails(forAnnotation annotation: PointAnnotation) {
+    private func presentDetails(for annotation: PointAnnotation) {
         guard let viewController = storyboard?.instantiateViewController(ofType: VenueDetailsViewController.self) else {
             return
         }
@@ -94,12 +103,16 @@ extension HomeViewController: MKMapViewDelegate {
             annotationView?.setImage(annotation.image)
             annotationView?.button.rx.controlEvent(.touchUpInside)
                 .subscribe({ [unowned self] _ in
-                    self.presentDetails(forAnnotation: annotation)
+                    self.presentDetails(for: annotation)
             }).disposed(by: viewModel.disposeBag)
         } else {
             annotationView?.annotation = annotation
         }
 
         return annotationView
+    }
+
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        viewModel.userLocationUpdate.onNext(userLocation)
     }
 }
