@@ -17,9 +17,9 @@ final class PointAnnotation: MKPointAnnotation {
     var postalCode: String?
     var countryCode: String?
     var county: String?
-    var price: String?
+    var priceTier: Int = 1
     var likes: Int = 0
-    var rating: Float?
+    var rating: Float = 0
     var image: UIImage?
 
     init(_ details: FSDetails?) {
@@ -35,7 +35,7 @@ final class PointAnnotation: MKPointAnnotation {
         self.countryCode = details.countryCode
         self.county = details.county
         self.coordinate = details.coordinate
-        self.price = details.price
+        self.priceTier = details.priceTier
         self.likes = details.likes
         self.rating = details.rating
         self.image = details.image

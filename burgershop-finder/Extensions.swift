@@ -60,11 +60,24 @@ extension UIFont {
 }
 
 extension NSAttributedString {
-    convenience init(_ string: String?) {
+    convenience init?<T>(_ value: T?) {
+        guard let value = value else { return nil }
+
         let attributes: [NSAttributedString.Key: Any] = [.kern: -1,
                                                          .foregroundColor: UIColor.white]
 
-        self.init(string: string ?? String(), attributes: attributes)
+        self.init(string: "\(value)", attributes: attributes)
+    }
+}
+
+extension NSMutableAttributedString {
+    convenience init(_ string: String, range: NSRange) {
+        let attributes: [NSAttributedString.Key: Any] = [.kern: 2,
+                                                         .foregroundColor: UIColor.white]
+
+        self.init(string: string, attributes: attributes)
+
+        addAttributes([.foregroundColor: UIColor.white.withAlphaComponent(0.4)], range: range)
     }
 }
 

@@ -59,16 +59,16 @@ final class FSDetails: Codable {
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 
-    var price: String {
-        return response.venue.price.level
+    var priceTier: Int {
+        return response.venue.price.tier
     }
 
     var likes: Int {
         return response.venue.likes.count
     }
 
-    var rating: Float? {
-        return response.venue.rating
+    var rating: Float {
+        return response.venue.rating ?? 0
     }
 
     private var _image: UIImage?
