@@ -95,11 +95,10 @@ extension HomeViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard let annotation = annotation as? PointAnnotation else { return nil }
 
-        var annotationView = mapView.dequeueReusableAnnotationView(ofType: AnnotationView.self)
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotation.identifier) as? AnnotationView
 
         if annotationView == nil {
             annotationView = AnnotationView(annotation: annotation)
-            annotationView?.canShowCallout = true
             annotationView?.setImage(annotation.image)
             annotationView?.button.rx.controlEvent(.touchUpInside)
                 .subscribe({ [unowned self] _ in

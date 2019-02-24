@@ -99,12 +99,6 @@ extension MapView {
     }
 }
 
-extension MKMapView {
-    func dequeueReusableAnnotationView<T>(ofType type: T.Type) -> T? {
-        return dequeueReusableAnnotationView(withIdentifier: String(describing: type)) as? T
-    }
-}
-
 extension UIStoryboard {
     func instantiateViewController<Controller: UIViewController>(ofType type: Controller.Type) -> Controller? {
         return instantiateViewController(withIdentifier: String(describing: type)) as? Controller

@@ -13,8 +13,8 @@ final class AnnotationView: SetupAnnotationView {
 
     var button = UIButton(type: .detailDisclosure)
 
-    convenience init(annotation: MKAnnotation?) {
-        self.init(annotation: annotation, reuseIdentifier: "AnnotationView")
+    convenience init(annotation: PointAnnotation) {
+        self.init(annotation: annotation, reuseIdentifier: annotation.identifier)
     }
 
     override func setup() {
