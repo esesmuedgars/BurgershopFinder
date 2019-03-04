@@ -30,7 +30,7 @@
                                                 <color key="textColor" name="White"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="10I-2U-A3x" customClass="MapView" customModule="Debug_Burgershop_Finder" customModuleProvider="target">
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="10I-2U-A3x" customClass="MapView" customModule="Debug_Burgershop_Finder" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="112" width="335" height="400"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="400" id="IF5-k2-UEv"/>
@@ -96,6 +96,25 @@
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="jeB-nc-cPZ"/>
                                                 </connections>
                                             </collectionView>
+                                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnk-Mw-Vyx">
+                                                <rect key="frame" x="315" y="122" width="30" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Me8-Jb-NxK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                        <inset key="imageEdgeInsets" minX="7" minY="7" maxX="7" maxY="7"/>
+                                                        <state key="normal" image="Arrow"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" name="Purple"/>
+                                                <constraints>
+                                                    <constraint firstItem="Me8-Jb-NxK" firstAttribute="top" secondItem="hnk-Mw-Vyx" secondAttribute="top" id="T6M-Rx-9Gk"/>
+                                                    <constraint firstAttribute="width" constant="30" id="UmM-gP-8BI"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Me8-Jb-NxK" secondAttribute="bottom" id="VC2-l0-cF5"/>
+                                                    <constraint firstAttribute="height" constant="30" id="cJQ-fR-VtH"/>
+                                                    <constraint firstItem="Me8-Jb-NxK" firstAttribute="leading" secondItem="hnk-Mw-Vyx" secondAttribute="leading" id="ht1-kR-kh7"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Me8-Jb-NxK" secondAttribute="trailing" id="vkj-lY-Ium"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -104,11 +123,13 @@
                                             <constraint firstAttribute="trailing" secondItem="10I-2U-A3x" secondAttribute="trailing" constant="20" id="KfT-7Q-wIO"/>
                                             <constraint firstAttribute="bottom" secondItem="4OT-vh-QiN" secondAttribute="bottom" id="Sfz-wh-SjT"/>
                                             <constraint firstItem="Xwv-WA-a4o" firstAttribute="leading" secondItem="lf9-17-7y7" secondAttribute="leading" constant="20" id="UtR-af-Jaw"/>
+                                            <constraint firstItem="hnk-Mw-Vyx" firstAttribute="top" secondItem="10I-2U-A3x" secondAttribute="top" constant="10" id="WP5-x2-AUe"/>
                                             <constraint firstItem="Xwv-WA-a4o" firstAttribute="top" secondItem="lf9-17-7y7" secondAttribute="top" constant="40" id="ZA3-8e-8Y0"/>
                                             <constraint firstItem="4OT-vh-QiN" firstAttribute="leading" secondItem="lf9-17-7y7" secondAttribute="leading" id="bIY-RU-yji"/>
                                             <constraint firstAttribute="trailing" secondItem="Xwv-WA-a4o" secondAttribute="trailing" constant="20" id="k55-Qb-Ove"/>
                                             <constraint firstAttribute="trailing" secondItem="4OT-vh-QiN" secondAttribute="trailing" id="mCi-aW-2Ti"/>
                                             <constraint firstItem="10I-2U-A3x" firstAttribute="top" secondItem="Xwv-WA-a4o" secondAttribute="bottom" constant="30" id="qVd-0G-x84"/>
+                                            <constraint firstItem="hnk-Mw-Vyx" firstAttribute="trailing" secondItem="10I-2U-A3x" secondAttribute="trailing" constant="-10" id="vh3-57-Q6J"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="topColor">
@@ -146,6 +167,8 @@
                         <outlet property="mapView" destination="10I-2U-A3x" id="bsK-ka-9jH"/>
                         <outlet property="scrollView" destination="fap-kU-BKG" id="I40-DL-zsy"/>
                         <outlet property="titleLabel" destination="Xwv-WA-a4o" id="M9y-hV-Z6y"/>
+                        <outlet property="userLocationButton" destination="Me8-Jb-NxK" id="m2r-nI-ITX"/>
+                        <outlet property="userLocationView" destination="hnk-Mw-Vyx" id="3oA-sE-XvW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -355,6 +378,7 @@
     </scenes>
     <resources>
         <image name="Address" width="20" height="20"/>
+        <image name="Arrow" width="20" height="20"/>
         <image name="Cheeseburger" width="1122" height="1122"/>
         <image name="Like" width="20" height="20"/>
         <image name="Phone" width="20" height="20"/>

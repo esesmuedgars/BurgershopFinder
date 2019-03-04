@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import MapKit
+import CoreLocation
 
 final class HomeViewController: UIViewController {
 
@@ -17,8 +18,15 @@ final class HomeViewController: UIViewController {
     @IBOutlet private var mapView: MapView!
     @IBOutlet private var collectionView: CollectionView!
     @IBOutlet private var scrollView: UIScrollView!
+    @IBOutlet private var userLocationView: UIView! {
+        didSet {
+            userLocationView.layer.cornerRadius = 5
+        }
+    }
+    @IBOutlet private var userLocationButton: UIButton!
 
     private lazy var viewModel = HomeViewModel()
+    private lazy var locationManager = CLLocationManager()
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -26,6 +34,8 @@ final class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        locationManager.delegate = self
 
         titleLabel.setTitle("Venues")
 
@@ -37,7 +47,7 @@ final class HomeViewController: UIViewController {
     private func bindRx() {
         viewModel.details
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak mapView] details in
+            .subscribe(onNext: { [mapView] details in
                 guard let details = details else { return }
 
                 let annotation = PointAnnotation(details)
@@ -60,10 +70,19 @@ final class HomeViewController: UIViewController {
             }.disposed(by: viewModel.disposeBag)
 
         viewModel.userLocationUpdated
-            .drive(onNext: { [weak self] coordinate in
-                self?.mapView.zoomTo(coordinate)
+            .drive(onNext: { [mapView] coordinate in
+                mapView?.selectedAnnotations.forEach { annotation in
+                    mapView?.deselectAnnotation(annotation, animated: true)
+                }
+
+                mapView?.zoomTo(coordinate, delta: 0.0005)
             })
             .disposed(by: viewModel.disposeBag)
+
+        userLocationButton.rx.tap
+            .bind(to: viewModel.focusLocationTaps)
+            .disposed(by: viewModel.disposeBag)
+
     }
 
     private func presentDetails(for annotation: PointAnnotation) {
@@ -100,7 +119,7 @@ extension HomeViewController: MKMapViewDelegate {
         if annotationView == nil {
             annotationView = AnnotationView(annotation: annotation)
             annotationView?.setImage(annotation.image)
-            annotationView?.button.rx.controlEvent(.touchUpInside)
+            annotationView?.button.rx.tap
                 .subscribe({ [unowned self] _ in
                     self.presentDetails(for: annotation)
             }).disposed(by: viewModel.disposeBag)
@@ -115,3 +134,5 @@ extension HomeViewController: MKMapViewDelegate {
         viewModel.userLocationUpdate.onNext(userLocation)
     }
 }
+
+extension HomeViewController: CLLocationManagerDelegate {}
