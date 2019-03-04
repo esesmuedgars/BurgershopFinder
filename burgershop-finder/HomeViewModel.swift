@@ -20,6 +20,7 @@ final class HomeViewModel {
     private lazy var userAuthorized = false
 
     private(set) lazy var disposeBag = DisposeBag()
+    private(set) lazy var locationManager = CLLocationManager()
 
     private lazy var _items = Variable(FSIdentifiers())
     var items: Observable<FSIdentifiers> {
@@ -28,20 +29,29 @@ final class HomeViewModel {
 
     private(set) lazy var details: BehaviorSubject<FSDetails?> = BehaviorSubject(value: nil)
 
-    let userLocationUpdate = PublishSubject<MKUserLocation>()
     let userLocationUpdated: Driver<CLLocationCoordinate2D>
+
+    let userLocationUpdate = PublishSubject<MKUserLocation>()
+    let focusLocationTaps = PublishSubject<Void>()
 
     init(apiService: APIServiceProtocol = Dependencies.shared.apiService(),
          authService: AuthServiceProtocol = Dependencies.shared.authService()) {
         self.apiService = apiService
         self.authService = authService
 
-        userLocationUpdated = userLocationUpdate.take(1)
+        let initialUserLocation = userLocationUpdate.take(1)
+
+        let focusUserLocation = focusLocationTaps
+            .withLatestFrom(userLocationUpdate)
+
+        userLocationUpdated = Observable<MKUserLocation>.merge(initialUserLocation, focusUserLocation)
             .map { $0.coordinate }
             .startWith(.default)
             .asDriver(onErrorJustReturn: .default)
 
         bindRx()
+
+        locationManager.requestWhenInUseAuthorization() // #debug
     }
 
     private func bindRx() {
