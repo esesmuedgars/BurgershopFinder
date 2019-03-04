@@ -13,11 +13,12 @@ import RxCocoa
 final class VenueDetailsViewController: UIViewController {
 
     @IBOutlet private var titleLabel: TitleLabel!
-//    @IBOutlet private var phoneNumberLabel: TitleLabel!
-    @IBOutlet private var addressLabel: TitleLabel!
-    @IBOutlet private var priceLabel: TitleLabel!
-//    @IBOutlet private var likesLabel: TitleLabel!
-//    @IBOutlet private var ratingLabel: TitleLabel!
+    @IBOutlet private var phoneNumberLabel: UILabel!
+    @IBOutlet private var phoneNumberStack: UIStackView!
+    @IBOutlet private var addressLabel: UILabel!
+    @IBOutlet private var priceLabel: UILabel!
+    @IBOutlet private var likesLabel: UILabel!
+    @IBOutlet private var ratingLabel: UILabel!
     @IBOutlet private var imageView: UIImageView! {
         didSet {
             imageView.layer.cornerRadius = 10
@@ -56,9 +57,13 @@ final class VenueDetailsViewController: UIViewController {
             .bind(to: titleLabel.rx.attributedText)
             .disposed(by: viewModel.disposeBag)
 
-//        viewModel.phoneNumberLabelAttributedText
-//            .bind(to: phoneNumberLabel.rx.attributedText)
-//            .disposed(by: viewModel.disposeBag)
+        viewModel.phoneNumberLabelAttributedText
+            .bind(to: phoneNumberLabel.rx.attributedText)
+            .disposed(by: viewModel.disposeBag)
+
+        viewModel.hasPhoneNumber
+            .bind(to: phoneNumberStack.rx.isHidden)
+            .disposed(by: viewModel.disposeBag)
 
         viewModel.addressLabelAttributedText
             .bind(to: addressLabel.rx.attributedText)
@@ -68,13 +73,13 @@ final class VenueDetailsViewController: UIViewController {
             .bind(to: priceLabel.rx.attributedText)
             .disposed(by: viewModel.disposeBag)
 
-//        viewModel.likesLabelAttributedText
-//            .bind(to: likesLabel.rx.attributedText)
-//            .disposed(by: viewModel.disposeBag)
+        viewModel.likesLabelAttributedText
+            .bind(to: likesLabel.rx.attributedText)
+            .disposed(by: viewModel.disposeBag)
 
-//        viewModel.ratingLabelAttributedText
-//            .bind(to: ratingLabel.rx.attributedText)
-//            .disposed(by: viewModel.disposeBag)
+        viewModel.ratingLabelAttributedText
+            .bind(to: ratingLabel.rx.attributedText)
+            .disposed(by: viewModel.disposeBag)
 
         viewModel.imageViewImage
             .bind(to: imageView.rx.image)

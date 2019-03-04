@@ -29,6 +29,7 @@ final class PointAnnotation: MKPointAnnotation {
 
         self.identifier = details.id
         self.title = details.name
+        self.phoneNumber = details.phoneNumber
         self.address = details.address
         self.street = details.street
         self.postalCode = details.postalCode

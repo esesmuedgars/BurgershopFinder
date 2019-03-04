@@ -132,3 +132,29 @@ extension Array {
         }
     }
 }
+
+extension Optional where Wrapped == String {
+    var isEmptyOrNil: Bool {
+        get {
+            guard let self = self else {
+                return true
+            }
+
+            return self.isEmpty
+        }
+    }
+}
+
+extension String {
+    func substring(start: Int, offsetBy offset: Int) -> Substring? {
+        guard let startIndex = index(self.startIndex, offsetBy: start, limitedBy: self.endIndex) else {
+            return nil
+        }
+
+        guard let endIndex = index(self.startIndex, offsetBy: start + offset, limitedBy: self.endIndex) else {
+            return nil
+        }
+
+        return self[startIndex ..< endIndex]
+    }
+}

@@ -19,6 +19,7 @@ final class VenueDetailsViewModel {
 
     let titleLabelAttributedText: Observable<NSAttributedString?>
     let phoneNumberLabelAttributedText: Observable<NSAttributedString?>
+    let hasPhoneNumber: Observable<Bool>
     let addressLabelAttributedText: Observable<NSAttributedString?>
     let priceLabelAttributedText: Observable<NSAttributedString?>
     let likesLabelAttributedText: Observable<NSAttributedString?>
@@ -35,8 +36,12 @@ final class VenueDetailsViewModel {
             .map { NSAttributedString($0?.capitalized) }
 
         phoneNumberLabelAttributedText = Observable<String?>
-            .just(annotation.phoneNumber)
+            .just(VenueDetailsViewModel.formatPhoneNumber(from: annotation))
             .map { NSAttributedString($0) }
+
+        hasPhoneNumber = Observable<String?>
+            .just(annotation.phoneNumber)
+            .map { $0.isEmptyOrNil }
 
         addressLabelAttributedText = Observable<String?>
             .just(VenueDetailsViewModel.combineAddress(from: annotation))
@@ -61,6 +66,37 @@ final class VenueDetailsViewModel {
 
         imageViewImage = Observable<UIImage?>
             .just(annotation.image)
+    }
+
+    private static func formatPhoneNumber(from annotation: PointAnnotation) -> String? {
+        guard let rawPhoneNumber = annotation.phoneNumber,
+            rawPhoneNumber.count == 12 else {
+                return nil
+        }
+
+        var completePhoneNumber = [Substring]()
+
+        let phoneNumber = rawPhoneNumber
+            .components(separatedBy: CharacterSet.decimalDigits.inverted)
+            .joined()
+
+        var length = 3
+        let countryCode = phoneNumber.prefix(length)
+        completePhoneNumber.append(countryCode)
+
+        if let component = phoneNumber.substring(start: length, offsetBy: 2) {
+            completePhoneNumber.append(component)
+            length += component.count
+        }
+
+        for _ in 0 ... 1 {
+            if let component = phoneNumber.substring(start: length, offsetBy: 3) {
+                completePhoneNumber.append(component)
+                length += component.count
+            }
+        }
+
+        return String(format: "+%@", completePhoneNumber.joined(separator: " "))
     }
 
     private static func combineAddress(from annotation: PointAnnotation) -> String {
