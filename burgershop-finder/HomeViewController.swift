@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import MapKit
 import CoreLocation
+import RxGesture
 
 final class HomeViewController: UIViewController {
 
@@ -61,7 +62,7 @@ final class HomeViewController: UIViewController {
                 let cellModel = self.viewModel.cellModel(forVenueWith: identifier)
                 cell.configure(with: cellModel)
 
-                cell.touchUpInside.subscribe(onNext: { _ in
+                cell.rx.tapGesture().subscribe(onNext: { _ in
                     self.scrollView.setContentOffset(.zero, animated: true)
                     self.mapView.selectAnnotation(by: identifier)
                 }, onError: { error in

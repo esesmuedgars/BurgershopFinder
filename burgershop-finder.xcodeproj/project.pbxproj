@@ -82,6 +82,8 @@
 		72C4E6A621ADD19E009FB99C /* VenueCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4E6A521ADD19E009FB99C /* VenueCellModel.swift */; };
 		72C4E6A821ADE4C6009FB99C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C4E6A721ADE4C6009FB99C /* Assets.xcassets */; };
 		72C4E6AA21ADE714009FB99C /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4E6A921ADE714009FB99C /* CacheManager.swift */; };
+		72C98416222D7B4900FBE209 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C98415222D7B4800FBE209 /* RxGesture.framework */; };
+		72C98417222D7B5A00FBE209 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C98415222D7B4800FBE209 /* RxGesture.framework */; };
 		72CE8CDB21BF11AD0007B085 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE8CDA21BF11AD0007B085 /* AnnotationView.swift */; };
 		72CE8CDD21BF34AF0007B085 /* PointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE8CDC21BF34AF0007B085 /* PointAnnotation.swift */; };
 		72D223092177B167003C04F6 /* FSItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D223082177B167003C04F6 /* FSItem.swift */; };
@@ -145,6 +147,7 @@
 		72C4E6A521ADD19E009FB99C /* VenueCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCellModel.swift; sourceTree = "<group>"; };
 		72C4E6A721ADE4C6009FB99C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72C4E6A921ADE714009FB99C /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		72C98415222D7B4800FBE209 /* RxGesture.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxGesture.framework; path = Carthage/Build/iOS/RxGesture.framework; sourceTree = "<group>"; };
 		72CE8CDA21BF11AD0007B085 /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 		72CE8CDC21BF34AF0007B085 /* PointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAnnotation.swift; sourceTree = "<group>"; };
 		72D223082177B167003C04F6 /* FSItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSItem.swift; sourceTree = "<group>"; };
@@ -166,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72C98417222D7B5A00FBE209 /* RxGesture.framework in Frameworks */,
 				72A32B522211ED6A00717890 /* RxCocoa.framework in Frameworks */,
 				72A32B532211ED6A00717890 /* RxSwift.framework in Frameworks */,
 			);
@@ -175,6 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72C98416222D7B4900FBE209 /* RxGesture.framework in Frameworks */,
 				729C490B21A8CF5E0071903F /* RxCocoa.framework in Frameworks */,
 				729C490C21A8CF5E0071903F /* RxSwift.framework in Frameworks */,
 			);
@@ -270,6 +275,7 @@
 		729C490821A8CF5E0071903F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				72C98415222D7B4800FBE209 /* RxGesture.framework */,
 				729C490921A8CF5E0071903F /* RxCocoa.framework */,
 				729C490A21A8CF5E0071903F /* RxSwift.framework */,
 			);
@@ -450,12 +456,14 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxGesture.framework",
 			);
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxGesture.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -471,12 +479,14 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxGesture.framework",
 			);
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxGesture.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

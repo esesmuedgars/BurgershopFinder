@@ -28,24 +28,10 @@ final class VenueCell: SetupCell {
 
     @IBOutlet private var imageView: UIImageView!
 
-    private var gestureRecognizer: UIGestureRecognizer!
-    public let touchUpInside = PublishSubject<Void>()
-
     private var viewModel: VenueCellModel! {
         didSet {
             viewModel.inspectVenue()
         }
-    }
-
-    override func setup() {
-        super.setup()
-
-        gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(touchUpInsideEvent))
-    }
-
-    @objc
-    private func touchUpInsideEvent() {
-        touchUpInside.onNext(())
     }
 
     func configure(with viewModel: VenueCellModel) {
@@ -58,11 +44,5 @@ final class VenueCell: SetupCell {
         viewModel.venueImage
             .bind(to: imageView.rx.image)
             .disposed(by: viewModel.disposeBag)
-
-        imageView.addGestureRecognizer(gestureRecognizer)
-    }
-
-    deinit {
-        imageView.removeGestureRecognizer(gestureRecognizer)
     }
 }
