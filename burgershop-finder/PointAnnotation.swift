@@ -17,7 +17,7 @@ final class PointAnnotation: MKPointAnnotation {
     var postalCode: String?
     var countryCode: String?
     var county: String?
-    var priceTier: Int = 1
+    var priceTier: Int = 0
     var likes: Int = 0
     var rating: Float = 0
     var image: UIImage?

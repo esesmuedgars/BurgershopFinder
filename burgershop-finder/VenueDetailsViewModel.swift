@@ -37,7 +37,7 @@ final class VenueDetailsViewModel {
             .map { $0.isEmptyOrNil }
 
         addressAttributedText = Observable<String?>
-            .just(VenueDetailsViewModel.combineAddress(from: annotation))
+            .just(VenueDetailsViewModel.formatAddress(from: annotation))
             .map { NSAttributedString($0) }
 
         priceAttributedText = Observable<Int>
@@ -55,7 +55,13 @@ final class VenueDetailsViewModel {
 
         ratingAttributedText = Observable<Float>
             .just(annotation.rating)
-            .map { NSAttributedString($0) }
+            .map {
+                if $0.isZero {
+                    return NSAttributedString(Int($0))
+                } else {
+                    return NSAttributedString($0)
+                }
+            }
 
         imageViewImage = Observable<UIImage?>
             .just(annotation.image)
@@ -92,7 +98,7 @@ final class VenueDetailsViewModel {
         return String(format: "+%@", completePhoneNumber.joined(separator: " "))
     }
 
-    private static func combineAddress(from annotation: PointAnnotation) -> String {
+    private static func formatAddress(from annotation: PointAnnotation) -> String {
         var completeAddress = [String]()
         var address2ndLine = [String]()
         var address3rdLine = [String]()

@@ -60,7 +60,7 @@ final class FSDetails: Codable {
     }
 
     var priceTier: Int {
-        return response.venue.price.tier
+        return response.venue.price.tier ?? 0
     }
 
     var likes: Int {

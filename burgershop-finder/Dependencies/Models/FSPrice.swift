@@ -9,5 +9,5 @@
 import Foundation
 
 struct FSPrice: Codable {
-    var tier: Int
+    var tier: Int?
 }
