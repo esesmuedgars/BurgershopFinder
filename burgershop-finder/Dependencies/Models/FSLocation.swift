@@ -8,29 +8,23 @@
 
 import Foundation
 
-final class FSLocation: NSObject, Codable {
+struct FSLocation: Codable {
     var address: String?
+    var street: String?
+    var postalCode: String?
+    var countryCode: String
+    var county: String?
     var latitude: Double
     var longitude: Double
 
-    enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case address
+        case street = "crossStreet"
+        case postalCode = "postalCode"
+        case countryCode = "cc"
+        case county = "state"
         case latitude = "lat"
         case longitude = "lng"
-    }
-
-    private init(address: String?, latitude: Double, longitude: Double) {
-        self.address = address
-        self.latitude = latitude
-        self.longitude = longitude
-    }
-
-    required init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-
-        self.address = try? container.decode(String.self, forKey: .address)
-        self.latitude = try container.decode(Double.self, forKey: .latitude)
-        self.longitude = try container.decode(Double.self, forKey: .longitude)
     }
 
     func asTuple() -> (latitude: Double, longitude: Double) {

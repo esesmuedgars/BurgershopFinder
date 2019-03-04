@@ -26,7 +26,7 @@ final class VenueCell: SetupCell {
         }
     }
 
-    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private var imageView: UIImageView!
 
     private var gestureRecognizer: UIGestureRecognizer!
     public let touchUpInside = PublishSubject<Void>()

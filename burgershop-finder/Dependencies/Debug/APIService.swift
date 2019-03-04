@@ -9,7 +9,6 @@
 import Foundation
 import RxSwift
 
-// TODO: Revisit
 final class APIService: APIServiceProtocol {
 
     var description: String {
@@ -46,7 +45,6 @@ final class APIService: APIServiceProtocol {
                         throw "Failed to find details_\(identifier).json in application bundle."
                     }
                     
-                    // TODO: Investigate Data.ReadingOptions (eg. mappedIfSafe)
                     let data = try Data(contentsOf: path, options: .mappedIfSafe)
                     
                     observer.onNext(try JSONDecoder().decode(FSDetails.self, from: data))

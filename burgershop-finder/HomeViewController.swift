@@ -13,9 +13,10 @@ import MapKit
 
 final class HomeViewController: UIViewController {
 
-    @IBOutlet private weak var titleLabel: TitleLabel!
-    @IBOutlet private weak var mapView: MapView!
-    @IBOutlet private weak var collectionView: CollectionView!
+    @IBOutlet private var titleLabel: TitleLabel!
+    @IBOutlet private var mapView: MapView!
+    @IBOutlet private var collectionView: CollectionView!
+    @IBOutlet private var scrollView: UIScrollView!
 
     private lazy var viewModel = HomeViewModel()
 
@@ -35,6 +36,7 @@ final class HomeViewController: UIViewController {
 
     private func bindRx() {
         viewModel.details
+            .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak mapView] details in
                 guard let details = details else { return }
 
@@ -50,11 +52,28 @@ final class HomeViewController: UIViewController {
                 cell.configure(with: cellModel)
 
                 cell.touchUpInside.subscribe(onNext: { _ in
+                    self.scrollView.setContentOffset(.zero, animated: true)
                     self.mapView.selectAnnotation(by: identifier)
                 }, onError: { error in
                     print(error)
                 }).disposed(by: self.viewModel.disposeBag)
             }.disposed(by: viewModel.disposeBag)
+
+        viewModel.userLocationUpdated
+            .drive(onNext: { [weak self] coordinate in
+                self?.mapView.zoomTo(coordinate)
+            })
+            .disposed(by: viewModel.disposeBag)
+    }
+
+    private func presentDetails(for annotation: PointAnnotation) {
+        guard let viewController = storyboard?.instantiateViewController(ofType: VenueDetailsViewController.self) else {
+            return
+        }
+
+        let viewModel = VenueDetailsViewModel(annotation: annotation)
+        viewController.configure(with: viewModel)
+        present(viewController, animated: true)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -76,17 +95,23 @@ extension HomeViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard let annotation = annotation as? PointAnnotation else { return nil }
 
-        let identifier = "VenueAnnotation"
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? AnnotationView
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotation.identifier) as? AnnotationView
 
         if annotationView == nil {
-            annotationView = AnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            annotationView?.canShowCallout = true
+            annotationView = AnnotationView(annotation: annotation)
             annotationView?.setImage(annotation.image)
+            annotationView?.button.rx.controlEvent(.touchUpInside)
+                .subscribe({ [unowned self] _ in
+                    self.presentDetails(for: annotation)
+            }).disposed(by: viewModel.disposeBag)
         } else {
             annotationView?.annotation = annotation
         }
 
         return annotationView
+    }
+
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        viewModel.userLocationUpdate.onNext(userLocation)
     }
 }

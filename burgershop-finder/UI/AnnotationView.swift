@@ -11,14 +11,18 @@ import MapKit
 
 final class AnnotationView: SetupAnnotationView {
 
-    var rightButton = UIButton(type: .detailDisclosure)
+    var button = UIButton(type: .detailDisclosure)
+
+    convenience init(annotation: PointAnnotation) {
+        self.init(annotation: annotation, reuseIdentifier: annotation.identifier)
+    }
 
     override func setup() {
         canShowCallout = true
 
-        let size = CGSize(width: 25, height: 35)
+        let size = CGSize(width: 20, height: 30)
         image = UIImage(named: "Marker")?.withSize(size)
-        rightCalloutAccessoryView = rightButton
+        rightCalloutAccessoryView = button
 
     }
 

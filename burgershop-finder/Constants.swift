@@ -44,4 +44,8 @@ struct Constants {
     static var limit: String {
         return "12"
     }
+
+    static var price: String {
+        return "€€€"
+    }
 }

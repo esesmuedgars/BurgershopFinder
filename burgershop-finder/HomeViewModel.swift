@@ -8,6 +8,9 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
+import MapKit
+import CoreLocation
 
 final class HomeViewModel {
 
@@ -25,17 +28,29 @@ final class HomeViewModel {
 
     private(set) lazy var details: BehaviorSubject<FSDetails?> = BehaviorSubject(value: nil)
 
+    let userLocationUpdate = PublishSubject<MKUserLocation>()
+    let userLocationUpdated: Driver<CLLocationCoordinate2D>
+
     init(apiService: APIServiceProtocol = Dependencies.shared.apiService(),
          authService: AuthServiceProtocol = Dependencies.shared.authService()) {
         self.apiService = apiService
         self.authService = authService
 
+        userLocationUpdated = userLocationUpdate.take(1)
+            .map { $0.coordinate }
+            .startWith(.default)
+            .asDriver(onErrorJustReturn: .default)
+
+        bindRx()
+    }
+
+    private func bindRx() {
         authService.authToken.subscribe(onNext: { [weak self] authToken in
-                self?.fetchVenues(authToken: authToken!)
+            self?.fetchVenues(authToken: authToken!)
             }, onError: { [weak self] error in
                 self?.userAuthorized = false
                 print(error)
-            }).disposed(by: disposeBag)
+        }).disposed(by: disposeBag)
     }
 
     func authorize(_ viewController: UIViewController) {
