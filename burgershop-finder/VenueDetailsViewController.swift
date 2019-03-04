@@ -13,9 +13,9 @@ import RxCocoa
 final class VenueDetailsViewController: UIViewController {
 
     @IBOutlet private var titleLabel: TitleLabel!
+    @IBOutlet private var addressLabel: UILabel!
     @IBOutlet private var phoneNumberLabel: UILabel!
     @IBOutlet private var phoneNumberStack: UIStackView!
-    @IBOutlet private var addressLabel: UILabel!
     @IBOutlet private var priceLabel: UILabel!
     @IBOutlet private var likesLabel: UILabel!
     @IBOutlet private var ratingLabel: UILabel!
@@ -53,31 +53,31 @@ final class VenueDetailsViewController: UIViewController {
     }
 
     private func bindRx() {
-        viewModel.titleLabelAttributedText
+        viewModel.titleAttributedText
             .bind(to: titleLabel.rx.attributedText)
             .disposed(by: viewModel.disposeBag)
 
-        viewModel.phoneNumberLabelAttributedText
-            .bind(to: phoneNumberLabel.rx.attributedText)
-            .disposed(by: viewModel.disposeBag)
-
-        viewModel.hasPhoneNumber
-            .bind(to: phoneNumberStack.rx.isHidden)
-            .disposed(by: viewModel.disposeBag)
-
-        viewModel.addressLabelAttributedText
+        viewModel.addressAttributedText
             .bind(to: addressLabel.rx.attributedText)
             .disposed(by: viewModel.disposeBag)
 
-        viewModel.priceLabelAttributedText
+        viewModel.phoneNumberAttributedText
+            .bind(to: phoneNumberLabel.rx.attributedText)
+            .disposed(by: viewModel.disposeBag)
+
+        viewModel.noPhoneNumber
+            .bind(to: phoneNumberStack.rx.isHidden)
+            .disposed(by: viewModel.disposeBag)
+
+        viewModel.priceAttributedText
             .bind(to: priceLabel.rx.attributedText)
             .disposed(by: viewModel.disposeBag)
 
-        viewModel.likesLabelAttributedText
+        viewModel.likesAttributedText
             .bind(to: likesLabel.rx.attributedText)
             .disposed(by: viewModel.disposeBag)
 
-        viewModel.ratingLabelAttributedText
+        viewModel.ratingAttributedText
             .bind(to: ratingLabel.rx.attributedText)
             .disposed(by: viewModel.disposeBag)
 

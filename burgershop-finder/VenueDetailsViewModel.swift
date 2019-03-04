@@ -12,42 +12,35 @@ import RxCocoa
 
 final class VenueDetailsViewModel {
 
-    private let annotation: PointAnnotation
-    private let apiService: APIServiceProtocol
-
     private(set) lazy var disposeBag = DisposeBag()
 
-    let titleLabelAttributedText: Observable<NSAttributedString?>
-    let phoneNumberLabelAttributedText: Observable<NSAttributedString?>
-    let hasPhoneNumber: Observable<Bool>
-    let addressLabelAttributedText: Observable<NSAttributedString?>
-    let priceLabelAttributedText: Observable<NSAttributedString?>
-    let likesLabelAttributedText: Observable<NSAttributedString?>
-    let ratingLabelAttributedText: Observable<NSAttributedString?>
+    let titleAttributedText: Observable<NSAttributedString?>
+    let phoneNumberAttributedText: Observable<NSAttributedString?>
+    let noPhoneNumber: Observable<Bool>
+    let addressAttributedText: Observable<NSAttributedString?>
+    let priceAttributedText: Observable<NSAttributedString?>
+    let likesAttributedText: Observable<NSAttributedString?>
+    let ratingAttributedText: Observable<NSAttributedString?>
     let imageViewImage: Observable<UIImage?>
 
-    init(annotation: PointAnnotation,
-         apiService: APIServiceProtocol = Dependencies.shared.apiService()) {
-        self.annotation = annotation
-        self.apiService = apiService
-
-        titleLabelAttributedText = Observable<String?>
+    init(annotation: PointAnnotation) {
+        titleAttributedText = Observable<String?>
             .just(annotation.title)
             .map { NSAttributedString($0?.capitalized) }
 
-        phoneNumberLabelAttributedText = Observable<String?>
+        phoneNumberAttributedText = Observable<String?>
             .just(VenueDetailsViewModel.formatPhoneNumber(from: annotation))
             .map { NSAttributedString($0) }
 
-        hasPhoneNumber = Observable<String?>
+        noPhoneNumber = Observable<String?>
             .just(annotation.phoneNumber)
             .map { $0.isEmptyOrNil }
 
-        addressLabelAttributedText = Observable<String?>
+        addressAttributedText = Observable<String?>
             .just(VenueDetailsViewModel.combineAddress(from: annotation))
             .map { NSAttributedString($0) }
 
-        priceLabelAttributedText = Observable<Int>
+        priceAttributedText = Observable<Int>
             .just(annotation.priceTier)
             .map {
                 let text = Constants.price
@@ -56,11 +49,11 @@ final class VenueDetailsViewModel {
                 return NSMutableAttributedString(text, range: range)
             }
 
-        likesLabelAttributedText = Observable<Int>
+        likesAttributedText = Observable<Int>
             .just(annotation.likes)
             .map { NSAttributedString($0) }
 
-        ratingLabelAttributedText = Observable<Float>
+        ratingAttributedText = Observable<Float>
             .just(annotation.rating)
             .map { NSAttributedString($0) }
 
