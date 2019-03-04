@@ -53,31 +53,31 @@ final class VenueDetailsViewController: UIViewController {
     }
 
     private func bindRx() {
-        viewModel.titleLabelAttributedText
+        viewModel.titleAttributedText
             .bind(to: titleLabel.rx.attributedText)
             .disposed(by: viewModel.disposeBag)
 
-        viewModel.phoneNumberLabelAttributedText
+        viewModel.phoneNumberAttributedText
             .bind(to: phoneNumberLabel.rx.attributedText)
             .disposed(by: viewModel.disposeBag)
 
-        viewModel.hasPhoneNumber
+        viewModel.noPhoneNumber
             .bind(to: phoneNumberStack.rx.isHidden)
             .disposed(by: viewModel.disposeBag)
 
-        viewModel.addressLabelAttributedText
+        viewModel.addressAttributedText
             .bind(to: addressLabel.rx.attributedText)
             .disposed(by: viewModel.disposeBag)
 
-        viewModel.priceLabelAttributedText
+        viewModel.priceAttributedText
             .bind(to: priceLabel.rx.attributedText)
             .disposed(by: viewModel.disposeBag)
 
-        viewModel.likesLabelAttributedText
+        viewModel.likesAttributedText
             .bind(to: likesLabel.rx.attributedText)
             .disposed(by: viewModel.disposeBag)
 
-        viewModel.ratingLabelAttributedText
+        viewModel.ratingAttributedText
             .bind(to: ratingLabel.rx.attributedText)
             .disposed(by: viewModel.disposeBag)
 
