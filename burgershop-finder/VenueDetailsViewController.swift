@@ -13,9 +13,9 @@ import RxCocoa
 final class VenueDetailsViewController: UIViewController {
 
     @IBOutlet private var titleLabel: TitleLabel!
+    @IBOutlet private var addressLabel: UILabel!
     @IBOutlet private var phoneNumberLabel: UILabel!
     @IBOutlet private var phoneNumberStack: UIStackView!
-    @IBOutlet private var addressLabel: UILabel!
     @IBOutlet private var priceLabel: UILabel!
     @IBOutlet private var likesLabel: UILabel!
     @IBOutlet private var ratingLabel: UILabel!
@@ -57,16 +57,16 @@ final class VenueDetailsViewController: UIViewController {
             .bind(to: titleLabel.rx.attributedText)
             .disposed(by: viewModel.disposeBag)
 
+        viewModel.addressAttributedText
+            .bind(to: addressLabel.rx.attributedText)
+            .disposed(by: viewModel.disposeBag)
+
         viewModel.phoneNumberAttributedText
             .bind(to: phoneNumberLabel.rx.attributedText)
             .disposed(by: viewModel.disposeBag)
 
         viewModel.noPhoneNumber
             .bind(to: phoneNumberStack.rx.isHidden)
-            .disposed(by: viewModel.disposeBag)
-
-        viewModel.addressAttributedText
-            .bind(to: addressLabel.rx.attributedText)
             .disposed(by: viewModel.disposeBag)
 
         viewModel.priceAttributedText
