@@ -97,8 +97,8 @@ extension Data {
 }
 
 extension MapView {
-    func zoomTo(_ coordinate: CLLocationCoordinate2D) {
-        let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+    func zoomTo(_ coordinate: CLLocationCoordinate2D, delta: CLLocationDegrees) {
+        let span = MKCoordinateSpan(latitudeDelta: delta, longitudeDelta: delta)
         let region = MKCoordinateRegion(center: coordinate, span: span)
         setRegion(region, animated: true)
     }
@@ -106,7 +106,7 @@ extension MapView {
     func selectAnnotation(by identifier: FSIdentifier, animated: Bool = true) {
         if let annotation = annotations.compactMap({ $0 as? PointAnnotation })
             .first(where: { $0.identifier == identifier }) {
-            zoomTo(annotation.coordinate)
+            zoomTo(annotation.coordinate, delta: 0.005)
             selectAnnotation(annotation, animated: animated)
         }
     }

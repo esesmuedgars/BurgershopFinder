@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MapKit
 
 final class AnnotationView: SetupAnnotationView {
 

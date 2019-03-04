@@ -37,7 +37,7 @@ final class HomeViewController: UIViewController {
     private func bindRx() {
         viewModel.details
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak mapView] details in
+            .subscribe(onNext: { [mapView] details in
                 guard let details = details else { return }
 
                 let annotation = PointAnnotation(details)
@@ -62,6 +62,8 @@ final class HomeViewController: UIViewController {
         viewModel.userLocationUpdated
             .drive(onNext: { [weak self] coordinate in
                 self?.mapView.zoomTo(coordinate)
+            .drive(onNext: { [mapView] coordinate in
+                mapView?.zoomTo(coordinate, delta: 0.0005)
             })
             .disposed(by: viewModel.disposeBag)
     }
@@ -100,7 +102,7 @@ extension HomeViewController: MKMapViewDelegate {
         if annotationView == nil {
             annotationView = AnnotationView(annotation: annotation)
             annotationView?.setImage(annotation.image)
-            annotationView?.button.rx.controlEvent(.touchUpInside)
+            annotationView?.button.rx.tap
                 .subscribe({ [unowned self] _ in
                     self.presentDetails(for: annotation)
             }).disposed(by: viewModel.disposeBag)

@@ -12,7 +12,7 @@ import UIKit
 final class MapView: SetupMapView {
 
     @IBInspectable
-    var cornerRadius: CGFloat = 0 {
+    public var cornerRadius: CGFloat = 0 {
         didSet {
             layer.cornerRadius = cornerRadius
         }
