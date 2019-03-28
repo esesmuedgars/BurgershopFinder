@@ -30,7 +30,6 @@
 		72A32B322211ED6A00717890 /* FSGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D2230C2177B1BD003C04F6 /* FSGroup.swift */; };
 		72A32B342211ED6A00717890 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E572BD21A9B09D009F1278 /* HomeViewModel.swift */; };
 		72A32B352211ED6A00717890 /* FSIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D223182177B9D7003C04F6 /* FSIdentifier.swift */; };
-		72A32B362211ED6A00717890 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4E6A921ADE714009FB99C /* CacheManager.swift */; };
 		72A32B382211ED6A00717890 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D62DC721AA1A3900FF4BD9 /* MapView.swift */; };
 		72A32B3A2211ED6A00717890 /* PointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE8CDC21BF34AF0007B085 /* PointAnnotation.swift */; };
 		72A32B3B2211ED6A00717890 /* FSLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724BCD10216E7E7F002F526E /* FSLocation.swift */; };
@@ -81,7 +80,6 @@
 		72C4E6A421ADBB64009FB99C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4E6A321ADBB64009FB99C /* Extensions.swift */; };
 		72C4E6A621ADD19E009FB99C /* VenueCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4E6A521ADD19E009FB99C /* VenueCellModel.swift */; };
 		72C4E6A821ADE4C6009FB99C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C4E6A721ADE4C6009FB99C /* Assets.xcassets */; };
-		72C4E6AA21ADE714009FB99C /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4E6A921ADE714009FB99C /* CacheManager.swift */; };
 		72C98416222D7B4900FBE209 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C98415222D7B4800FBE209 /* RxGesture.framework */; };
 		72C98417222D7B5A00FBE209 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C98415222D7B4800FBE209 /* RxGesture.framework */; };
 		72CE8CDB21BF11AD0007B085 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE8CDA21BF11AD0007B085 /* AnnotationView.swift */; };
@@ -146,7 +144,6 @@
 		72C4E6A321ADBB64009FB99C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		72C4E6A521ADD19E009FB99C /* VenueCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCellModel.swift; sourceTree = "<group>"; };
 		72C4E6A721ADE4C6009FB99C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		72C4E6A921ADE714009FB99C /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		72C98415222D7B4800FBE209 /* RxGesture.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxGesture.framework; path = Carthage/Build/iOS/RxGesture.framework; sourceTree = "<group>"; };
 		72CE8CDA21BF11AD0007B085 /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 		72CE8CDC21BF34AF0007B085 /* PointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAnnotation.swift; sourceTree = "<group>"; };
@@ -323,7 +320,6 @@
 				7288831A2214C02500768FFE /* VenueDetailsViewController.swift */,
 				72C4E6A521ADD19E009FB99C /* VenueCellModel.swift */,
 				72C4E6A121ADB49F009FB99C /* VenueCell.swift */,
-				72C4E6A921ADE714009FB99C /* CacheManager.swift */,
 				72E572BF21A9C786009F1278 /* Constants.swift */,
 				72C4E6A321ADBB64009FB99C /* Extensions.swift */,
 				72CE8CDC21BF34AF0007B085 /* PointAnnotation.swift */,
@@ -504,7 +500,6 @@
 				72A32B322211ED6A00717890 /* FSGroup.swift in Sources */,
 				72A32B342211ED6A00717890 /* HomeViewModel.swift in Sources */,
 				72A32B352211ED6A00717890 /* FSIdentifier.swift in Sources */,
-				72A32B362211ED6A00717890 /* CacheManager.swift in Sources */,
 				72A32B382211ED6A00717890 /* MapView.swift in Sources */,
 				72A32B3A2211ED6A00717890 /* PointAnnotation.swift in Sources */,
 				72A32B6B2211F24100717890 /* Dependencies.swift in Sources */,
@@ -545,7 +540,6 @@
 				7288831E2214C6DD00768FFE /* VenueDetailsViewModel.swift in Sources */,
 				72E572BE21A9B09D009F1278 /* HomeViewModel.swift in Sources */,
 				72D223192177B9D7003C04F6 /* FSIdentifier.swift in Sources */,
-				72C4E6AA21ADE714009FB99C /* CacheManager.swift in Sources */,
 				72D62DC821AA1A3900FF4BD9 /* MapView.swift in Sources */,
 				72CE8CDD21BF34AF0007B085 /* PointAnnotation.swift in Sources */,
 				724BCD11216E7E7F002F526E /* FSLocation.swift in Sources */,

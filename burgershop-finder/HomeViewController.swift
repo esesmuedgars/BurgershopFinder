@@ -41,8 +41,6 @@ final class HomeViewController: UIViewController {
         titleLabel.setTitle("Venues")
 
         bindRx()
-        
-        CacheManager.shared.cache.removeAllObjects() // #debug
     }
 
     private func bindRx() {

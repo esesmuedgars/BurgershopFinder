@@ -13,10 +13,6 @@ import UIKit
 
 final class VenueCellModel {
 
-    private var cache: NSCache<NSString, UIImage> {
-        return CacheManager.shared.cache
-    }
-
     private let venueId: String
     private let apiService: APIServiceProtocol
     private let authService: AuthServiceProtocol
@@ -45,33 +41,24 @@ final class VenueCellModel {
 
     private func bindRx() {
         venueDetails.skip(1)
-            .subscribe(onNext: { [weak self] (details) in
+            .subscribe(onNext: { [_venueImage] details in
                 guard let image = details?.image else {
-                    self?.cacheImage(UIImage(named: "Cheeseburger"))
+                    _venueImage.value = UIImage(named: "Cheeseburger")
                     return
                 }
 
-                self?.cacheImage(image)
-            }).disposed(by: disposeBag)
+                _venueImage.value = image
+            })
+            .disposed(by: disposeBag)
     }
 
     func inspectVenue() {
-        if let image = cache.get(forKey: venueId) {
-            _venueImage.value = image
-        } else {
-            apiService.inspectVenue(authToken: authService.rawToken!, venueId: venueId)
-                .subscribe(onNext: { [weak self] details in
-                    self?._venueDetails.value = details
-                    }, onError: { error in
-                        print(error)
-                }).disposed(by: disposeBag)
-        }
-    }
-
-    private func cacheImage(_ image: UIImage?) {
-        guard cache.get(forKey: venueId) == nil else { return }
-
-        cache.set(image, forKey: venueId)
-        _venueImage.value = image
+        apiService.inspectVenue(authToken: authService.rawToken!, venueId: venueId)
+            .subscribe(onNext: { [_venueDetails] details in
+                _venueDetails.value = details
+            }, onError: { error in
+                print(error)
+            })
+            .disposed(by: disposeBag)
     }
 }

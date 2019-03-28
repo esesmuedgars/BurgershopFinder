@@ -24,18 +24,6 @@ extension Reactive where Base : UICollectionView {
     }
 }
 
-extension NSCache where KeyType == NSString, ObjectType == UIImage {
-    func get(forKey key: String) -> UIImage? {
-        return object(forKey: NSString(string: key))
-    }
-
-    func set(_ image: UIImage?, forKey key: String) {
-        if let image = image {
-            setObject(image, forKey: NSString(string: key))
-        }
-    }
-}
-
 extension UIImage {
     convenience init?(_ photo: FSItem) {
         guard let data = try? Data(contentsOf: photo.url) else { return nil }
