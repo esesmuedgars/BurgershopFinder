@@ -24,7 +24,7 @@ final class VenueCellModel {
         return _venueDetails.asObservable()
     }
 
-    private lazy var _venueImage: Variable<UIImage?> = Variable(UIImage(named: "Cheeseburger"))
+    private lazy var _venueImage: Variable<UIImage?> = Variable(.default)
     var venueImage: Observable<UIImage?> {
         return _venueImage.asObservable()
     }
@@ -43,7 +43,7 @@ final class VenueCellModel {
         venueDetails.skip(1)
             .subscribe(onNext: { [_venueImage] details in
                 guard let image = details?.image else {
-                    _venueImage.value = UIImage(named: "Cheeseburger")
+                    _venueImage.value = .default
                     return
                 }
 

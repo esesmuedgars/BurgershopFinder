@@ -25,6 +25,11 @@ extension Reactive where Base : UICollectionView {
 }
 
 extension UIImage {
+
+    static var `default`: UIImage? {
+        return UIImage(named: "Cheeseburger")
+    }
+
     convenience init?(_ photo: FSItem) {
         guard let data = try? Data(contentsOf: photo.url) else { return nil }
         self.init(data: data)

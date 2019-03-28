@@ -85,7 +85,7 @@ final class FSDetails: Codable {
         if let photo = response.venue.photo.group?.items.first {
             _image = UIImage(photo)
         } else {
-            _image = UIImage(named: "Cheeseburger")
+            _image = .default
         }
     }
 }
