@@ -9,14 +9,21 @@
 import UIKit
 
 final class CollectionView: SetupCollectionView {
+
+    var collectionViewFlowLayout: CollectionViewFlowLayout? {
+        return collectionViewLayout as? CollectionViewFlowLayout
+    }
+
     override func reloadData() {
         super.reloadData()
+
         invalidateIntrinsicContentSize()
+        collectionViewFlowLayout?.invalidateItemSize()
     }
 
     override var intrinsicContentSize: CGSize {
         guard isEmpty else {
-            return self.collectionViewLayout.collectionViewContentSize
+            return collectionViewLayout.collectionViewContentSize
         }
 
         return UIScreen.main.bounds.size

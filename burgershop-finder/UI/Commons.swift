@@ -119,6 +119,27 @@ class SetupCollectionView: UICollectionView, SetupProtocol {
     func setupFromNib() {}
 }
 
+class SetupCollectionViewFlowLayout: UICollectionViewFlowLayout, SetupProtocol {
+    override init() {
+        super.init()
+        setup()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init()
+        setup()
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupFromNib()
+    }
+
+    func setup() {}
+
+    func setupFromNib() {}
+}
+
 class SetupCell: UICollectionViewCell, SetupProtocol {
     override init(frame: CGRect) {
         super.init(frame: frame)

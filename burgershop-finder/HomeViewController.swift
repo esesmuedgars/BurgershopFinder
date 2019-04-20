@@ -17,7 +17,11 @@ final class HomeViewController: UIViewController {
 
     @IBOutlet private var titleLabel: TitleLabel!
     @IBOutlet private var mapView: MapView!
-    @IBOutlet private var collectionView: CollectionView!
+    @IBOutlet private var collectionView: CollectionView! {
+        didSet {
+            collectionView.collectionViewFlowLayout?.numberOfColumns = 2
+        }
+    }
     @IBOutlet private var scrollView: UIScrollView!
     @IBOutlet private var userLocationView: UIView! {
         didSet {
@@ -99,13 +103,19 @@ final class HomeViewController: UIViewController {
 
         viewModel.authorize(self)
     }
-}
 
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = (collectionView.frame.width - 50) / 2
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
 
-        return CGSize(width: size, height: size)
+
+        let annotation = mapView.selectedAnnotations.first as? PointAnnotation
+
+        collectionView.invalidateIntrinsicContentSize()
+        collectionView.collectionViewFlowLayout?.invalidateItemSize()
+
+        if let identifier = annotation?.identifier {
+            mapView.selectAnnotation(by: identifier, animated: false)
+        }
     }
 }
 
