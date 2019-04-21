@@ -15,6 +15,8 @@
 		72383A7422176B8D0081C59F /* FSLikes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72383A7322176B8D0081C59F /* FSLikes.swift */; };
 		72383A7522176B8D0081C59F /* FSLikes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72383A7322176B8D0081C59F /* FSLikes.swift */; };
 		7243AF5F21B82B0D0060DE07 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7243AF5E21B82B0D0060DE07 /* TitleLabel.swift */; };
+		7248D6BD226BACBE00762766 /* CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7248D6BC226BACBE00762766 /* CollectionViewFlowLayout.swift */; };
+		7248D6BE226BACBE00762766 /* CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7248D6BC226BACBE00762766 /* CollectionViewFlowLayout.swift */; };
 		724BCD11216E7E7F002F526E /* FSLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724BCD10216E7E7F002F526E /* FSLocation.swift */; };
 		72534D3C21F10A2F007EC465 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72534D3B21F10A2F007EC465 /* Protocols.swift */; };
 		72587F5D21B9806200EA7B03 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72587F5C21B9806200EA7B03 /* CollectionView.swift */; };
@@ -107,6 +109,7 @@
 		72383A70221769540081C59F /* FSContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSContact.swift; sourceTree = "<group>"; };
 		72383A7322176B8D0081C59F /* FSLikes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSLikes.swift; sourceTree = "<group>"; };
 		7243AF5E21B82B0D0060DE07 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
+		7248D6BC226BACBE00762766 /* CollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		724BCD10216E7E7F002F526E /* FSLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSLocation.swift; sourceTree = "<group>"; };
 		72534D3B21F10A2F007EC465 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		72534D3D21F10A95007EC465 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -204,6 +207,7 @@
 				72CE8CDA21BF11AD0007B085 /* AnnotationView.swift */,
 				72D62DC921AA1AC600FF4BD9 /* GradientView.swift */,
 				72587F5C21B9806200EA7B03 /* CollectionView.swift */,
+				7248D6BC226BACBE00762766 /* CollectionViewFlowLayout.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -517,6 +521,7 @@
 				72A32B472211ED6A00717890 /* APIService.swift in Sources */,
 				72383A72221769540081C59F /* FSContact.swift in Sources */,
 				72A32B492211ED6A00717890 /* FSPhoto.swift in Sources */,
+				7248D6BE226BACBE00762766 /* CollectionViewFlowLayout.swift in Sources */,
 				72A32B4A2211ED6A00717890 /* FSItem.swift in Sources */,
 				7288831C2214C02500768FFE /* VenueDetailsViewController.swift in Sources */,
 				72383A7522176B8D0081C59F /* FSLikes.swift in Sources */,
@@ -543,6 +548,7 @@
 				72D62DC821AA1A3900FF4BD9 /* MapView.swift in Sources */,
 				72CE8CDD21BF34AF0007B085 /* PointAnnotation.swift in Sources */,
 				724BCD11216E7E7F002F526E /* FSLocation.swift in Sources */,
+				7248D6BD226BACBE00762766 /* CollectionViewFlowLayout.swift in Sources */,
 				72383A7422176B8D0081C59F /* FSLikes.swift in Sources */,
 				72383A71221769540081C59F /* FSContact.swift in Sources */,
 				72C4E6A221ADB49F009FB99C /* VenueCell.swift in Sources */,

@@ -99,6 +99,7 @@ extension MapView {
     func selectAnnotation(by identifier: FSIdentifier, animated: Bool = true) {
         if let annotation = annotations.compactMap({ $0 as? PointAnnotation })
             .first(where: { $0.identifier == identifier }) {
+            selectedAnnotations.removeAll()
             zoomTo(annotation.coordinate, delta: 0.005)
             selectAnnotation(annotation, animated: animated)
         }

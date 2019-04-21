@@ -53,15 +53,10 @@
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4OT-vh-QiN" customClass="CollectionView" customModule="Debug_Burgershop_Finder" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="532" width="375" height="135"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nSx-wK-RLU">
-                                                    <size key="itemSize" width="50" height="50"/>
-                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="40"/>
-                                                </collectionViewFlowLayout>
+                                                <collectionViewLayout key="collectionViewLayout" id="izI-ed-Elx" customClass="CollectionViewFlowLayout" customModule="Debug_Burgershop_Finder" customModuleProvider="target"/>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VenueCell" id="8kH-rc-cau" customClass="VenueCell" customModule="Debug_Burgershop_Finder" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="0.0" width="50" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -92,9 +87,6 @@
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
-                                                <connections>
-                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jeB-nc-cPZ"/>
-                                                </connections>
                                             </collectionView>
                                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnk-Mw-Vyx">
                                                 <rect key="frame" x="315" y="122" width="30" height="30"/>
