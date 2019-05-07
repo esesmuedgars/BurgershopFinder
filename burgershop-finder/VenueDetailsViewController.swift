@@ -53,36 +53,13 @@ final class VenueDetailsViewController: UIViewController {
     }
 
     private func bindRx() {
-        viewModel.titleAttributedText
-            .bind(to: titleLabel.rx.attributedText)
-            .disposed(by: viewModel.disposeBag)
-
-        viewModel.addressAttributedText
-            .bind(to: addressLabel.rx.attributedText)
-            .disposed(by: viewModel.disposeBag)
-
-        viewModel.phoneNumberAttributedText
-            .bind(to: phoneNumberLabel.rx.attributedText)
-            .disposed(by: viewModel.disposeBag)
-
-        viewModel.noPhoneNumber
-            .bind(to: phoneNumberStack.rx.isHidden)
-            .disposed(by: viewModel.disposeBag)
-
-        viewModel.priceAttributedText
-            .bind(to: priceLabel.rx.attributedText)
-            .disposed(by: viewModel.disposeBag)
-
-        viewModel.likesAttributedText
-            .bind(to: likesLabel.rx.attributedText)
-            .disposed(by: viewModel.disposeBag)
-
-        viewModel.ratingAttributedText
-            .bind(to: ratingLabel.rx.attributedText)
-            .disposed(by: viewModel.disposeBag)
-
-        viewModel.imageViewImage
-            .bind(to: imageView.rx.image)
-            .disposed(by: viewModel.disposeBag)
+        titleLabel.text = viewModel.titleText
+        addressLabel.text = viewModel.addressText
+        phoneNumberLabel.text = viewModel.phoneNumberText
+        phoneNumberStack.isHidden = viewModel.noPhoneNumber
+        priceLabel.attributedText = viewModel.priceAttributedText
+        likesLabel.text = viewModel.likesText
+        ratingLabel.text = viewModel.ratingText
+        imageView.image = viewModel.image
     }
 }

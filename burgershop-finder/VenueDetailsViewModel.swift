@@ -7,64 +7,37 @@
 //
 
 import Foundation
-import RxSwift
-import RxCocoa
 
 final class VenueDetailsViewModel {
 
-    private(set) lazy var disposeBag = DisposeBag()
-
-    let titleAttributedText: Observable<NSAttributedString?>
-    let phoneNumberAttributedText: Observable<NSAttributedString?>
-    let noPhoneNumber: Observable<Bool>
-    let addressAttributedText: Observable<NSAttributedString?>
-    let priceAttributedText: Observable<NSAttributedString?>
-    let likesAttributedText: Observable<NSAttributedString?>
-    let ratingAttributedText: Observable<NSAttributedString?>
-    let imageViewImage: Observable<UIImage?>
+    let titleText: String?
+    let phoneNumberText: String?
+    let noPhoneNumber: Bool
+    let addressText: String
+    let priceAttributedText: NSAttributedString
+    let likesText: String
+    let ratingText: String
+    let image: UIImage?
 
     init(annotation: PointAnnotation) {
-        titleAttributedText = Observable<String?>
-            .just(annotation.title)
-            .map { NSAttributedString($0?.capitalized) }
+        titleText = annotation.title?.capitalized
 
-        phoneNumberAttributedText = Observable<String?>
-            .just(VenueDetailsViewModel.formatPhoneNumber(from: annotation))
-            .map { NSAttributedString($0) }
+        phoneNumberText = VenueDetailsViewModel.formatPhoneNumber(from: annotation)
 
-        noPhoneNumber = Observable<String?>
-            .just(annotation.phoneNumber)
-            .map { $0.isEmptyOrNil }
+        noPhoneNumber = annotation.phoneNumber.isEmptyOrNil
 
-        addressAttributedText = Observable<String?>
-            .just(VenueDetailsViewModel.formatAddress(from: annotation))
-            .map { NSAttributedString($0) }
+        addressText = VenueDetailsViewModel.formatAddress(from: annotation)
 
-        priceAttributedText = Observable<Int>
-            .just(annotation.priceTier)
-            .map {
-                let text = Constants.price
-                let range = NSRange(location: $0, length: text.count - $0)
+        let priceTier = annotation.priceTier
+        let text = Constants.price
+        let range = NSRange(location: priceTier, length: text.count - priceTier)
+        priceAttributedText = NSMutableAttributedString(text, range: range)
 
-                return NSMutableAttributedString(text, range: range)
-            }
+        likesText = String(annotation.likes)
 
-        likesAttributedText = Observable<Int>
-            .just(annotation.likes)
-            .map { NSAttributedString($0) }
+        ratingText = annotation.rating.isZero ? String(Int(annotation.rating)) : String(annotation.rating)
 
-        ratingAttributedText = Observable<Float>
-            .just(annotation.rating)
-            .map {
-                if $0.isZero {
-                    return NSAttributedString(Int($0))
-                } else {
-                    return NSAttributedString($0)
-                }
-            }
-
-        imageViewImage = Observable<UIImage?>
-            .just(annotation.image)
+        image = annotation.image
     }
 
     private static func formatPhoneNumber(from annotation: PointAnnotation) -> String? {
