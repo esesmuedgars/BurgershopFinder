@@ -1,2 +1,2 @@
-github "ReactiveX/RxSwift" ~> 4.0
-github "RxSwiftCommunity/RxGesture" ~> 1.1.1
+github "ReactiveX/RxSwift" ~> 4.5
+github "RxSwiftCommunity/RxGesture" ~> 2.2

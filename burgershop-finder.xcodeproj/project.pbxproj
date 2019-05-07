@@ -25,8 +25,6 @@
 		7288831C2214C02500768FFE /* VenueDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7288831A2214C02500768FFE /* VenueDetailsViewController.swift */; };
 		7288831E2214C6DD00768FFE /* VenueDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7288831D2214C6DD00768FFE /* VenueDetailsViewModel.swift */; };
 		7288831F2214C6DD00768FFE /* VenueDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7288831D2214C6DD00768FFE /* VenueDetailsViewModel.swift */; };
-		729C490B21A8CF5E0071903F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729C490921A8CF5E0071903F /* RxCocoa.framework */; };
-		729C490C21A8CF5E0071903F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729C490A21A8CF5E0071903F /* RxSwift.framework */; };
 		72A32B302211ED6A00717890 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF5676216B5FC300102EA8 /* HomeViewController.swift */; };
 		72A32B312211ED6A00717890 /* FSDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D223102177B325003C04F6 /* FSDetails.swift */; };
 		72A32B322211ED6A00717890 /* FSGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D2230C2177B1BD003C04F6 /* FSGroup.swift */; };
@@ -52,8 +50,6 @@
 		72A32B4D2211ED6A00717890 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF5674216B5FC300102EA8 /* AppDelegate.swift */; };
 		72A32B4E2211ED6A00717890 /* FSVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D223142177B370003C04F6 /* FSVenue.swift */; };
 		72A32B502211ED6A00717890 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72534D3B21F10A2F007EC465 /* Protocols.swift */; };
-		72A32B522211ED6A00717890 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729C490921A8CF5E0071903F /* RxCocoa.framework */; };
-		72A32B532211ED6A00717890 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729C490A21A8CF5E0071903F /* RxSwift.framework */; };
 		72A32B552211ED6A00717890 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72AF567D216B5FC400102EA8 /* LaunchScreen.storyboard */; };
 		72A32B562211ED6A00717890 /* details_58c53419cf11d406a5450186.json in Resources */ = {isa = PBXBuildFile; fileRef = 7278132421F90A0E002B0512 /* details_58c53419cf11d406a5450186.json */; };
 		72A32B572211ED6A00717890 /* identifiers.json in Resources */ = {isa = PBXBuildFile; fileRef = 726DF03721F7BCE300EC0934 /* identifiers.json */; };
@@ -78,12 +74,16 @@
 		72AF567A216B5FC300102EA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72AF5678216B5FC300102EA8 /* Main.storyboard */; };
 		72AF567F216B5FC400102EA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72AF567D216B5FC400102EA8 /* LaunchScreen.storyboard */; };
 		72AF5689216B662F00102EA8 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF5688216B662F00102EA8 /* Endpoint.swift */; };
+		72BE66602282007E005F51C6 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C98415222D7B4800FBE209 /* RxGesture.framework */; };
+		72BE666122820088005F51C6 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729C490921A8CF5E0071903F /* RxCocoa.framework */; };
+		72BE666222820095005F51C6 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729C490A21A8CF5E0071903F /* RxSwift.framework */; };
+		72BE6663228200BD005F51C6 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C98415222D7B4800FBE209 /* RxGesture.framework */; };
+		72BE6664228200CB005F51C6 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729C490921A8CF5E0071903F /* RxCocoa.framework */; };
+		72BE6665228200D5005F51C6 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729C490A21A8CF5E0071903F /* RxSwift.framework */; };
 		72C4E6A221ADB49F009FB99C /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4E6A121ADB49F009FB99C /* VenueCell.swift */; };
 		72C4E6A421ADBB64009FB99C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4E6A321ADBB64009FB99C /* Extensions.swift */; };
 		72C4E6A621ADD19E009FB99C /* VenueCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4E6A521ADD19E009FB99C /* VenueCellModel.swift */; };
 		72C4E6A821ADE4C6009FB99C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C4E6A721ADE4C6009FB99C /* Assets.xcassets */; };
-		72C98416222D7B4900FBE209 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C98415222D7B4800FBE209 /* RxGesture.framework */; };
-		72C98417222D7B5A00FBE209 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C98415222D7B4800FBE209 /* RxGesture.framework */; };
 		72CE8CDB21BF11AD0007B085 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE8CDA21BF11AD0007B085 /* AnnotationView.swift */; };
 		72CE8CDD21BF34AF0007B085 /* PointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE8CDC21BF34AF0007B085 /* PointAnnotation.swift */; };
 		72D223092177B167003C04F6 /* FSItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D223082177B167003C04F6 /* FSItem.swift */; };
@@ -135,7 +135,7 @@
 		729C490A21A8CF5E0071903F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		72A32B692211ED6A00717890 /* Debug Burgershop Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Debug Burgershop Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A32B6E2211F91B00717890 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		72AF5671216B5FC300102EA8 /* .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = .app; path = "Release Burgershop Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		72AF5671216B5FC300102EA8 /* Release Burgershop Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Release Burgershop Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72AF5674216B5FC300102EA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72AF5676216B5FC300102EA8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		72AF5679216B5FC300102EA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -169,9 +169,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72C98417222D7B5A00FBE209 /* RxGesture.framework in Frameworks */,
-				72A32B522211ED6A00717890 /* RxCocoa.framework in Frameworks */,
-				72A32B532211ED6A00717890 /* RxSwift.framework in Frameworks */,
+				72BE6665228200D5005F51C6 /* RxSwift.framework in Frameworks */,
+				72BE6664228200CB005F51C6 /* RxCocoa.framework in Frameworks */,
+				72BE6663228200BD005F51C6 /* RxGesture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,9 +179,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72C98416222D7B4900FBE209 /* RxGesture.framework in Frameworks */,
-				729C490B21A8CF5E0071903F /* RxCocoa.framework in Frameworks */,
-				729C490C21A8CF5E0071903F /* RxSwift.framework in Frameworks */,
+				72BE666222820095005F51C6 /* RxSwift.framework in Frameworks */,
+				72BE666122820088005F51C6 /* RxCocoa.framework in Frameworks */,
+				72BE66602282007E005F51C6 /* RxGesture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +306,7 @@
 		72AF5672216B5FC300102EA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				72AF5671216B5FC300102EA8 /* .app */,
+				72AF5671216B5FC300102EA8 /* Release Burgershop Finder.app */,
 				72A32B692211ED6A00717890 /* Debug Burgershop Finder.app */,
 			);
 			name = Products;
@@ -371,7 +371,7 @@
 			);
 			name = Release;
 			productName = "burgershop-finder";
-			productReference = 72AF5671216B5FC300102EA8 /* .app */;
+			productReference = 72AF5671216B5FC300102EA8 /* Release Burgershop Finder.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -617,7 +617,7 @@
 				PRODUCT_NAME = "Debug Burgershop Finder";
 				SWIFT_OBJC_BRIDGING_HEADER = "burgershop-finder/FSOAuth/burgershop-finder-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -641,7 +641,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = app.esesmuedgars.debug.burgershopfinder;
 				PRODUCT_NAME = "Debug Burgershop Finder";
 				SWIFT_OBJC_BRIDGING_HEADER = "burgershop-finder/FSOAuth/burgershop-finder-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -782,7 +782,7 @@
 				PRODUCT_NAME = "Release Burgershop Finder";
 				SWIFT_OBJC_BRIDGING_HEADER = "burgershop-finder/FSOAuth/burgershop-finder-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -806,7 +806,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = app.esesmuedgars.burgershopfinder;
 				PRODUCT_NAME = "Release Burgershop Finder";
 				SWIFT_OBJC_BRIDGING_HEADER = "burgershop-finder/FSOAuth/burgershop-finder-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

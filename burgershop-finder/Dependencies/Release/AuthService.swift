@@ -58,6 +58,8 @@ final class AuthService: AuthServiceProtocol {
             print("Invalid client identifier")
         case .errorFoursquareOAuthNotSupported:
             print("Installed Foursquare App doesn't support oAuth")
+        @unknown default:
+            break
         }
 
         _authToken.value = nil
@@ -109,6 +111,8 @@ final class AuthService: AuthServiceProtocol {
             print("Invalid unsupported grant error")
         case .unknown:
             print("Unknown error")
+        @unknown default:
+            break
         }
 
         _authToken.value = nil
