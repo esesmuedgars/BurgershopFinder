@@ -19,15 +19,8 @@ final class VenueCellModel {
 
     private(set) lazy var disposeBag = DisposeBag()
 
-    private lazy var _venueDetails: Variable<FSDetails?> = Variable(nil)
-    var venueDetails: Observable<FSDetails?> {
-        return _venueDetails.asObservable()
-    }
-
-    private lazy var _venueImage: Variable<UIImage?> = Variable(.default)
-    var venueImage: Observable<UIImage?> {
-        return _venueImage.asObservable()
-    }
+    public lazy var venueDetails: BehaviorRelay<FSDetails?> = BehaviorRelay(value: nil)
+    public lazy var venueImage: BehaviorRelay<UIImage?> = BehaviorRelay(value: .default)
 
     init(forVenueWith venueId: String,
          apiService: APIServiceProtocol = Dependencies.shared.apiService(),
@@ -41,21 +34,21 @@ final class VenueCellModel {
 
     private func bindRx() {
         venueDetails.skip(1)
-            .subscribe(onNext: { [_venueImage] details in
+            .subscribe(onNext: { [venueImage] details in
                 guard let image = details?.image else {
-                    _venueImage.value = .default
+                    venueImage.accept(.default)
                     return
                 }
 
-                _venueImage.value = image
+                venueImage.accept(image)
             })
             .disposed(by: disposeBag)
     }
 
     func inspectVenue() {
         apiService.inspectVenue(authToken: authService.rawToken!, venueId: venueId)
-            .subscribe(onNext: { [_venueDetails] details in
-                _venueDetails.value = details
+            .subscribe(onNext: { [venueDetails] details in
+                venueDetails.accept(details)
             }, onError: { error in
                 print(error)
             })

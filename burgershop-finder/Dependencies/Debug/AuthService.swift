@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import RxSwift
+import RxRelay
 
 final class AuthService: AuthServiceProtocol {
 
@@ -16,7 +17,7 @@ final class AuthService: AuthServiceProtocol {
         return "authorization service stub"
     }
 
-    private var _authToken: Variable<String?> = Variable(nil)
+    private var _authToken = BehaviorRelay<String?>(value: nil)
     var authToken: Observable<String?> {
         return _authToken.asObservable().skip(1)
     }
@@ -26,7 +27,7 @@ final class AuthService: AuthServiceProtocol {
     }
 
     func authorize(_ viewController: UIViewController) {
-        _authToken.value = "TOKEN123"
+        _authToken.accept("TOKEN123")
     }
 
     func requestToken(_ url: URL) {}

@@ -25,6 +25,8 @@
 		7288831C2214C02500768FFE /* VenueDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7288831A2214C02500768FFE /* VenueDetailsViewController.swift */; };
 		7288831E2214C6DD00768FFE /* VenueDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7288831D2214C6DD00768FFE /* VenueDetailsViewModel.swift */; };
 		7288831F2214C6DD00768FFE /* VenueDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7288831D2214C6DD00768FFE /* VenueDetailsViewModel.swift */; };
+		72896BB7228B7056005DBE6B /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72896BB6228B7056005DBE6B /* RxRelay.framework */; };
+		72896BB8228B7062005DBE6B /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72896BB6228B7056005DBE6B /* RxRelay.framework */; };
 		72A32B302211ED6A00717890 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF5676216B5FC300102EA8 /* HomeViewController.swift */; };
 		72A32B312211ED6A00717890 /* FSDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D223102177B325003C04F6 /* FSDetails.swift */; };
 		72A32B322211ED6A00717890 /* FSGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D2230C2177B1BD003C04F6 /* FSGroup.swift */; };
@@ -131,6 +133,7 @@
 		7278133821F90AB0002B0512 /* details_511b91b9e4b0c70932c1ae92.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = details_511b91b9e4b0c70932c1ae92.json; sourceTree = "<group>"; };
 		7288831A2214C02500768FFE /* VenueDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailsViewController.swift; sourceTree = "<group>"; };
 		7288831D2214C6DD00768FFE /* VenueDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailsViewModel.swift; sourceTree = "<group>"; };
+		72896BB6228B7056005DBE6B /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		729C490921A8CF5E0071903F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		729C490A21A8CF5E0071903F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		72A32B692211ED6A00717890 /* Debug Burgershop Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Debug Burgershop Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72896BB7228B7056005DBE6B /* RxRelay.framework in Frameworks */,
 				72BE6665228200D5005F51C6 /* RxSwift.framework in Frameworks */,
 				72BE6664228200CB005F51C6 /* RxCocoa.framework in Frameworks */,
 				72BE6663228200BD005F51C6 /* RxGesture.framework in Frameworks */,
@@ -179,6 +183,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72896BB8228B7062005DBE6B /* RxRelay.framework in Frameworks */,
 				72BE666222820095005F51C6 /* RxSwift.framework in Frameworks */,
 				72BE666122820088005F51C6 /* RxCocoa.framework in Frameworks */,
 				72BE66602282007E005F51C6 /* RxGesture.framework in Frameworks */,
@@ -276,6 +281,7 @@
 		729C490821A8CF5E0071903F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				72896BB6228B7056005DBE6B /* RxRelay.framework */,
 				72C98415222D7B4800FBE209 /* RxGesture.framework */,
 				729C490921A8CF5E0071903F /* RxCocoa.framework */,
 				729C490A21A8CF5E0071903F /* RxSwift.framework */,
@@ -457,6 +463,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxGesture.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -464,6 +471,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxGesture.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxRelay.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -480,6 +488,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxGesture.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -487,6 +496,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxGesture.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxRelay.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

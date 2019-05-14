@@ -22,10 +22,7 @@ final class HomeViewModel {
     private(set) lazy var disposeBag = DisposeBag()
     private(set) lazy var locationManager = CLLocationManager()
 
-    private lazy var _items = Variable(FSIdentifiers())
-    var items: Observable<FSIdentifiers> {
-        return _items.asObservable()
-    }
+    public lazy var items = BehaviorRelay(value: FSIdentifiers())
 
     private(set) lazy var details: BehaviorSubject<FSDetails?> = BehaviorSubject(value: nil)
 
@@ -55,12 +52,14 @@ final class HomeViewModel {
     }
 
     private func bindRx() {
-        authService.authToken.subscribe(onNext: { [weak self] authToken in
-            self?.fetchVenues(authToken: authToken!)
+        authService.authToken
+            .subscribe(onNext: { [weak self] authToken in
+                self?.fetchVenues(authToken: authToken!)
             }, onError: { [weak self] error in
                 self?.userAuthorized = false
                 print(error)
-        }).disposed(by: disposeBag)
+            })
+            .disposed(by: disposeBag)
     }
 
     func authorize(_ viewController: UIViewController) {
@@ -72,11 +71,12 @@ final class HomeViewModel {
 
     private func fetchVenues(authToken: String) {
         apiService.fetchVenues(authToken: authToken)
-            .subscribe(onNext: { [weak self] items in
-                self?._items.value = items
+            .subscribe(onNext: { [items] venues in
+                items.accept(venues)
             }, onError: { error in
                 print(error)
-            }).disposed(by: disposeBag)
+            })
+            .disposed(by: disposeBag)
     }
 
     func cellModel(forVenueWith identifier: String) -> VenueCellModel {

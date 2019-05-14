@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import RxSwift
+import RxRelay
 
 final class AuthService: AuthServiceProtocol {
 
@@ -16,7 +17,7 @@ final class AuthService: AuthServiceProtocol {
         return "authorization service"
     }
 
-    private lazy var _authToken: Variable<String?> = Variable(nil)
+    private lazy var _authToken = BehaviorRelay<String?>(value: nil)
     var authToken: Observable<String?> {
         return _authToken.asObservable().skip(1).flatMap { authToken -> Observable<String?> in
             return Observable<String?>.create { observer -> Disposable in
@@ -62,7 +63,7 @@ final class AuthService: AuthServiceProtocol {
             break
         }
 
-        _authToken.value = nil
+        _authToken.accept(nil)
     }
 
     func requestToken(_ url: URL) {
@@ -85,7 +86,7 @@ final class AuthService: AuthServiceProtocol {
                                        clientSecret: Constants.secret) { [weak self] (authToken, requestCompleted, errorCode) in
             if requestCompleted {
                 if (errorCode == .none) {
-                    self?._authToken.value = authToken
+                    self?._authToken.accept(authToken)
                 } else {
                     self?.errorMessageForCode(errorCode: errorCode)
                 }
@@ -115,6 +116,6 @@ final class AuthService: AuthServiceProtocol {
             break
         }
 
-        _authToken.value = nil
+        _authToken.accept(nil)
     }
 }

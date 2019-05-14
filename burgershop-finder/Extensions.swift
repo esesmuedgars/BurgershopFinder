@@ -19,7 +19,7 @@ extension String: LocalizedError {
 }
 
 extension Reactive where Base : UICollectionView {
-    public func items<S, Cell, O>(cellType: Cell.Type) -> (O) -> (@escaping (Int, S.Iterator.Element, Cell) -> Void) -> Disposable where S : Sequence, S == O.E, Cell : UICollectionViewCell, O : ObservableType {
+    public func items<S, Cell, O>(cellType: Cell.Type) -> (O) -> (@escaping (Int, S.Iterator.Element, Cell) -> Void) -> Disposable where S : Sequence, S == O.Element, Cell : UICollectionViewCell, O : ObservableType {
         return items(cellIdentifier: String(describing: cellType), cellType: cellType)
     }
 }
