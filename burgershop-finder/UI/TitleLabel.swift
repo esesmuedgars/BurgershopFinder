@@ -15,7 +15,7 @@ final class TitleLabel: SetupLabel {
             return attributedText?.string
         }
         set {
-            setAttributedText(text)
+            setAttributedText(newValue)
         }
     }
 
