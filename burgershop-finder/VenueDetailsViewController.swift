@@ -27,13 +27,6 @@ final class VenueDetailsViewController: UIViewController {
 
     private var viewModel: VenueDetailsViewModel!
 
-    override var modalPresentationStyle: UIModalPresentationStyle {
-        get {
-            return .overCurrentContext
-        }
-        set {}
-    }
-
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -42,10 +35,6 @@ final class VenueDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         bindRx()
-    }
-
-    @IBAction func returnWasTapped() {
-        dismiss(animated: true)
     }
 
     func configure(with viewModel: VenueDetailsViewModel) {
