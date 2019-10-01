@@ -44,12 +44,12 @@ final class CollectionViewFlowLayout: SetupCollectionViewFlowLayout {
         let lineSpacingCount = itemCount - 1
         let verticalInsets = sectionInset.top + sectionInset.bottom
 
-        if UIDevice.current.orientation.isPortrait {
+        if orientation.isPortrait {
             let width = min(size.width, size.height)
             let height = itemCount * itemSize.height + lineSpacingCount * minimumLineSpacing + verticalInsets
 
             return CGSize(width: width, height: height)
-        } else if UIDevice.current.orientation.isLandscape {
+        } else if orientation.isLandscape {
             let width = max(size.width, size.height)
             let height = itemCount * itemSize.height + lineSpacingCount * minimumLineSpacing + verticalInsets
 
@@ -66,12 +66,12 @@ final class CollectionViewFlowLayout: SetupCollectionViewFlowLayout {
     func invalidateItemSize() {
         let horizontalInsets = sectionInset.left + sectionInset.right
 
-        if UIDevice.current.orientation.isPortrait {
+        if orientation.isPortrait {
             let width = min(size.width, size.height)
             let constant = (width - minimumLineSpacing - horizontalInsets) / numberOfColumns
 
             itemSize = CGSize(width: constant, height: constant)
-        } else if UIDevice.current.orientation.isLandscape {
+        } else if orientation.isLandscape {
             let width = max(size.width, size.height)
             let constant = (width - minimumLineSpacing - horizontalInsets) / numberOfColumns
 
