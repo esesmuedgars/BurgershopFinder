@@ -10,7 +10,6 @@ import Foundation
 import RxSwift
 import RxCocoa
 import MapKit
-import CoreLocation
 
 final class HomeViewModel {
 
@@ -20,7 +19,6 @@ final class HomeViewModel {
     private lazy var userAuthorized = false
 
     private(set) lazy var disposeBag = DisposeBag()
-    private(set) lazy var locationManager = CLLocationManager()
 
     public lazy var items = BehaviorRelay(value: FSIdentifiers())
 
@@ -47,8 +45,6 @@ final class HomeViewModel {
             .asDriver(onErrorJustReturn: .default)
 
         bindRx()
-
-        locationManager.requestWhenInUseAuthorization() // #debug
     }
 
     private func bindRx() {

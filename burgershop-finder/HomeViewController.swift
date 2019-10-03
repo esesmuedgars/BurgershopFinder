@@ -10,7 +10,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 import MapKit
-import CoreLocation
 import RxGesture
 
 final class HomeViewController: UIViewController {
@@ -31,7 +30,6 @@ final class HomeViewController: UIViewController {
     @IBOutlet private var userLocationButton: UIButton!
 
     private lazy var viewModel = HomeViewModel()
-    private lazy var locationManager = CLLocationManager()
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -39,8 +37,6 @@ final class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        locationManager.delegate = self
 
         titleLabel.setTitle("Venues")
 
@@ -143,5 +139,3 @@ extension HomeViewController: MKMapViewDelegate {
         viewModel.userLocationUpdate.onNext(userLocation)
     }
 }
-
-extension HomeViewController: CLLocationManagerDelegate {}
