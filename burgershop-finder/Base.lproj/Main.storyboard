@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nLE-78-cnp">
-    <device id="retina4_0" orientation="portrait" appearance="dark"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -16,13 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cheeseburger" translatesAutoresizingMaskIntoConstraints="NO" id="0o2-ZB-z1L">
-                                <rect key="frame" x="50" y="150" width="220" height="200"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="LocationService" translatesAutoresizingMaskIntoConstraints="NO" id="0o2-ZB-z1L">
+                                <rect key="frame" x="20" y="120" width="280" height="237.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="v6C-Mj-ZlC"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="tS5-eq-08O">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="100"/>
+                                        <variation key="heightClass=compact-widthClass=regular" constant="100"/>
+                                    </constraint>
                                 </constraints>
-                                <variation key="heightClass=compact-widthClass=compact" hidden="YES"/>
-                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0d-6d-wGq">
                                 <rect key="frame" x="20" y="418" width="280" height="50"/>
@@ -38,7 +39,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzq-8g-EyW">
-                                <rect key="frame" x="20" y="370" width="280" height="20.5"/>
+                                <rect key="frame" x="20" y="377.5" width="280" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -47,15 +48,21 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Wzq-8g-EyW" firstAttribute="leading" secondItem="ROA-I9-X12" secondAttribute="leading" constant="20" id="79e-Wz-vXu"/>
-                            <constraint firstItem="Wzq-8g-EyW" firstAttribute="top" secondItem="0o2-ZB-z1L" secondAttribute="bottom" constant="20" id="FxG-4j-mGN"/>
-                            <constraint firstAttribute="trailing" secondItem="0o2-ZB-z1L" secondAttribute="trailing" constant="50" id="INx-Lj-FD0"/>
+                            <constraint firstItem="Wzq-8g-EyW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0o2-ZB-z1L" secondAttribute="bottom" constant="20" id="FxG-4j-mGN"/>
+                            <constraint firstAttribute="trailing" secondItem="0o2-ZB-z1L" secondAttribute="trailing" constant="20" id="INx-Lj-FD0"/>
                             <constraint firstItem="S0d-6d-wGq" firstAttribute="leading" secondItem="ROA-I9-X12" secondAttribute="leading" constant="20" id="LUC-wK-tWc"/>
-                            <constraint firstItem="0o2-ZB-z1L" firstAttribute="leading" secondItem="ROA-I9-X12" secondAttribute="leading" constant="50" id="LfW-PZ-hd9"/>
-                            <constraint firstItem="0o2-ZB-z1L" firstAttribute="top" secondItem="NpX-oG-HwK" secondAttribute="top" constant="150" id="W6k-Ma-9vn"/>
+                            <constraint firstItem="0o2-ZB-z1L" firstAttribute="leading" secondItem="ROA-I9-X12" secondAttribute="leading" constant="20" id="LfW-PZ-hd9"/>
+                            <constraint firstItem="0o2-ZB-z1L" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NpX-oG-HwK" secondAttribute="top" constant="120" id="ZAf-0V-0FQ">
+                                <variation key="heightClass=compact-widthClass=compact" constant="30"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="30"/>
+                            </constraint>
                             <constraint firstAttribute="trailing" secondItem="Wzq-8g-EyW" secondAttribute="trailing" constant="20" id="c8N-m6-q4a"/>
                             <constraint firstAttribute="trailing" secondItem="S0d-6d-wGq" secondAttribute="trailing" constant="20" id="t9s-zj-Q2f"/>
                             <constraint firstItem="S0d-6d-wGq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Wzq-8g-EyW" secondAttribute="bottom" constant="20" id="vnT-64-JX9"/>
-                            <constraint firstItem="NpX-oG-HwK" firstAttribute="bottom" secondItem="S0d-6d-wGq" secondAttribute="bottom" constant="100" id="y4T-e3-PbJ"/>
+                            <constraint firstItem="NpX-oG-HwK" firstAttribute="bottom" secondItem="S0d-6d-wGq" secondAttribute="bottom" constant="100" id="y4T-e3-PbJ">
+                                <variation key="heightClass=compact-widthClass=compact" constant="30"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="20"/>
+                            </constraint>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NpX-oG-HwK"/>
                         <userDefinedRuntimeAttributes>
@@ -131,7 +138,7 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cheeseburger" translatesAutoresizingMaskIntoConstraints="NO" id="Uej-Q5-muI">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="50.000000000000227" height="50.000000000000227"/>
                                                                 </imageView>
                                                             </subviews>
                                                         </view>
@@ -265,7 +272,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cheeseburger" translatesAutoresizingMaskIntoConstraints="NO" id="DUC-w4-Sr7">
-                                                <rect key="frame" x="20" y="100" width="280" height="280"/>
+                                                <rect key="frame" x="20" y="100" width="280.00000000000023" height="280.00000000000023"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="DUC-w4-Sr7" secondAttribute="height" multiplier="1:1" id="KoF-fj-Ske"/>
                                                 </constraints>
@@ -439,6 +446,7 @@
         <image name="Arrow" width="20" height="20"/>
         <image name="Cheeseburger" width="1122" height="1122"/>
         <image name="Like" width="20" height="20"/>
+        <image name="LocationService" width="423" height="388"/>
         <image name="Phone" width="20" height="20"/>
         <image name="Price" width="20" height="20"/>
         <image name="Rating" width="20" height="19"/>
