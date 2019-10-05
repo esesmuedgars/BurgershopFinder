@@ -13,6 +13,7 @@ import MapKit
 
 final class HomeViewModel {
 
+    private let locationService: LocationServiceProtocol
     private let apiService: APIServiceProtocol
     private let authService: AuthServiceProtocol
 
@@ -29,8 +30,15 @@ final class HomeViewModel {
     let userLocationUpdate = PublishSubject<MKUserLocation>()
     let focusLocationTaps = PublishSubject<Void>()
 
+    private let _requestLocationServices = ReplaySubject<Void>.create(bufferSize: 1)
+    var requestLocationServices: Observable<Void> {
+        return _requestLocationServices.asObservable()
+    }
+
     init(apiService: APIServiceProtocol = Dependencies.shared.apiService(),
-         authService: AuthServiceProtocol = Dependencies.shared.authService()) {
+         authService: AuthServiceProtocol = Dependencies.shared.authService(),
+         locationService: LocationServiceProtocol = Dependencies.shared.locationService()) {
+        self.locationService = locationService
         self.apiService = apiService
         self.authService = authService
 
@@ -47,6 +55,12 @@ final class HomeViewModel {
         bindRx()
     }
 
+    // TODO:
+    // Gives this more taught.
+    // Location is not used with APIs, don't want to block from using app without location
+    // Should force user to grant location permission?
+    private var permitted = false
+
     private func bindRx() {
         authService.authToken
             .subscribe(onNext: { [weak self] authToken in
@@ -56,10 +70,20 @@ final class HomeViewModel {
                 print(error)
             })
             .disposed(by: disposeBag)
+
+        locationService.initialAuthorizationStatus
+            .subscribe(onSuccess: { [weak self] status in
+                if status == .notDetermined || status == .restricted || status == .denied {
+                    self?._requestLocationServices.onNext(())
+                }
+
+                self?.permitted = true
+            })
+            .disposed(by: disposeBag)
     }
 
     func authorize(_ viewController: UIViewController) {
-        if !userAuthorized {
+        if !userAuthorized && permitted {
             authService.authorize(viewController)
             userAuthorized = true
         }

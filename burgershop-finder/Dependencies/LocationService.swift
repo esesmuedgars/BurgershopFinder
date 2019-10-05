@@ -13,21 +13,34 @@ import RxCocoa
 
 final class LocationService: NSObject, LocationServiceProtocol, CLLocationManagerDelegate {
 
-    private var locationManager = CLLocationManager() {
-        didSet {
-            locationManager.delegate = self
-        }
+    private var locationManager = CLLocationManager()
+
+    override init() {
+        super.init()
+
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        locationManager.pausesLocationUpdatesAutomatically = false
     }
 
     private let _authorizationStatus = PublishRelay<CLAuthorizationStatus>()
     var authorizationStatus: Observable<CLAuthorizationStatus> {
-        return _authorizationStatus.asObservable()
+        return _authorizationStatus
+            .do(onNext: { [locationManager] status in
+                if status == .authorizedAlways || status == .authorizedWhenInUse {
+                    locationManager.startUpdatingLocation()
+                }
+            })
+            .asObservable()
+    }
+
+    var currentAuthorizationStatus: CLAuthorizationStatus {
+        return CLLocationManager.authorizationStatus()
     }
 
     var initialAuthorizationStatus: Single<CLAuthorizationStatus> {
-        return Single<CLAuthorizationStatus>.create { event -> Disposable in
-            let authorizationStatus = CLLocationManager.authorizationStatus()
-            event(.success(authorizationStatus))
+        return Single<CLAuthorizationStatus>.create { [currentAuthorizationStatus] event -> Disposable in
+            event(.success(currentAuthorizationStatus))
 
             return Disposables.create()
         }
@@ -35,6 +48,14 @@ final class LocationService: NSObject, LocationServiceProtocol, CLLocationManage
 
     func requestAuthorization() {
         locationManager.requestWhenInUseAuthorization()
+    }
+
+    func setBackgroundAccuracy() {
+        locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
+    }
+
+    func setForegroundAccuracy() {
+        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
     }
 
     // MARK: - CLLocationManagerDelegate

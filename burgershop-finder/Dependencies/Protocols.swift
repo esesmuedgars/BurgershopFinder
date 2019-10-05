@@ -34,8 +34,12 @@ protocol APIServiceProtocol {
 
 protocol LocationServiceProtocol {
 
+    var currentAuthorizationStatus: CLAuthorizationStatus { get }
     var initialAuthorizationStatus: Single<CLAuthorizationStatus> { get }
     var authorizationStatus: Observable<CLAuthorizationStatus> { get }
 
     func requestAuthorization()
+
+    func setBackgroundAccuracy()
+    func setForegroundAccuracy()
 }

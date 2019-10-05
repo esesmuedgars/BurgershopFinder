@@ -20,22 +20,13 @@ final class LocationPermissionViewController: UIViewController {
     }
 
     @IBAction func didTouchUpInside() {
-        viewModel.requestAuthorization()
+        viewModel.requestAuthorizationOrOpenSettings()
     }
 
     private let viewModel = LocationPermissionViewModel()
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
-    }
-
-    override var modalPresentationStyle: UIModalPresentationStyle {
-        get {
-            return .fullScreen
-        }
-        set {
-            print("modalPresentationStyle of LocationPermissionViewController is overriden to always return UIModalPresentationStyle.fullScreen")
-        }
     }
 
     override func viewDidLoad() {
@@ -51,6 +42,12 @@ final class LocationPermissionViewController: UIViewController {
             .bind(to: button.rx.title(for: .normal))
             .disposed(by: viewModel.disposeBag)
 
-        viewModel.fetchValues()
+        viewModel.authorized
+            .subscribe(onNext: { [weak self] in
+                DispatchQueue.main.async {
+                    self?.dismiss(animated: true)
+                }
+            })
+            .disposed(by: viewModel.disposeBag)
     }
 }

@@ -44,6 +44,12 @@ final class HomeViewController: UIViewController {
     }
 
     private func bindRx() {
+        viewModel.requestLocationServices
+            .subscribe(onNext: { [weak self] in
+                self?.presentLocationController()
+            })
+            .disposed(by: viewModel.disposeBag)
+
         viewModel.details
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [mapView] details in
@@ -84,6 +90,16 @@ final class HomeViewController: UIViewController {
 
     }
 
+    private func presentLocationController() {
+        guard let viewController = storyboard?.instantiateViewController(ofType: LocationPermissionViewController.self) else {
+            return
+        }
+
+        DispatchQueue.main.async {
+            self.present(viewController, animated: true)
+        }
+    }
+
     private func presentDetails(for annotation: PointAnnotation) {
         guard let viewController = storyboard?.instantiateViewController(ofType: VenueDetailsViewController.self) else {
             return
@@ -91,7 +107,10 @@ final class HomeViewController: UIViewController {
 
         let viewModel = VenueDetailsViewModel(annotation: annotation)
         viewController.configure(with: viewModel)
-        present(viewController, animated: true)
+
+        DispatchQueue.main.async {
+            self.present(viewController, animated: true)
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {

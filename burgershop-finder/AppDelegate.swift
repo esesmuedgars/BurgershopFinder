@@ -37,5 +37,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         return didHandle
     }
+
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        let locationService = Dependencies.shared.locationService()
+        locationService.setBackgroundAccuracy()
+    }
+
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        let locationService = Dependencies.shared.locationService()
+        locationService.setForegroundAccuracy()
+    }
 }
 

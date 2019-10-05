@@ -59,6 +59,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Your location location will be displayed on map.</string>
+	<string>We&apos;ll help you find burger venues in Tallin. Grant permission to have your location displayed.</string>
 </dict>
 </plist>
