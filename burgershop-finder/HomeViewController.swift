@@ -44,9 +44,15 @@ final class HomeViewController: UIViewController {
     }
 
     private func bindRx() {
-        viewModel.requestLocationServices
+        viewModel.requestLocationService
             .subscribe(onNext: { [weak self] in
                 self?.presentLocationController()
+            })
+            .disposed(by: viewModel.disposeBag)
+
+        viewModel.locationServiceEnabled
+            .subscribe(onNext: { [weak self] _ in
+                self?.authorizeWithFoursquare()
             })
             .disposed(by: viewModel.disposeBag)
 
@@ -90,6 +96,12 @@ final class HomeViewController: UIViewController {
 
     }
 
+    private func authorizeWithFoursquare() {
+        DispatchQueue.main.async {
+            self.viewModel.authorize(self)
+        }
+    }
+
     private func presentLocationController() {
         guard let viewController = storyboard?.instantiateViewController(ofType: LocationPermissionViewController.self) else {
             return
@@ -111,12 +123,6 @@ final class HomeViewController: UIViewController {
         DispatchQueue.main.async {
             self.present(viewController, animated: true)
         }
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        viewModel.authorize(self)
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

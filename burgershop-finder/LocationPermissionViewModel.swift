@@ -35,22 +35,7 @@ final class LocationPermissionViewModel {
     }
 
     private func bindRx() {
-        locationService.initialAuthorizationStatus
-            .subscribe(onSuccess: { [_buttonTitle] status in
-                switch status {
-                case .notDetermined:
-                    _buttonTitle.onNext("Enable location services")
-                case .authorizedAlways, .authorizedWhenInUse:
-                    print("Initial state returned `.authorizedAlways` or `.authorizedWhenInUse`")
-                case .restricted, .denied:
-                    _buttonTitle.onNext("Open settings")
-                @unknown default:
-                    break
-                }
-            })
-            .disposed(by: disposeBag)
-
-        locationService.authorizationStatus
+        Observable.merge(locationService.initialAuthorizationStatus.asObservable(), locationService.authorizationStatus)
             .subscribe(onNext: { [unowned self] status in
                 switch status {
                 case .notDetermined:
@@ -60,7 +45,7 @@ final class LocationPermissionViewModel {
                 case .restricted, .denied:
                     self._buttonTitle.onNext("Open settings")
                 @unknown default:
-                    break
+                    print("`CLAuthorizationStatus` returned unknown value")
                 }
             })
             .disposed(by: disposeBag)

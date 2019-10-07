@@ -30,14 +30,19 @@ final class HomeViewModel {
     let userLocationUpdate = PublishSubject<MKUserLocation>()
     let focusLocationTaps = PublishSubject<Void>()
 
-    private let _requestLocationServices = ReplaySubject<Void>.create(bufferSize: 1)
-    var requestLocationServices: Observable<Void> {
-        return _requestLocationServices.asObservable()
+    private let _requestLocationService = ReplaySubject<Void>.create(bufferSize: 1)
+    var requestLocationService: Observable<Void> {
+        return _requestLocationService.asObservable()
     }
 
-    init(apiService: APIServiceProtocol = Dependencies.shared.apiService(),
-         authService: AuthServiceProtocol = Dependencies.shared.authService(),
-         locationService: LocationServiceProtocol = Dependencies.shared.locationService()) {
+    private let _locationServiceEnabled = ReplaySubject<Bool>.create(bufferSize: 1)
+    var locationServiceEnabled: Observable<Bool> {
+        return _locationServiceEnabled.asObserver()
+    }
+
+    init(locationService: LocationServiceProtocol = Dependencies.shared.locationService(),
+         apiService: APIServiceProtocol = Dependencies.shared.apiService(),
+         authService: AuthServiceProtocol = Dependencies.shared.authService()) {
         self.locationService = locationService
         self.apiService = apiService
         self.authService = authService
@@ -55,12 +60,6 @@ final class HomeViewModel {
         bindRx()
     }
 
-    // TODO:
-    // Gives this more taught.
-    // Location is not used with APIs, don't want to block from using app without location
-    // Should force user to grant location permission?
-    private var permitted = false
-
     private func bindRx() {
         authService.authToken
             .subscribe(onNext: { [weak self] authToken in
@@ -71,19 +70,31 @@ final class HomeViewModel {
             })
             .disposed(by: disposeBag)
 
-        locationService.initialAuthorizationStatus
-            .subscribe(onSuccess: { [weak self] status in
-                if status == .notDetermined || status == .restricted || status == .denied {
-                    self?._requestLocationServices.onNext(())
+        locationService.authorizationStatus
+            .compactMap { status -> Optional<Bool> in
+                switch status {
+                case .authorizedAlways, .authorizedWhenInUse:
+                    return true
+                case .notDetermined, .restricted, .denied:
+                    return false
+                @unknown default:
+                    print("`CLAuthorizationStatus` returned unknown value")
+                    return nil
                 }
-
-                self?.permitted = true
+            }
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] isAuthorized in
+                if isAuthorized {
+                    self?._locationServiceEnabled.onNext(true)
+                } else {
+                    self?._requestLocationService.onNext(())
+                }
             })
             .disposed(by: disposeBag)
     }
 
     func authorize(_ viewController: UIViewController) {
-        if !userAuthorized && permitted {
+        if !userAuthorized {
             authService.authorize(viewController)
             userAuthorized = true
         }
