@@ -10,7 +10,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 import MapKit
-import CoreLocation
 import RxGesture
 
 final class HomeViewController: UIViewController {
@@ -31,7 +30,6 @@ final class HomeViewController: UIViewController {
     @IBOutlet private var userLocationButton: UIButton!
 
     private lazy var viewModel = HomeViewModel()
-    private lazy var locationManager = CLLocationManager()
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -40,14 +38,24 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        locationManager.delegate = self
-
         titleLabel.setTitle("Venues")
 
         bindRx()
     }
 
     private func bindRx() {
+        viewModel.requestLocationService
+            .subscribe(onNext: { [weak self] in
+                self?.presentLocationController()
+            })
+            .disposed(by: viewModel.disposeBag)
+
+        viewModel.locationServiceEnabled
+            .subscribe(onNext: { [weak self] _ in
+                self?.authorizeWithFoursquare()
+            })
+            .disposed(by: viewModel.disposeBag)
+
         viewModel.details
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [mapView] details in
@@ -88,6 +96,22 @@ final class HomeViewController: UIViewController {
 
     }
 
+    private func authorizeWithFoursquare() {
+        DispatchQueue.main.async {
+            self.viewModel.authorize(self)
+        }
+    }
+
+    private func presentLocationController() {
+        guard let viewController = storyboard?.instantiateViewController(ofType: LocationPermissionViewController.self) else {
+            return
+        }
+
+        DispatchQueue.main.async {
+            self.present(viewController, animated: true)
+        }
+    }
+
     private func presentDetails(for annotation: PointAnnotation) {
         guard let viewController = storyboard?.instantiateViewController(ofType: VenueDetailsViewController.self) else {
             return
@@ -95,13 +119,10 @@ final class HomeViewController: UIViewController {
 
         let viewModel = VenueDetailsViewModel(annotation: annotation)
         viewController.configure(with: viewModel)
-        present(viewController, animated: true)
-    }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        viewModel.authorize(self)
+        DispatchQueue.main.async {
+            self.present(viewController, animated: true)
+        }
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -143,5 +164,3 @@ extension HomeViewController: MKMapViewDelegate {
         viewModel.userLocationUpdate.onNext(userLocation)
     }
 }
-
-extension HomeViewController: CLLocationManagerDelegate {}

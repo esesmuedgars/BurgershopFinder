@@ -10,17 +10,16 @@ import Foundation
 import RxSwift
 import RxCocoa
 import MapKit
-import CoreLocation
 
 final class HomeViewModel {
 
+    private let locationService: LocationServiceProtocol
     private let apiService: APIServiceProtocol
     private let authService: AuthServiceProtocol
 
     private lazy var userAuthorized = false
 
     private(set) lazy var disposeBag = DisposeBag()
-    private(set) lazy var locationManager = CLLocationManager()
 
     public lazy var items = BehaviorRelay(value: FSIdentifiers())
 
@@ -31,8 +30,20 @@ final class HomeViewModel {
     let userLocationUpdate = PublishSubject<MKUserLocation>()
     let focusLocationTaps = PublishSubject<Void>()
 
-    init(apiService: APIServiceProtocol = Dependencies.shared.apiService(),
+    private let _requestLocationService = ReplaySubject<Void>.create(bufferSize: 1)
+    var requestLocationService: Observable<Void> {
+        return _requestLocationService.asObservable()
+    }
+
+    private let _locationServiceEnabled = ReplaySubject<Bool>.create(bufferSize: 1)
+    var locationServiceEnabled: Observable<Bool> {
+        return _locationServiceEnabled.asObservable()
+    }
+
+    init(locationService: LocationServiceProtocol = Dependencies.shared.locationService(),
+         apiService: APIServiceProtocol = Dependencies.shared.apiService(),
          authService: AuthServiceProtocol = Dependencies.shared.authService()) {
+        self.locationService = locationService
         self.apiService = apiService
         self.authService = authService
 
@@ -47,8 +58,6 @@ final class HomeViewModel {
             .asDriver(onErrorJustReturn: .default)
 
         bindRx()
-
-        locationManager.requestWhenInUseAuthorization() // #debug
     }
 
     private func bindRx() {
@@ -58,6 +67,28 @@ final class HomeViewModel {
             }, onError: { [weak self] error in
                 self?.userAuthorized = false
                 print(error)
+            })
+            .disposed(by: disposeBag)
+
+        locationService.authorizationStatus
+            .compactMap { status -> Optional<Bool> in
+                switch status {
+                case .authorizedAlways, .authorizedWhenInUse:
+                    return true
+                case .notDetermined, .restricted, .denied:
+                    return false
+                @unknown default:
+                    print("`CLAuthorizationStatus` returned unknown value")
+                    return nil
+                }
+            }
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] isAuthorized in
+                if isAuthorized {
+                    self?._locationServiceEnabled.onNext(true)
+                } else {
+                    self?._requestLocationService.onNext(())
+                }
             })
             .disposed(by: disposeBag)
     }
