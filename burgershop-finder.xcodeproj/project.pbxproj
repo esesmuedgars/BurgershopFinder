@@ -20,6 +20,8 @@
 		724BCD11216E7E7F002F526E /* FSLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724BCD10216E7E7F002F526E /* FSLocation.swift */; };
 		72534D3C21F10A2F007EC465 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72534D3B21F10A2F007EC465 /* Protocols.swift */; };
 		72587F5D21B9806200EA7B03 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72587F5C21B9806200EA7B03 /* CollectionView.swift */; };
+		726059B12343E5E5002B3377 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726059B02343E5E5002B3377 /* LocationService.swift */; };
+		726059B22343E5E5002B3377 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726059B02343E5E5002B3377 /* LocationService.swift */; };
 		726547CE21AE8FCB00F4DD77 /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726547CD21AE8FCB00F4DD77 /* Commons.swift */; };
 		7288831B2214C02500768FFE /* VenueDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7288831A2214C02500768FFE /* VenueDetailsViewController.swift */; };
 		7288831C2214C02500768FFE /* VenueDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7288831A2214C02500768FFE /* VenueDetailsViewController.swift */; };
@@ -117,6 +119,7 @@
 		72534D3D21F10A95007EC465 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		72534D3F21F10AB7007EC465 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		72587F5C21B9806200EA7B03 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		726059B02343E5E5002B3377 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		726547CD21AE8FCB00F4DD77 /* Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
 		726DF03721F7BCE300EC0934 /* identifiers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = identifiers.json; sourceTree = "<group>"; };
 		726DF03A21F7C5D200EC0934 /* details_500ab27fe4b0e68937e2d7d9.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = details_500ab27fe4b0e68937e2d7d9.json; sourceTree = "<group>"; };
@@ -240,6 +243,7 @@
 			children = (
 				72534D3B21F10A2F007EC465 /* Protocols.swift */,
 				72E572C121A9CE2B009F1278 /* Dependencies.swift */,
+				726059B02343E5E5002B3377 /* LocationService.swift */,
 				72A32B6D2211F6F600717890 /* Release */,
 				72534D4121F11C97007EC465 /* Debug */,
 				724BCD13216E7E93002F526E /* Models */,
@@ -516,6 +520,7 @@
 				72A32B352211ED6A00717890 /* FSIdentifier.swift in Sources */,
 				72A32B382211ED6A00717890 /* MapView.swift in Sources */,
 				72A32B3A2211ED6A00717890 /* PointAnnotation.swift in Sources */,
+				726059B22343E5E5002B3377 /* LocationService.swift in Sources */,
 				72A32B6B2211F24100717890 /* Dependencies.swift in Sources */,
 				7288831F2214C6DD00768FFE /* VenueDetailsViewModel.swift in Sources */,
 				72A32B3B2211ED6A00717890 /* FSLocation.swift in Sources */,
@@ -559,6 +564,7 @@
 				72CE8CDD21BF34AF0007B085 /* PointAnnotation.swift in Sources */,
 				724BCD11216E7E7F002F526E /* FSLocation.swift in Sources */,
 				7248D6BD226BACBE00762766 /* CollectionViewFlowLayout.swift in Sources */,
+				726059B12343E5E5002B3377 /* LocationService.swift in Sources */,
 				72383A7422176B8D0081C59F /* FSLikes.swift in Sources */,
 				72383A71221769540081C59F /* FSContact.swift in Sources */,
 				72C4E6A221ADB49F009FB99C /* VenueCell.swift in Sources */,

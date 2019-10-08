@@ -6,8 +6,8 @@
 //  Copyright © 2019 esesmuedgars. All rights reserved.
 //
 
-import Foundation
 import RxSwift
+import CoreLocation
 
 protocol AuthServiceProtocol {
 
@@ -19,7 +19,7 @@ protocol AuthServiceProtocol {
     /// Authorize user with Foursquare server.
     /// Will call `application(_:open:options:)` method of `UIApplicationDelegate` subclass on success.
     ///
-    /// - Parameter viewController: `UIViewController` subclass which will present `FSOAuth` created WebView.
+    /// - Parameter viewController: `UIViewController` subclass which will present `FSOAuth` initialized `SFSafariViewController`.
     func authorize(_ viewController: UIViewController)
     func requestToken(_ url: URL)
 }
@@ -30,4 +30,16 @@ protocol APIServiceProtocol {
 
     func fetchVenues(authToken token: String) -> Observable<FSIdentifiers>
     func inspectVenue(authToken token: String, venueId identifier: String) -> Observable<FSDetails>
+}
+
+protocol LocationServiceProtocol {
+
+    var currentAuthorizationStatus: CLAuthorizationStatus { get }
+    var initialAuthorizationStatus: Single<CLAuthorizationStatus> { get }
+    var authorizationStatus: Observable<CLAuthorizationStatus> { get }
+
+    func requestAuthorization()
+
+    func setBackgroundAccuracy()
+    func setForegroundAccuracy()
 }

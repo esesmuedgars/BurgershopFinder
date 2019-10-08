@@ -21,4 +21,9 @@ final class Dependencies {
     func apiService() -> APIServiceProtocol {
         return _apiService
     }
+
+    private let _locationService = LocationService()
+    func locationService() -> LocationServiceProtocol {
+        return _locationService
+    }
 }
