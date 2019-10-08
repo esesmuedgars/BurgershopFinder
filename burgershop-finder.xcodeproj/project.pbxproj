@@ -20,6 +20,10 @@
 		724BCD11216E7E7F002F526E /* FSLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724BCD10216E7E7F002F526E /* FSLocation.swift */; };
 		72534D3C21F10A2F007EC465 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72534D3B21F10A2F007EC465 /* Protocols.swift */; };
 		72587F5D21B9806200EA7B03 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72587F5C21B9806200EA7B03 /* CollectionView.swift */; };
+		726059AB2343DFD1002B3377 /* LocationPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726059AA2343DFD1002B3377 /* LocationPermissionViewController.swift */; };
+		726059AC2343DFD1002B3377 /* LocationPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726059AA2343DFD1002B3377 /* LocationPermissionViewController.swift */; };
+		726059AE2343DFFA002B3377 /* LocationPermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726059AD2343DFFA002B3377 /* LocationPermissionViewModel.swift */; };
+		726059AF2343DFFA002B3377 /* LocationPermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726059AD2343DFFA002B3377 /* LocationPermissionViewModel.swift */; };
 		726059B12343E5E5002B3377 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726059B02343E5E5002B3377 /* LocationService.swift */; };
 		726059B22343E5E5002B3377 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726059B02343E5E5002B3377 /* LocationService.swift */; };
 		726547CE21AE8FCB00F4DD77 /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726547CD21AE8FCB00F4DD77 /* Commons.swift */; };
@@ -119,6 +123,8 @@
 		72534D3D21F10A95007EC465 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		72534D3F21F10AB7007EC465 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		72587F5C21B9806200EA7B03 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		726059AA2343DFD1002B3377 /* LocationPermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionViewController.swift; sourceTree = "<group>"; };
+		726059AD2343DFFA002B3377 /* LocationPermissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionViewModel.swift; sourceTree = "<group>"; };
 		726059B02343E5E5002B3377 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		726547CD21AE8FCB00F4DD77 /* Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
 		726DF03721F7BCE300EC0934 /* identifiers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = identifiers.json; sourceTree = "<group>"; };
@@ -149,6 +155,7 @@
 		72AF5680216B5FC400102EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72AF5686216B635300102EA8 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		72AF5688216B662F00102EA8 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		72BB7744234CD7EE007404E3 /* Tallin, Estonia.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Tallin, Estonia.gpx"; sourceTree = "<group>"; };
 		72C4E6A121ADB49F009FB99C /* VenueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
 		72C4E6A321ADBB64009FB99C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		72C4E6A521ADD19E009FB99C /* VenueCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCellModel.swift; sourceTree = "<group>"; };
@@ -307,6 +314,7 @@
 		72AF5668216B5FC300102EA8 = {
 			isa = PBXGroup;
 			children = (
+				72BB7744234CD7EE007404E3 /* Tallin, Estonia.gpx */,
 				72AF5673216B5FC300102EA8 /* burgershop-finder */,
 				72AF5672216B5FC300102EA8 /* Products */,
 				729C490821A8CF5E0071903F /* Frameworks */,
@@ -328,6 +336,8 @@
 				7243AF6021B82B160060DE07 /* UI */,
 				7213F69921A76D8A003A591A /* FSOAuth */,
 				724BCD14216E7EB3002F526E /* Dependencies */,
+				726059AD2343DFFA002B3377 /* LocationPermissionViewModel.swift */,
+				726059AA2343DFD1002B3377 /* LocationPermissionViewController.swift */,
 				72E572BD21A9B09D009F1278 /* HomeViewModel.swift */,
 				72AF5676216B5FC300102EA8 /* HomeViewController.swift */,
 				7288831D2214C6DD00768FFE /* VenueDetailsViewModel.swift */,
@@ -543,6 +553,8 @@
 				72A32B4B2211ED6A00717890 /* GradientView.swift in Sources */,
 				72A32B4C2211ED6A00717890 /* AuthService.swift in Sources */,
 				72383A6F22175BED0081C59F /* FSPrice.swift in Sources */,
+				726059AC2343DFD1002B3377 /* LocationPermissionViewController.swift in Sources */,
+				726059AF2343DFFA002B3377 /* LocationPermissionViewModel.swift in Sources */,
 				72A32B4D2211ED6A00717890 /* AppDelegate.swift in Sources */,
 				72A32B4E2211ED6A00717890 /* FSVenue.swift in Sources */,
 				72A32B502211ED6A00717890 /* Protocols.swift in Sources */,
@@ -557,11 +569,13 @@
 				72D223112177B325003C04F6 /* FSDetails.swift in Sources */,
 				72D2230D2177B1BD003C04F6 /* FSGroup.swift in Sources */,
 				72E572C221A9CE2B009F1278 /* Dependencies.swift in Sources */,
+				726059AB2343DFD1002B3377 /* LocationPermissionViewController.swift in Sources */,
 				7288831E2214C6DD00768FFE /* VenueDetailsViewModel.swift in Sources */,
 				72E572BE21A9B09D009F1278 /* HomeViewModel.swift in Sources */,
 				72D223192177B9D7003C04F6 /* FSIdentifier.swift in Sources */,
 				72D62DC821AA1A3900FF4BD9 /* MapView.swift in Sources */,
 				72CE8CDD21BF34AF0007B085 /* PointAnnotation.swift in Sources */,
+				726059AE2343DFFA002B3377 /* LocationPermissionViewModel.swift in Sources */,
 				724BCD11216E7E7F002F526E /* FSLocation.swift in Sources */,
 				7248D6BD226BACBE00762766 /* CollectionViewFlowLayout.swift in Sources */,
 				726059B12343E5E5002B3377 /* LocationService.swift in Sources */,
