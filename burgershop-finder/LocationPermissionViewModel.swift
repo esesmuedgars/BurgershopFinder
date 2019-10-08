@@ -16,7 +16,7 @@ final class LocationPermissionViewModel {
 
     let descriptionText = "We'll help you find burger venues in Tallin. Grant permission to have your location displayed."
 
-    private let _buttonTitle = BehaviorSubject<String>(value: "")
+    private let _buttonTitle = ReplaySubject<String>.create(bufferSize: 1)
     var buttonTitle: Observable<String> {
         return _buttonTitle.asObservable()
     }

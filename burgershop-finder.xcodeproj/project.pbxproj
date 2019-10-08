@@ -155,6 +155,7 @@
 		72AF5680216B5FC400102EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72AF5686216B635300102EA8 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		72AF5688216B662F00102EA8 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		72BB7744234CD7EE007404E3 /* Tallin, Estonia.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Tallin, Estonia.gpx"; sourceTree = "<group>"; };
 		72C4E6A121ADB49F009FB99C /* VenueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
 		72C4E6A321ADBB64009FB99C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		72C4E6A521ADD19E009FB99C /* VenueCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCellModel.swift; sourceTree = "<group>"; };
@@ -313,6 +314,7 @@
 		72AF5668216B5FC300102EA8 = {
 			isa = PBXGroup;
 			children = (
+				72BB7744234CD7EE007404E3 /* Tallin, Estonia.gpx */,
 				72AF5673216B5FC300102EA8 /* burgershop-finder */,
 				72AF5672216B5FC300102EA8 /* Products */,
 				729C490821A8CF5E0071903F /* Frameworks */,
