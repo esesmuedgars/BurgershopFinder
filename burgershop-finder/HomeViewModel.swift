@@ -37,7 +37,7 @@ final class HomeViewModel {
 
     private let _locationServiceEnabled = ReplaySubject<Bool>.create(bufferSize: 1)
     var locationServiceEnabled: Observable<Bool> {
-        return _locationServiceEnabled.asObserver()
+        return _locationServiceEnabled.asObservable()
     }
 
     init(locationService: LocationServiceProtocol = Dependencies.shared.locationService(),
