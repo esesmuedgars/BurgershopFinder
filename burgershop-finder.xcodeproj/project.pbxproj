@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,14 @@
 		72383A72221769540081C59F /* FSContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72383A70221769540081C59F /* FSContact.swift */; };
 		72383A7422176B8D0081C59F /* FSLikes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72383A7322176B8D0081C59F /* FSLikes.swift */; };
 		72383A7522176B8D0081C59F /* FSLikes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72383A7322176B8D0081C59F /* FSLikes.swift */; };
+		72406466235263B3000CFB3A /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 72406465235263B3000CFB3A /* RxRelay */; };
+		72406468235263B3000CFB3A /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 72406467235263B3000CFB3A /* RxSwift */; };
+		7240646A235263B3000CFB3A /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 72406469235263B3000CFB3A /* RxCocoa */; };
+		7240646D23526412000CFB3A /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = 7240646C23526412000CFB3A /* RxGesture */; };
+		7240646F2352644A000CFB3A /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7240646E2352644A000CFB3A /* RxCocoa */; };
+		724064712352644F000CFB3A /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = 724064702352644F000CFB3A /* RxGesture */; };
+		7240647323526457000CFB3A /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 7240647223526457000CFB3A /* RxRelay */; };
+		724064752352645B000CFB3A /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 724064742352645B000CFB3A /* RxSwift */; };
 		7243AF5F21B82B0D0060DE07 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7243AF5E21B82B0D0060DE07 /* TitleLabel.swift */; };
 		7248D6BD226BACBE00762766 /* CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7248D6BC226BACBE00762766 /* CollectionViewFlowLayout.swift */; };
 		7248D6BE226BACBE00762766 /* CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7248D6BC226BACBE00762766 /* CollectionViewFlowLayout.swift */; };
@@ -31,8 +39,6 @@
 		7288831C2214C02500768FFE /* VenueDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7288831A2214C02500768FFE /* VenueDetailsViewController.swift */; };
 		7288831E2214C6DD00768FFE /* VenueDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7288831D2214C6DD00768FFE /* VenueDetailsViewModel.swift */; };
 		7288831F2214C6DD00768FFE /* VenueDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7288831D2214C6DD00768FFE /* VenueDetailsViewModel.swift */; };
-		72896BB7228B7056005DBE6B /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72896BB6228B7056005DBE6B /* RxRelay.framework */; };
-		72896BB8228B7062005DBE6B /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72896BB6228B7056005DBE6B /* RxRelay.framework */; };
 		72A32B302211ED6A00717890 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF5676216B5FC300102EA8 /* HomeViewController.swift */; };
 		72A32B312211ED6A00717890 /* FSDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D223102177B325003C04F6 /* FSDetails.swift */; };
 		72A32B322211ED6A00717890 /* FSGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D2230C2177B1BD003C04F6 /* FSGroup.swift */; };
@@ -82,12 +88,6 @@
 		72AF567A216B5FC300102EA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72AF5678216B5FC300102EA8 /* Main.storyboard */; };
 		72AF567F216B5FC400102EA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72AF567D216B5FC400102EA8 /* LaunchScreen.storyboard */; };
 		72AF5689216B662F00102EA8 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF5688216B662F00102EA8 /* Endpoint.swift */; };
-		72BE66602282007E005F51C6 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C98415222D7B4800FBE209 /* RxGesture.framework */; };
-		72BE666122820088005F51C6 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729C490921A8CF5E0071903F /* RxCocoa.framework */; };
-		72BE666222820095005F51C6 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729C490A21A8CF5E0071903F /* RxSwift.framework */; };
-		72BE6663228200BD005F51C6 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C98415222D7B4800FBE209 /* RxGesture.framework */; };
-		72BE6664228200CB005F51C6 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729C490921A8CF5E0071903F /* RxCocoa.framework */; };
-		72BE6665228200D5005F51C6 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729C490A21A8CF5E0071903F /* RxSwift.framework */; };
 		72C4E6A221ADB49F009FB99C /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4E6A121ADB49F009FB99C /* VenueCell.swift */; };
 		72C4E6A421ADBB64009FB99C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4E6A321ADBB64009FB99C /* Extensions.swift */; };
 		72C4E6A621ADD19E009FB99C /* VenueCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4E6A521ADD19E009FB99C /* VenueCellModel.swift */; };
@@ -182,10 +182,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72896BB7228B7056005DBE6B /* RxRelay.framework in Frameworks */,
-				72BE6665228200D5005F51C6 /* RxSwift.framework in Frameworks */,
-				72BE6664228200CB005F51C6 /* RxCocoa.framework in Frameworks */,
-				72BE6663228200BD005F51C6 /* RxGesture.framework in Frameworks */,
+				7240647323526457000CFB3A /* RxRelay in Frameworks */,
+				724064712352644F000CFB3A /* RxGesture in Frameworks */,
+				724064752352645B000CFB3A /* RxSwift in Frameworks */,
+				7240646F2352644A000CFB3A /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,10 +193,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72896BB8228B7062005DBE6B /* RxRelay.framework in Frameworks */,
-				72BE666222820095005F51C6 /* RxSwift.framework in Frameworks */,
-				72BE666122820088005F51C6 /* RxCocoa.framework in Frameworks */,
-				72BE66602282007E005F51C6 /* RxGesture.framework in Frameworks */,
+				72406468235263B3000CFB3A /* RxSwift in Frameworks */,
+				72406466235263B3000CFB3A /* RxRelay in Frameworks */,
+				7240646D23526412000CFB3A /* RxGesture in Frameworks */,
+				7240646A235263B3000CFB3A /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,13 +365,18 @@
 				72A32B2F2211ED6A00717890 /* Sources */,
 				72A32B512211ED6A00717890 /* Frameworks */,
 				72A32B542211ED6A00717890 /* Resources */,
-				72A32B652211ED6A00717890 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Debug;
+			packageProductDependencies = (
+				7240646E2352644A000CFB3A /* RxCocoa */,
+				724064702352644F000CFB3A /* RxGesture */,
+				7240647223526457000CFB3A /* RxRelay */,
+				724064742352645B000CFB3A /* RxSwift */,
+			);
 			productName = "burgershop-finder";
 			productReference = 72A32B692211ED6A00717890 /* Debug Burgershop Finder.app */;
 			productType = "com.apple.product-type.application";
@@ -383,13 +388,18 @@
 				72AF566D216B5FC300102EA8 /* Sources */,
 				72AF566E216B5FC300102EA8 /* Frameworks */,
 				72AF566F216B5FC300102EA8 /* Resources */,
-				729C490E21A8CF7D0071903F /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Release;
+			packageProductDependencies = (
+				72406465235263B3000CFB3A /* RxRelay */,
+				72406467235263B3000CFB3A /* RxSwift */,
+				72406469235263B3000CFB3A /* RxCocoa */,
+				7240646C23526412000CFB3A /* RxGesture */,
+			);
 			productName = "burgershop-finder";
 			productReference = 72AF5671216B5FC300102EA8 /* Release Burgershop Finder.app */;
 			productType = "com.apple.product-type.application";
@@ -401,7 +411,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = esesmuedgars;
 				TargetAttributes = {
 					72AF5670216B5FC300102EA8 = {
@@ -419,6 +429,10 @@
 				Base,
 			);
 			mainGroup = 72AF5668216B5FC300102EA8;
+			packageReferences = (
+				72406464235263B3000CFB3A /* XCRemoteSwiftPackageReference "RxSwift" */,
+				7240646B23526412000CFB3A /* XCRemoteSwiftPackageReference "RxGesture" */,
+			);
 			productRefGroup = 72AF5672216B5FC300102EA8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -464,59 +478,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		729C490E21A8CF7D0071903F /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxGesture.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxGesture.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxRelay.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-		72A32B652211ED6A00717890 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxGesture.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxGesture.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxRelay.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		72A32B2F2211ED6A00717890 /* Sources */ = {
@@ -872,6 +833,68 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		72406464235263B3000CFB3A /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		7240646B23526412000CFB3A /* XCRemoteSwiftPackageReference "RxGesture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxGesture.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		72406465235263B3000CFB3A /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72406464235263B3000CFB3A /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		72406467235263B3000CFB3A /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72406464235263B3000CFB3A /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		72406469235263B3000CFB3A /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72406464235263B3000CFB3A /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		7240646C23526412000CFB3A /* RxGesture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7240646B23526412000CFB3A /* XCRemoteSwiftPackageReference "RxGesture" */;
+			productName = RxGesture;
+		};
+		7240646E2352644A000CFB3A /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72406464235263B3000CFB3A /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		724064702352644F000CFB3A /* RxGesture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7240646B23526412000CFB3A /* XCRemoteSwiftPackageReference "RxGesture" */;
+			productName = RxGesture;
+		};
+		7240647223526457000CFB3A /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72406464235263B3000CFB3A /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		724064742352645B000CFB3A /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72406464235263B3000CFB3A /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 72AF5669216B5FC300102EA8 /* Project object */;
 }
