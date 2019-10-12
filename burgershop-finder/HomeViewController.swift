@@ -98,7 +98,11 @@ final class HomeViewController: UIViewController {
 
     private func authorizeWithFoursquare() {
         DispatchQueue.main.async {
-            self.viewModel.authorize(self)
+            if let locationController = self.presentedViewController as? LocationPermissionViewController {
+                locationController.dismiss(animated: true) { [unowned self] in
+                    self.viewModel.authorize(self)
+                }
+            }
         }
     }
 
