@@ -102,6 +102,8 @@ final class HomeViewController: UIViewController {
                 locationController.dismiss(animated: true) { [unowned self] in
                     self.viewModel.authorize(self)
                 }
+            } else {
+                self.viewModel.authorize(self)
             }
         }
     }
