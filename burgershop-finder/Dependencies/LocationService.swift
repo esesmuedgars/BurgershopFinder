@@ -6,7 +6,6 @@
 //  Copyright © 2019 esesmuedgars. All rights reserved.
 //
 
-import Foundation
 import CoreLocation
 import RxSwift
 import RxCocoa
@@ -31,7 +30,7 @@ final class LocationService: NSObject, LocationServiceProtocol, CLLocationManage
                     locationManager.startUpdatingLocation()
                 }
             })
-            .asObservable()
+            .share(replay: 1, scope: .forever)
     }
 
     var currentAuthorizationStatus: CLAuthorizationStatus {

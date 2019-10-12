@@ -132,7 +132,6 @@ final class HomeViewController: UIViewController {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
 
-
         let annotation = mapView.selectedAnnotations.first as? PointAnnotation
 
         collectionView.invalidateIntrinsicContentSize()

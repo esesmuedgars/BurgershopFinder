@@ -6,7 +6,6 @@
 //  Copyright © 2019 esesmuedgars. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import RxSwift
 import RxRelay
@@ -19,7 +18,7 @@ final class AuthService: AuthServiceProtocol {
 
     private var _authToken = BehaviorRelay<String?>(value: nil)
     var authToken: Observable<String?> {
-        return _authToken.asObservable().skip(1)
+        return _authToken.skip(1)
     }
 
     var rawToken: String? {

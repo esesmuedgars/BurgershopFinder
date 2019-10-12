@@ -6,7 +6,6 @@
 //  Copyright © 2018 esesmuedgars. All rights reserved.
 //
 
-import Foundation
 import RxSwift
 import RxCocoa
 import MapKit
@@ -32,12 +31,12 @@ final class HomeViewModel {
 
     private let _requestLocationService = ReplaySubject<Void>.create(bufferSize: 1)
     var requestLocationService: Observable<Void> {
-        return _requestLocationService.asObservable()
+        return _requestLocationService
     }
 
     private let _locationServiceEnabled = ReplaySubject<Bool>.create(bufferSize: 1)
     var locationServiceEnabled: Observable<Bool> {
-        return _locationServiceEnabled.asObservable()
+        return _locationServiceEnabled
     }
 
     init(locationService: LocationServiceProtocol = Dependencies.shared.locationService(),

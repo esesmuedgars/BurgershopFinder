@@ -6,7 +6,6 @@
 //  Copyright © 2018 esesmuedgars. All rights reserved.
 //
 
-import Foundation
 import RxSwift
 
 final class APIService: APIServiceProtocol {

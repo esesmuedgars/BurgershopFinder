@@ -19,14 +19,14 @@ struct Constants {
         return "fsburgershopfinder://authorized"
     }
 
-    /// Replace `client_id` with your Foursquare application `Client ID` string.
+    /// Replace placeholder with your Foursquare application `Client ID` string.
     static var identifier: String {
-        return "client_id"
+        return "<#Client ID#>"
     }
 
-    /// Replace `client_secret` with your Foursquare application `Client Secret` string.
+    /// Replace placeholder with your Foursquare application `Client Secret` string.
     static var secret: String {
-        return "client_secret"
+        return "<#Client Secret#>"
     }
 
     static var version: String {

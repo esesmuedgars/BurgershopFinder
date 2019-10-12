@@ -6,9 +6,7 @@
 //  Copyright © 2019 esesmuedgars. All rights reserved.
 //
 
-import Foundation
-import RxSwift
-import RxCocoa
+import UIKit
 
 final class VenueDetailsViewController: UIViewController {
 
@@ -34,14 +32,10 @@ final class VenueDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        bindRx()
+        bind()
     }
 
-    func configure(with viewModel: VenueDetailsViewModel) {
-        self.viewModel = viewModel
-    }
-
-    private func bindRx() {
+    private func bind() {
         titleLabel.text = viewModel.titleText
         addressLabel.text = viewModel.addressText
         phoneNumberLabel.text = viewModel.phoneNumberText
@@ -50,5 +44,9 @@ final class VenueDetailsViewController: UIViewController {
         likesLabel.text = viewModel.likesText
         ratingLabel.text = viewModel.ratingText
         imageView.image = viewModel.image
+    }
+
+    func configure(with viewModel: VenueDetailsViewModel) {
+        self.viewModel = viewModel
     }
 }
