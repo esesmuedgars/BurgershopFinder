@@ -6,8 +6,6 @@
 //  Copyright © 2018 esesmuedgars. All rights reserved.
 //
 
-import Foundation
-
 struct FSPhoto: Codable {
     private var groups: FSGroups
 

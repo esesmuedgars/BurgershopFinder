@@ -6,8 +6,6 @@
 //  Copyright © 2018 esesmuedgars. All rights reserved.
 //
 
-import Foundation
-
 typealias FSGroups = [FSGroup]
 
 struct FSGroup: Codable {

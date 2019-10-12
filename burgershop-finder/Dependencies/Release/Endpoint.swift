@@ -6,8 +6,6 @@
 //  Copyright © 2018 esesmuedgars. All rights reserved.
 //
 
-import Foundation
-
 enum Endpoint {
     case search
     case details(withIdentifier: String)

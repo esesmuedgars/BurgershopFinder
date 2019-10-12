@@ -6,8 +6,6 @@
 //  Copyright © 2019 esesmuedgars. All rights reserved.
 //
 
-import Foundation
-
 struct FSPrice: Codable {
     var tier: Int?
 }

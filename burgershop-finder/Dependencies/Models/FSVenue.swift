@@ -6,14 +6,12 @@
 //  Copyright © 2018 esesmuedgars. All rights reserved.
 //
 
-import Foundation
-
 struct FSVenue: Codable {
     var id: String
     var name: String
     var contact: FSContact
     var location: FSLocation
-    var price: FSPrice
+    var price: FSPrice?
     var likes: FSLikes
     var rating: Float?
     var photo: FSPhoto

@@ -102,6 +102,8 @@ final class HomeViewController: UIViewController {
                 locationController.dismiss(animated: true) { [unowned self] in
                     self.viewModel.authorize(self)
                 }
+            } else {
+                self.viewModel.authorize(self)
             }
         }
     }
@@ -131,7 +133,6 @@ final class HomeViewController: UIViewController {
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-
 
         let annotation = mapView.selectedAnnotations.first as? PointAnnotation
 

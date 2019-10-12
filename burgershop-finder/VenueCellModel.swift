@@ -6,10 +6,9 @@
 //  Copyright © 2018 esesmuedgars. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import RxSwift
 import RxCocoa
-import UIKit
 
 final class VenueCellModel {
 

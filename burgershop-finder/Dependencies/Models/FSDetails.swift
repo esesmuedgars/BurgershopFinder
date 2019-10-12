@@ -6,7 +6,6 @@
 //  Copyright © 2018 esesmuedgars. All rights reserved.
 //
 
-import Foundation
 import MapKit
 
 final class FSDetails: Codable {
@@ -60,7 +59,7 @@ final class FSDetails: Codable {
     }
 
     var priceTier: Int {
-        return response.venue.price.tier ?? 0
+        return response.venue.price?.tier ?? 0
     }
 
     var likes: Int {

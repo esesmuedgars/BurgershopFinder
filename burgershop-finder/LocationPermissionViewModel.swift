@@ -6,7 +6,6 @@
 //  Copyright © 2019 esesmuedgars. All rights reserved.
 //
 
-import Foundation
 import RxSwift
 import RxCocoa
 
@@ -18,12 +17,12 @@ final class LocationPermissionViewModel {
 
     private let _buttonTitle = ReplaySubject<String>.create(bufferSize: 1)
     var buttonTitle: Observable<String> {
-        return _buttonTitle.asObservable()
+        return _buttonTitle
     }
 
     private let _authorized = ReplaySubject<Void>.create(bufferSize: 1)
     var authorized: Observable<Void> {
-        return _authorized.asObservable()
+        return _authorized
     }
 
     let disposeBag = DisposeBag()
